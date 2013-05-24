@@ -1,0 +1,92 @@
+Hospital System
+    System Narrative
+        PATIENT
+        Patient ID, Name, Age, Sex, Address, DOB, SSN, List of Appointments, Payment
+
+        DOCTOR
+        Doctor ID, Name, Age, Address, Department, Salary
+
+System Narrative
+----------------
+Why Hospital {{{
+
+}}}
+
+Create New Account {{{
+
+ * Hospital Staff can create a new Account for the patient, which will include the patient's name, age, sex, address, DOB, and ssn and List of Appointments. 
+
+}}}
+
+Admit New Patient {{{
+
+ * Hospital checks to see if a patient already has an account with the Hospital and creates one if they don't. Admitting the patient means adding the patient to the list of patients in the Hospital's private listing.
+
+}}}
+
+Appointments {{{
+
+ * Those that have an account with the hospital can set up multiple appointments with the hospitals for checkups of different kinds. 
+ * The user can add as many appointments as they want with the hospital, provided the appointments don't conflict in time. 
+ * The user receives an Appointment ID from the hospital for them to keep.
+
+}}}
+
+Check In {{{
+
+ * Patients with accounts can check in to a prior appointment. Patients check in with their Patient ID, Appointment ID, and password.
+
+}}}
+Check Out {{{
+
+ * After an appointment, patients check out of the hospitol. Patients check out with their Patient ID, Appointment ID, and password.
+
+}}}
+
+Display Account Information {{{
+
+ * Users with an account at the hospital can access the account information they signed up with viewing name, age, sex, address, DOB, ssn and both their past list of appointments and their current list of appointments.
+
+}}}
+Account Management {{{
+
+ * Users with an account at the hospital can change some of their account information that they signed up with. They can change everything they can view in `Display Account Information` except, age, DOB, and ssn, as well as any patient history. 
+
+}}}
+
+Patient History {{{
+
+ * A User with an account at the hospital can view their past history. Past history includes their patient information, as well as their past list of appointments and past diagnosis. 
+
+}}}
+
+Patient Diagnosis {{{
+
+ * Patients can view the official diagnosis that a Doctor gives them. 
+
+}}}
+
+Change Rooms {{{
+
+ * Staff can check whether or not a room is available based on maximum number of occupancy for that room. 
+ * User can request rooms based of the same thing.
+
+}}}
+
+List of Allowed Visitors {{{
+
+ * Patients are allowed a list of visitors expressed verbally or by their emergency contact information.
+
+}}}
+
+Pharmacy {{{
+
+ * Patient provides the medicine name to the Pharmacy in the hospital.
+ * Hospital searches their inventory for the medicine and returns some medicine that includes medicine ID, company, manufacture date, expiration date and price.
+
+}}}
+
+Conclusions {{{
+
+}}}
+
