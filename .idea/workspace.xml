@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad41140e-5724-41ca-98f7-3d5f4755823b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project Code/src/t5_main/HospitalInit.java" afterPath="$PROJECT_DIR$/Project Code/src/t5_main/HospitalInit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="ad41140e-5724-41ca-98f7-3d5f4755823b" name="Default" comment="" />
     <ignored path="Hospital.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="ad41140e-5724-41ca-98f7-3d5f4755823b" time="1369940071193" ignored="false" />
@@ -98,7 +95,7 @@
       <file leaf-file-name="HospitalInit.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Project Code/src/t5_main/HospitalInit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="26" selection-start="348" selection-end="348" vertical-scroll-proportion="0.44280443">
+            <state line="12" column="10" selection-start="183" selection-end="183" vertical-scroll-proportion="0.3321033">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#567#575#0" expanded="true" />
@@ -664,7 +661,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Project Code/src/t5_main/HospitalInit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="26" selection-start="348" selection-end="348" vertical-scroll-proportion="0.44280443">
+        <state line="12" column="10" selection-start="183" selection-end="183" vertical-scroll-proportion="0.3321033">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#567#575#0" expanded="true" />
