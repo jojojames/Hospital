@@ -1,7 +1,7 @@
 package t5_relations;
 
-import t5_objects.Patient;
-import t5_objects.Person;
+import t5_domain_objects.Patient;
+import t5_domain_objects.Person;
 
 public class Person_Patient {
     public Patient patient;

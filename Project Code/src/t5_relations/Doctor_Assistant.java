@@ -1,7 +1,7 @@
 package t5_relations;
 
-import t5_objects.Assistant;
-import t5_objects.Doctor;
+import t5_domain_objects.Assistant;
+import t5_domain_objects.Doctor;
 
 public class Doctor_Assistant {
     public Assistant assistant;

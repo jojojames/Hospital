@@ -1,7 +1,7 @@
 package t5_relations;
 
-import t5_objects.Surgeon;
-import t5_objects.Surgery;
+import t5_domain_objects.Surgeon;
+import t5_domain_objects.Surgery;
 
 public class Surgeon_Surgery {
     public Surgery surgery;
