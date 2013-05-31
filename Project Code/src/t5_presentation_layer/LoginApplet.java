@@ -15,7 +15,7 @@ import java.util.Map;
 
 import t5_domain_objects.*;
 
-public class LoginApplet extends JPanel {
+public class LoginApplet extends JPanel implements ActionListener {
 
     //private JTextField How;
     private JTextField username = new JTextField(10);
@@ -42,25 +42,33 @@ public class LoginApplet extends JPanel {
         login.setLocation(740,650);
         login.setSize(100, 25);
 
+        login.addActionListener(this);
         //Button Action
-        login.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                for(Iterator<Map.Entry<String, Person>> it = Person.hashMap.entrySet().iterator();it.hasNext();)
-                {
-                    Map.Entry<String, Person> entry = it.next();
-                    if(entry.getKey().equals(username.getText()))
-                    {
-                        CardLayout cardLayout = (CardLayout) contentPane.getLayout();
-                        cardLayout.next(contentPane);
-                    }
-                }
-            }
-        });
+
 
         //add components
         add (password);
         add (username);
         add (login);
+    }
+    public void actionPerformed(ActionEvent e){
+        String cmd = e.getActionCommand();
+        if(cmd.equals("Login"))
+        {
+            for(Iterator<Map.Entry<String, Person>> it = Person.hashMap.entrySet().iterator();it.hasNext();)
+            {
+                Map.Entry<String, Person> entry = it.next();
+                if(entry.getKey().equals(username.getText()))
+                {
+                    CardLayout cardLayout = (CardLayout) contentPane.getLayout();
+                    cardLayout.next(contentPane);
+                }
+            }
+            //CardLayout cardLayout = (CardLayout) contentPane.getLayout();
+            //cardLayout.next(contentPane);
+
+        }
+
     }
 
     public static class GhostText implements FocusListener, DocumentListener, PropertyChangeListener {

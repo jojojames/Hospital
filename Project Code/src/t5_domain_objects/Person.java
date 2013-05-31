@@ -7,16 +7,14 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Vector;
 
-public class Person {
+public class Person extends PersonElement {
     private String password;
     private String middleName;
     protected int socialSecurity;
     private Date dateOfBirth;
-    public Vector<Person_Patient> personPatient = new Vector<Person_Patient>();
     private String ECrelationship;
     private String firstName;
     private String city;
-    public Vector<Person_Head> personHead = new Vector<Person_Head>();
     private String lastName;
     private String ECfirstName;
     private String username;
@@ -32,16 +30,21 @@ public class Person {
     private int age;
     private int ECmobileNumber;
     protected int idNumber;
-    public Vector<Person_Assistant> personAssistant = new Vector<Person_Assistant>();
     private String EClastName;
     private String ECmiddleName;
+    private int EChomeNumber;
+    public Vector<Person_Assistant> personAssistant = new Vector<Person_Assistant>();
     public Vector<Person_Nurse> personNurse = new Vector<Person_Nurse>();
     public Vector<Person_Doctor> personDoctor = new Vector<Person_Doctor>();
     public Vector<Person_Surgeon> personSurgeon = new Vector<Person_Surgeon>();
-    private int EChomeNumber;
+    public Vector<Person_Head> personHead = new Vector<Person_Head>();
+    public Vector<Person_Patient> personPatient = new Vector<Person_Patient>();
 
     public static HashMap<String, Person> hashMap = new HashMap<String, Person>();
 
+    public Person(){
+
+    }
     /**
      *
      * @param password          Person's created password
@@ -87,6 +90,12 @@ public class Person {
         this.EClastName = EClastName;
         this.ECmiddleName = ECmiddleName;
         this.EChomeNumber = EChomeNumber;
+
+        hashMap.put(username, this);
+    }
+
+    public String toString(){
+        return "";
     }
 
 }
