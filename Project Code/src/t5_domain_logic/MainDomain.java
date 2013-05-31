@@ -1,10 +1,10 @@
 package t5_domain_logic;
-import t5_presentation_layer.LoginView;
+import t5_presentation_layer.Login;
 
 public class MainDomain {
     public static void main(String[] args) {
 		//Applet applet = new HospitalApplet();
 		//Frame frame = new HospitalFrame(applet);
-        LoginView loginView = new LoginView();
+        Login loginView = new Login();
     }
 }

@@ -17,7 +17,7 @@
     <file path="/Nurse.java" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1368843629984" ignored="false" />
     <file path="/OperatingRoom.java" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1368843648949" ignored="false" />
     <file path="/Patient.java" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1368843734076" ignored="false" />
-    <file path="/Person.java" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1368843871009" ignored="false" />
+    <file path="/Person.java" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1370023983663" ignored="false" />
     <file path="/Prescription.java" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1368843897169" ignored="false" />
     <file path="/Skills.java" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1368843922184" ignored="false" />
     <file path="/Surgeon.java" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1368843981119" ignored="false" />
@@ -26,6 +26,20 @@
     <file path="/Dummy.txt" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1369278938446" ignored="false" />
     <file path="$PROJECT_DIR$/../../Java/IntExpo/src/Expo/Main.java" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1369331315589" ignored="false" />
     <file path="/Main.java" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1369941443310" ignored="false" />
+    <file path="/PlannerApplet.java" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1369959345226" ignored="false" />
+    <file path="$USER_HOME$/IdeaProjects/CS 3340 - Assignment 7a/src/planner/gui/PlannerApplet.java" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1370023297015" ignored="false" />
+    <file path="$USER_HOME$/IdeaProjects/CS 3340 - Assignment 7a/src/planner/gui/domain/Item.java" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1369958197411" ignored="false" />
+    <file path="/Item.java" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1369958197411" ignored="false" />
+    <file path="$USER_HOME$/IdeaProjects/CS 3340 - Assignment 7a/src/planner/Planner.java" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1369959956888" ignored="false" />
+    <file path="/Planner.java" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1369959904862" ignored="false" />
+    <file path="/LoginView.java" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1370022438470" ignored="false" />
+    <file path="/Login.java" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1370027163129" ignored="false" />
+    <file path="/LoginApplet.java" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1370029517449" ignored="false" />
+    <file path="/MainDomain.java" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1370023072396" ignored="false" />
+    <file path="$USER_HOME$/IdeaProjects/paneltest/src/CardLayoutExample.java" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1370024700605" ignored="false" />
+    <file path="/AdminApplet.java" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1370027136899" ignored="false" />
+    <file path="/MyPanel.java" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1370026969153" ignored="false" />
+    <file path="/MyPanel2.java" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1370026974243" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +54,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -77,6 +90,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -86,36 +100,75 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HospitalInit.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/t5_domain_logic/HospitalInit.java">
+      <file leaf-file-name="Person.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/t5_domain_objects/Person.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="0" selection-start="1103" selection-end="1103" vertical-scroll-proportion="0.0">
+            <state line="42" column="82" selection-start="1410" selection-end="1410" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#1391#1407#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Login.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/Login.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="43" selection-start="743" selection-end="743" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#979#1113#0" expanded="true" />
+                <element signature="e#1102#1103#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginApplet.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/LoginApplet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="18" selection-start="1344" selection-end="1344" vertical-scroll-proportion="0.5964392">
+              <folding>
+                <element signature="e#1382#1949#0" expanded="true" />
+                <element signature="e#1938#1939#0" expanded="true" />
+                <element signature="class#GhostText#0;class#LoginApplet#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProtectionDomain.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.7.0_17/src.zip!/java/security/ProtectionDomain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="75" column="0" selection-start="1965" selection-end="1965" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#16213#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#12123#12413#0" expanded="false" />
+                <element signature="e#12394#12395#0" expanded="false" />
+                <element signature="e#15364#16202#0" expanded="false" />
+                <element signature="e#16187#16188#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HospitalApplet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/HospitalApplet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="13" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginView.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/LoginView.java">
+      <file leaf-file-name="AdminApplet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/AdminApplet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="21" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginView.form" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/LoginView.form">
-          <provider selected="true" editor-type-id="ui-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainDomain.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/t5_domain_logic/MainDomain.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="277" selection-end="277" vertical-scroll-proportion="0.24725275">
-              <folding />
+            <state line="12" column="49" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -132,34 +185,7 @@
       <file leaf-file-name="HospitalFrame.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/t5_domain_logic/HospitalFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="27" selection-start="488" selection-end="488" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Patient.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/t5_domain_objects/Patient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="905" selection-end="905" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Surgeon.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/t5_domain_objects/Surgeon.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="27" selection-start="852" selection-end="852" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Surgery.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/t5_domain_objects/Surgery.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="13" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0">
+            <state line="20" column="30" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -175,14 +201,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/t5_objects/Head.java" />
-        <option value="$PROJECT_DIR$/src/t5_objects/Insurance.java" />
-        <option value="$PROJECT_DIR$/src/t5_objects/OperatingRoom.java" />
-        <option value="$PROJECT_DIR$/src/t5_objects/Patient.java" />
-        <option value="$PROJECT_DIR$/src/t5_objects/Person.java" />
-        <option value="$PROJECT_DIR$/src/t5_objects/Prescription.java" />
-        <option value="$PROJECT_DIR$/src/t5_objects/Skills.java" />
-        <option value="$PROJECT_DIR$/src/t5_objects/Surgeon.java" />
         <option value="$PROJECT_DIR$/src/t5_objects/Surgery.java" />
         <option value="$PROJECT_DIR$/src/t5_objects/ExaminationRoom.java" />
         <option value="$PROJECT_DIR$/src/t5_objects/Nurse.java" />
@@ -190,14 +208,23 @@
         <option value="$PROJECT_DIR$/src/t5_main/Main.java" />
         <option value="$PROJECT_DIR$/src/t5_main/MainController.java" />
         <option value="$PROJECT_DIR$/src/t5_domain_logic/MainController.java" />
+        <option value="$PROJECT_DIR$/src/t5_presentation_layer/LoginView.form" />
+        <option value="$PROJECT_DIR$/src/t5_presentation_layer/LoginView.java" />
         <option value="$PROJECT_DIR$/src/t5_domain_logic/MainDomain.java" />
+        <option value="$PROJECT_DIR$/src/t5_domain_objects/Person.java" />
+        <option value="$PROJECT_DIR$/src/t5_presentation_layer/MyPanel.java" />
+        <option value="$PROJECT_DIR$/src/t5_presentation_layer/MyPanel2.java" />
+        <option value="$PROJECT_DIR$/src/t5_presentation_layer/Login.java" />
+        <option value="$PROJECT_DIR$/src/t5_presentation_layer/AdminApplet.java" />
+        <option value="$PROJECT_DIR$/src/t5_presentation_layer/LoginApplet.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
-    <option name="width" value="1280" />
-    <option name="height" value="717" />
+    <option name="x" value="-964" />
+    <option name="y" value="-312" />
+    <option name="width" value="965" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -308,10 +335,6 @@
               <option name="myItemId" value="t5_presentation_layer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LoginView" />
-              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -357,17 +380,19 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
-  <component name="RunManager" selected="Application.MainDomain">
+  <component name="RunManager" selected="Application.Login">
     <configuration default="false" name="MainDomain" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="t5_domain_logic.MainDomain" />
@@ -385,6 +410,66 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="LoginView" type="Applet" factoryName="Applet" temporary="true">
+      <module name="Project Code" />
+      <option name="MAIN_CLASS_NAME" value="t5_presentation_layer.LoginView" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="0" />
+      <option name="HEIGHT" value="0" />
+      <option name="POLICY_FILE" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Login" type="Applet" factoryName="Applet" temporary="true">
+      <module name="Project Code" />
+      <option name="MAIN_CLASS_NAME" value="t5_presentation_layer.Login" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="0" />
+      <option name="HEIGHT" value="0" />
+      <option name="POLICY_FILE" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Login" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="t5_presentation_layer.Login" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Project Code" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="0" />
+      <option name="HEIGHT" value="0" />
+      <option name="POLICY_FILE" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -400,16 +485,27 @@
       <envs />
       <method />
     </configuration>
-    <list size="1">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.MainDomain" />
+      <item index="1" class="java.lang.String" itemvalue="Applet.LoginView" />
+      <item index="2" class="java.lang.String" itemvalue="Applet.Login" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Login" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.MainDomain" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Application.Login" />
+        <item index="1" class="java.lang.String" itemvalue="Applet.Login" />
+        <item index="2" class="java.lang.String" itemvalue="Applet.LoginView" />
+        <item index="3" class="java.lang.String" itemvalue="Application.MainDomain" />
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SliceManager">
+    <option name="analysisUIOptions">
+      <AnalysisUIOptions />
+    </option>
+  </component>
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
@@ -436,28 +532,29 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="717" extended-state="6" />
+    <frame x="-964" y="-312" width="965" height="1040" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.6722973" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.6722973" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.6722973" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="JFormDesigner Bindings" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283082" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23356009" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959481" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20097245" sideWeight="0.67336684" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32663316" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26135105" sideWeight="0.8321996" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16780046" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.6722973" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -527,55 +624,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/t5_domain_objects/ExaminationRoom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/t5_domain_objects/OperatingRoom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="26" selection-start="285" selection-end="285" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/t5_domain_objects/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="20" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/t5_domain_objects/Prescription.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="83" selection-end="83" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/t5_domain_objects/Room.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="113" selection-end="113" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/t5_domain_objects/Skills.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="60" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/t5_domain_objects/Surgeon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="27" selection-start="852" selection-end="852" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/t5_domain_objects/Patient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="0" selection-start="905" selection-end="905" vertical-scroll-proportion="0.0">
@@ -590,22 +638,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/LoginView.java">
+    <entry file="file://$PROJECT_DIR$/src/t5_domain_objects/Diagnosis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="21" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0">
+        <state line="2" column="13" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/LoginView.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/t5_domain_logic/HospitalInit.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="0" selection-start="1103" selection-end="1103" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/t5_domain_logic/MainDomain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="18" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/t5_domain_objects/Allergies.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="13" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/t5_domain_objects/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="82" selection-start="1410" selection-end="1410" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1391#1407#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -618,15 +684,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/t5_domain_logic/HospitalFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="27" selection-start="488" selection-end="488" vertical-scroll-proportion="0.0">
+        <state line="20" column="30" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/t5_domain_logic/MainDomain.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_17/src.zip!/java/security/ProtectionDomain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="277" selection-end="277" vertical-scroll-proportion="0.24725275">
+        <state line="75" column="0" selection-start="1965" selection-end="1965" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#16213#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#12123#12413#0" expanded="false" />
+            <element signature="e#12394#12395#0" expanded="false" />
+            <element signature="e#15364#16202#0" expanded="false" />
+            <element signature="e#16187#16188#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="43" selection-start="743" selection-end="743" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#979#1113#0" expanded="true" />
+            <element signature="e#1102#1103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/HospitalApplet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="13" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/AdminApplet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="49" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/LoginApplet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="18" selection-start="1344" selection-end="1344" vertical-scroll-proportion="0.5964392">
+          <folding>
+            <element signature="e#1382#1949#0" expanded="true" />
+            <element signature="e#1938#1939#0" expanded="true" />
+            <element signature="class#GhostText#0;class#LoginApplet#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
