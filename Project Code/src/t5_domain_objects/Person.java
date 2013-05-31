@@ -4,6 +4,7 @@ import t5_relations.*;
 
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Vector;
 
 public class Person {
@@ -38,6 +39,8 @@ public class Person {
     public Vector<Person_Doctor> personDoctor = new Vector<Person_Doctor>();
     public Vector<Person_Surgeon> personSurgeon = new Vector<Person_Surgeon>();
     private int EChomeNumber;
+
+    public static HashMap<String, Person> hashMap = new HashMap<String, Person>();
 
     /**
      *
