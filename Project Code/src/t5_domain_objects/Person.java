@@ -9,26 +9,27 @@ import java.util.Vector;
 
 public class Person extends PersonElement {
     private String userId;
-    private String username;
-    private String password;
     private String firstName;
-    private String middleName;
     private String lastName;
-    private String email;
-    private String zip;
-    private String phoneNumber;
-    private String address;
-    private String ECContact;
-    private String ECNumber;
-    protected String socialSecurity;
     private String dateOfBirth;
-    private int age;
-    private char sex;
-
+    private String socialSecurity;
+    private String address;
     private String city;
-    private int mobile;
-    public Insurance insurace;
-    protected int accountNumber;
+    private String homePhone;
+    private String mobilePhone;
+    private String emailAddress;
+    private String ECfirstName;
+    private String EClastName;
+    private String EChomePhone;
+    private String ECmobilePhone;
+    private String insuranceProvider;
+    private String insuranceAccount;
+    private String userName;
+    private String sex;
+    private String state;
+    private String age;
+    private String password;
+
     public Vector<Person_Assistant> personAssistant = new Vector<Person_Assistant>();
     public Vector<Person_Nurse> personNurse = new Vector<Person_Nurse>();
     public Vector<Person_Doctor> personDoctor = new Vector<Person_Doctor>();
@@ -81,27 +82,38 @@ public class Person extends PersonElement {
      * @param age               person's age
      */
 
-    public Person(String userId, String username, String password, String firstName, String middleName, String lastName, String email, String zip, String phoneNumber, String address, String ECContact, String ECNumber, String socialSecurity, String dateOfBirth, int age, char sex) {
+    public Person(String userId, String firstName, String lastName, 
+            String dateOfBirth, String socialSecurity, String address, 
+            String city, String homePhone, String mobilePhone, 
+            String emailAddress, String ECfirstName, String EClastName, 
+            String EChomePhone, String ECmobilePhone, 
+            String insuranceProvider, String insuranceAccount, String userName, 
+            String sex, String state, String age, String password) {
 
         this.userId = userId;
-        this.username = username;
-        this.password = password;
         this.firstName = firstName;
-        this.middleName = middleName;
         this.lastName = lastName;
-        this.email = email;
-        this.zip = zip;
-        this.phoneNumber = phoneNumber;
-        this.address = address;
-        this.ECContact = ECContact;
-        this.ECNumber = ECNumber;
-        this.socialSecurity = socialSecurity;
         this.dateOfBirth = dateOfBirth;
-        this.age = age;
+        this.socialSecurity = socialSecurity;
+        this.address = address;
+        this.city = city;
+        this.homePhone = homePhone;
+        this.mobilePhone = mobilePhone;
+        this.emailAddress = emailAddress;
+        this.ECfirstName = ECfirstName;
+        this.EClastName = EClastName;
+        this.EChomePhone = EChomePhone;
+        this.ECmobilePhone = ECmobilePhone;
+        this.insuranceProvider = insuranceProvider;
+        this.insuranceAccount = insuranceAccount;
+        this.userName = userName;
         this.sex = sex;
+        this.state = state;
+        this.age = age;
+        this.password = password;
 
         // TODO: VERIFY THIS HASHMAP IS NEEDED.
-        hashMap.put(username, this);
+        hashMap.put(userName, this);
     }
 
     public String toString() {

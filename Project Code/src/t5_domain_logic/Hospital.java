@@ -24,6 +24,8 @@ public class Hospital {
     public Vector<Insurance> allInsurance = new Vector<Insurance>();
     public Vector<InsurancePolicy> allInsurancePolicy = new Vector<InsurancePolicy>();
 
+    private HashMap<String, Person> allUsers = new HashMap<String, Person>();
+
     /*
     Things Accounted For So Far
     --------------------------
@@ -58,7 +60,55 @@ public class Hospital {
         build_insurance();
         build_insurance_policy();
 
+        generate_users();
+
     }
+
+    private void generate_users() {
+        Person a = new Person(getUniqueUserID(), "a", "A", "1/1/92", "123-123-123", "Address", "City", "310-123-123",
+                "323-123-123", "email.com", "aEC", "AEC", "123-123-123", "323-123-122", "InsuranceProvider",
+                "InsuranceAccount", "aUserName", "m", "CA", "20", "Password");
+        allUsers.put(a.getUserId(), a);
+
+
+        Person b = new Person(getUniqueUserID(), "b", "B", "1/1/91", "223-124-123", "Address", "City", "311-123-123",
+                "323-125-123", "email.com", "bEC", "BEC", "123-153-123", "323-124-122", "InsuranceProvider",
+                "InsuranceAccount", "bUserName", "m", "CA", "21", "Password");
+        allUsers.put(b.getUserId(), b);
+
+
+        Person c = new Person(getUniqueUserID(), "c", "C", "1/1/93", "253-124-123", "Address", "City", "111-123-123",
+                "326-122-123", "email.com", "cEC", "CEC", "123-753-523", "323-124-132", "InsuranceProvider",
+                "InsuranceAccount", "cUserName", "m", "CA", "26", "Password");
+        allUsers.put(c.getUserId(), c);
+
+        Person d = new Person(getUniqueUserID(), "d", "D", "9/1/93", "953-924-123", "Address", "City", "191-123-123",
+                "326-822-193", "email.com", "dEC", "DEC", "123-853-528", "393-124-130", "InsuranceProvider",
+                "InsuranceAccount", "dUserName", "f", "CA", "29", "Password");
+        allUsers.put(d.getUserId(), d);
+
+        Person e = new Person(getUniqueUserID(), "e", "E", "9/8/93", "883-924-123", "Address", "City", "198-123-123",
+                "326-822-883", "email.com", "eEC", "EEC", "123-853-828", "393-124-138", "InsuranceProvider",
+                "InsuranceAccount", "eUserName", "f", "CA", "27", "Password");
+        allUsers.put(e.getUserId(), e);
+    }
+
+    public HashMap<String, Person> getAllUsers() {
+        return allUsers;
+    }
+
+    public void setAllUsers(HashMap<String, Person> allUsers) {
+        this.allUsers = allUsers;
+    }
+
+    private String getUniqueUserID() {
+        // Create a user id based on the count of all users. User ID is guaranteed to be unique this way.
+        // TODO: The method isn't very good, it forces a User to be immediately added to whatever data structure before
+        // TODO: creating another user. If the user isn't added after being created. On creation, the next user will
+        // TODO: have the same userid as the previous user. Rewrite this so that that userid value will always be unique.
+        return String.valueOf(allUsers.size() + staff.size() + 1);
+    }
+
 
     private void hire_surgeon() {
         int numSurgeons = 10;

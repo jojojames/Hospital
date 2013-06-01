@@ -1,5 +1,6 @@
 package t5_presentation_layer;
 
+import t5_domain_logic.Hospital;
 import t5_domain_objects.Person;
 
 import javax.swing.*;
@@ -26,12 +27,11 @@ public class MainForm {
     JPanel contentPane;
     private JFrame frame;
 
-    // TODO: Refactor this so that it's in the Hospital Object instead.
-    // Key = userid, Value = password
-    private HashMap<String, Person> usersInSystem;
+    // Holds all the predefined domain objects to be used with other pages.
+    // Send specific data structures to other pages in order to use.
+    private Hospital hospital = new Hospital();
 
     public static void main(String[] args) {
-
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 new MainForm();
@@ -40,15 +40,6 @@ public class MainForm {
     }
 
     private void init_frame() {
-        // Initialize the userInSystem hashmap.
-        usersInSystem = new HashMap<String, Person>();
-        // TEST CASE, CREATE A USER AND ADD IT TO THE HASHMAP TO TEST LOGGING IN WITH A USER
-        // ********************************************************************************
-        Person user = new Person("1", "UserName", "1", "FirstName", "MiddleName", "LastName", "test@test.com",
-                "90111", "323-100-100", "Address", "UserECContact", "UserECNumber", "Social", "Date", 20, 'm');
-        usersInSystem.put(user.getUserId(), user);
-        // ********************************************************************************
-
         contentPane = new JPanel();
         contentPane.setBorder(
                 BorderFactory.createEmptyBorder(5, 5, 5, 5));
@@ -61,10 +52,9 @@ public class MainForm {
         UserPage userPage = new UserPage(contentPane);
         contentPane.add(userPage.getUserPagePanel(), "User Page");
 
-        // Page User sees if signing up.
-        SignUpPage signUpPage = new SignUpPage(contentPane, usersInSystem);
-        contentPane.add(signUpPage.getSignUpPagePanel(), "Sign Up Page");
-
+        // Page User sees when signing up.
+        NewUserPage newUserPage = new NewUserPage(contentPane, hospital);
+        contentPane.add(newUserPage.getPanel1(), "New User Page");
 
         frame = new JFrame("MainForm");
         frame.setContentPane(contentPane);
@@ -84,8 +74,8 @@ public class MainForm {
                 // TODO: getText() is a deprecated function. Figure out how to use getPassword() instead.
                 String enteredPassword = passwordPasswordField.getText();
 
-                if(usersInSystem.containsKey(enteredUserId)) {
-                    String realPassword = usersInSystem.get(enteredUserId).getPassword();
+                if(hospital.getAllUsers().containsKey(enteredUserId)) {
+                    String realPassword = hospital.getAllUsers().get(enteredUserId).getPassword();
                     if(realPassword.equals(enteredPassword)) {
                         // they entered the correct password
                         clearTextFields();
@@ -116,7 +106,7 @@ public class MainForm {
         signUpButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 CardLayout cl = (CardLayout) contentPane.getLayout();
-                cl.show(contentPane, "Sign Up Page");
+                cl.show(contentPane, "New User Page");
             }
 
         });
