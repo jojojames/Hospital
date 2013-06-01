@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Vector;
 
 public class Person extends PersonElement {
+    private String userId;
     private String password;
     private String middleName;
     protected int socialSecurity;
@@ -45,6 +46,25 @@ public class Person extends PersonElement {
     public Person(){
 
     }
+
+    // Getters and Setters
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getUserId() {
+
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
     /**
      *
      * @param password          Person's created password
@@ -68,8 +88,9 @@ public class Person extends PersonElement {
      * @param ECmiddleName      person's emergency contact middle name
      * @param EChomeNumber      person's emergency contact home number
      */
-    public Person(String password, String middleName, String ECrelationship, String firstName, String city, String lastName, String ECfirstName, String username, String email, char sex, String zip, int mobile, int home, 
+    public Person(String userid, String password, String middleName, String ECrelationship, String firstName, String city, String lastName, String ECfirstName, String username, String email, char sex, String zip, int mobile, int home,
                   int phone, int address, int age, int ECmobileNumber, String EClastName, String ECmiddleName, int EChomeNumber) {
+        this.userId = userid;
         this.password = password;
         this.middleName = middleName;
         this.firstName = firstName;
