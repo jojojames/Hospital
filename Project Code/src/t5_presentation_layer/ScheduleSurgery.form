@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="t5_presentation_layer.ScheduleSurgery">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="FormLayout">
+    <rowspec value="center:60px:noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="center:8px:noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:8dlu:noGrow"/>
+    <rowspec value="center:25px:noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:25px:noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="center:25px:noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="center:25px:noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:25px:noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:25px:noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:25px:noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="center:25px:noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="center:25px:noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="center:25px:noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="center:25px:noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:100px:noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:25px:noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:25px:noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:25px:noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:60px:noGrow"/>
+    <colspec value="fill:60px:noGrow"/>
+    <colspec value="left:4dlu:noGrow"/>
+    <colspec value="fill:113px:noGrow"/>
+    <colspec value="left:4dlu:noGrow"/>
+    <colspec value="fill:175px:noGrow"/>
+    <colspec value="left:8dlu:noGrow"/>
+    <colspec value="fill:119px:noGrow"/>
+    <colspec value="left:8dlu:noGrow"/>
+    <colspec value="fill:94px:noGrow"/>
+    <colspec value="left:8dlu:noGrow"/>
+    <colspec value="fill:76px:noGrow"/>
+    <colspec value="left:4dlu:noGrow"/>
+    <colspec value="fill:170px:noGrow"/>
+    <colspec value="left:4dlu:noGrow"/>
+    <colspec value="fill:60px:noGrow"/>
+    <constraints>
+      <xy x="20" y="20" width="939" height="725"/>
+    </constraints>
+    <properties>
+      <enabled value="true"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="1c0e1" class="javax.swing.JTextField" binding="textField2" default-binding="true">
+        <constraints>
+          <grid row="4" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="a7418" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <text value="Search Patient by ID:"/>
+        </properties>
+      </component>
+      <component id="24000" class="javax.swing.JSeparator">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="7" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="cfe3c" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="10" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <font size="24" style="1"/>
+          <text value="Schedule A Surgery"/>
+        </properties>
+      </component>
+      <component id="2e65c" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <text value="Patient Name:"/>
+        </properties>
+      </component>
+      <component id="fbe20" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+        <constraints>
+          <grid row="6" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="db194" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <text value="Patient Address:"/>
+        </properties>
+      </component>
+      <component id="a92f" class="javax.swing.JTextField" binding="textField3" default-binding="true">
+        <constraints>
+          <grid row="8" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="9019" class="javax.swing.JTextField" binding="textField4" default-binding="true">
+        <constraints>
+          <grid row="10" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="78a4c" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <text value="Date of Birth:"/>
+        </properties>
+      </component>
+      <component id="afd00" class="javax.swing.JTextField" binding="textField5" default-binding="true">
+        <constraints>
+          <grid row="12" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="d50a1" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="12" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <text value="Home Phone:"/>
+        </properties>
+      </component>
+      <component id="7e8f2" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="14" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <text value="Mobile Phone:"/>
+        </properties>
+      </component>
+      <component id="bb68e" class="javax.swing.JTextField" binding="textField6" default-binding="true">
+        <constraints>
+          <grid row="14" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="71e53" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="16" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <text value="Guarantor:"/>
+        </properties>
+      </component>
+      <component id="d417a" class="javax.swing.JTextField" binding="textField7" default-binding="true">
+        <constraints>
+          <grid row="16" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="3ef70" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="20" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <text value="Procedure:"/>
+        </properties>
+      </component>
+      <component id="a47f" class="javax.swing.JTextField" binding="textField8" default-binding="true">
+        <constraints>
+          <grid row="20" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="e20ca" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="26" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <text value="Surgery Date:"/>
+        </properties>
+      </component>
+      <component id="5f9ab" class="javax.swing.JTextField" binding="textField9" default-binding="true">
+        <constraints>
+          <grid row="26" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="622a9" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="22" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <text value="Procedure Code:"/>
+        </properties>
+      </component>
+      <component id="fbec3" class="javax.swing.JTextField" binding="textField10" default-binding="true">
+        <constraints>
+          <grid row="22" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="ee0c6" class="javax.swing.JTextField" binding="textField11" default-binding="true">
+        <constraints>
+          <grid row="24" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="30309" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="24" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <text value="Diagnosis Code:"/>
+        </properties>
+      </component>
+      <component id="14270" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="28" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="5" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <text value="Comments:"/>
+        </properties>
+      </component>
+      <component id="cb0cc" class="javax.swing.JTextArea" binding="textArea1" default-binding="true">
+        <constraints>
+          <grid row="28" column="4" row-span="1" col-span="3" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <lineWrap value="true"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="49e96" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="30" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <text value="Attnd. Physician(s):"/>
+        </properties>
+      </component>
+      <component id="4a881" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="32" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <text value="Assistant(s):"/>
+        </properties>
+      </component>
+      <component id="c235e" class="javax.swing.JComboBox" binding="comboBox1" default-binding="true">
+        <constraints>
+          <grid row="30" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <model>
+            <item value="Attn. Physician 1"/>
+            <item value="Attn. Physician 2"/>
+            <item value="Attn. Physician 3"/>
+            <item value="Attn. Physician 4"/>
+            <item value="Attn. Physician 5"/>
+            <item value="Attn. Physician 6"/>
+            <item value="Attn. Physician 7"/>
+            <item value="Attn. Physician 8"/>
+            <item value="Attn. Physician 9"/>
+            <item value="Attn. Physician 10"/>
+          </model>
+        </properties>
+      </component>
+      <component id="3dd26" class="javax.swing.JComboBox" binding="comboBox2" default-binding="true">
+        <constraints>
+          <grid row="32" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <model>
+            <item value="Assistant 1"/>
+            <item value="Assistant 2"/>
+            <item value="Assistant 3"/>
+            <item value="Assistant 4"/>
+            <item value="Assistant 5"/>
+            <item value="Assistant 6"/>
+            <item value="Assistant 7"/>
+            <item value="Assistant 8"/>
+            <item value="Assistant 9"/>
+            <item value="Assistant 10"/>
+          </model>
+        </properties>
+      </component>
+      <component id="235cb" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="34" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <text value="Prim. Physician:"/>
+        </properties>
+      </component>
+      <component id="966aa" class="javax.swing.JComboBox" binding="comboBox3" default-binding="true">
+        <constraints>
+          <grid row="34" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <model>
+            <item value="Prim. Physician 1"/>
+            <item value="Prim. Physician 2"/>
+            <item value="Prim. Physician 3"/>
+            <item value="Prim. Physician 4"/>
+            <item value="Prim. Physician 5"/>
+            <item value="Prim. Physician 6"/>
+            <item value="Prim. Physician 7"/>
+            <item value="Prim. Physician 8"/>
+            <item value="Prim. Physician 9"/>
+            <item value="Prim. Physician 10"/>
+          </model>
+        </properties>
+      </component>
+      <component id="727c9" class="javax.swing.JTextField" binding="textField12" default-binding="true">
+        <constraints>
+          <grid row="6" column="12" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="d5fb4" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="6" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <text value="Ins. Provider:"/>
+        </properties>
+      </component>
+      <component id="bdb59" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="8" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <text value="Policy #"/>
+        </properties>
+      </component>
+      <component id="34a0b" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="10" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <text value="Group #"/>
+        </properties>
+      </component>
+      <component id="6df07" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="12" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <text value="Subs. Name:"/>
+        </properties>
+      </component>
+      <component id="12f6b" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="14" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <text value="Ins. Phone #"/>
+        </properties>
+      </component>
+      <component id="4e674" class="javax.swing.JTextField" binding="textField13" default-binding="true">
+        <constraints>
+          <grid row="8" column="12" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="7c0ea" class="javax.swing.JTextField" binding="textField14" default-binding="true">
+        <constraints>
+          <grid row="10" column="12" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="90e53" class="javax.swing.JTextField" binding="textField15" default-binding="true">
+        <constraints>
+          <grid row="12" column="12" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="918e1" class="javax.swing.JTextField" binding="textField16" default-binding="true">
+        <constraints>
+          <grid row="14" column="12" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="dc050" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="16" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <text value="Auth. #"/>
+        </properties>
+      </component>
+      <component id="e05a" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="18" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <text value="# of Days:"/>
+        </properties>
+      </component>
+      <component id="4a228" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="20" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <text value="Ins. Contact:"/>
+        </properties>
+      </component>
+      <component id="9ae0c" class="javax.swing.JTextField" binding="textField17" default-binding="true">
+        <constraints>
+          <grid row="16" column="12" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="6b8a1" class="javax.swing.JTextField" binding="textField18" default-binding="true">
+        <constraints>
+          <grid row="18" column="12" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="87fc0" class="javax.swing.JTextField" binding="textField19" default-binding="true">
+        <constraints>
+          <grid row="20" column="12" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="a52f9" class="javax.swing.JCheckBox" binding="inpatientCheckBox" default-binding="true">
+        <constraints>
+          <grid row="22" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="Inpatient"/>
+        </properties>
+      </component>
+      <component id="56441" class="javax.swing.JCheckBox" binding="outpatientCheckBox" default-binding="true">
+        <constraints>
+          <grid row="24" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="Outpatient"/>
+        </properties>
+      </component>
+      <component id="11ad5" class="javax.swing.JButton" binding="cancelButton" default-binding="true">
+        <constraints>
+          <grid row="34" column="10" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="Cancel"/>
+        </properties>
+      </component>
+      <component id="c64b8" class="javax.swing.JButton" binding="clearButton" default-binding="true">
+        <constraints>
+          <grid row="32" column="10" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="Clear"/>
+        </properties>
+      </component>
+      <component id="bc100" class="javax.swing.JButton" binding="scheduleSurgeryButton" default-binding="true">
+        <constraints>
+          <grid row="30" column="10" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="Schedule Surgery"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
