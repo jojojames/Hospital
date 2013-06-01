@@ -21,13 +21,14 @@ public class MainForm {
     private JTextField userIdTextField;
     private JPasswordField passwordPasswordField;
     private JPanel MainPanel;
+    private JButton signUpButton;
 
     JPanel contentPane;
     private JFrame frame;
 
     // TODO: Refactor this so that it's in the Hospital Object instead.
     // Key = userid, Value = password
-    private HashMap<String, String> usersInSystem;
+    private HashMap<String, Person> usersInSystem;
 
     public static void main(String[] args) {
 
@@ -40,23 +41,30 @@ public class MainForm {
 
     private void init_frame() {
         // Initialize the userInSystem hashmap.
-        usersInSystem = new HashMap<String, String>();
-        Person admin = new Person("2", "2","","","","","","","Admin","",' ',"",0,0,0,0,0,0,"","",0);
+        usersInSystem = new HashMap<String, Person>();
         // TEST CASE, CREATE A USER AND ADD IT TO THE HASHMAP TO TEST LOGGING IN WITH A USER
         // ********************************************************************************
-        Person user = new Person("1", "1","","","","","","","User","",' ',"",0,0,0,0,0,0,"","",0);
-        usersInSystem.put(user.getUserId(), user.getPassword());
+        Person user = new Person("1", "UserName", "1", "FirstName", "MiddleName", "LastName", "test@test.com",
+                "90111", "323-100-100", "Address", "UserECContact", "UserECNumber", "Social", "Date", 20, 'm');
+        usersInSystem.put(user.getUserId(), user);
         // ********************************************************************************
-
 
         contentPane = new JPanel();
         contentPane.setBorder(
                 BorderFactory.createEmptyBorder(5, 5, 5, 5));
         contentPane.setLayout(new CardLayout());
-        contentPane.add(MainPanel, "Login");
 
+        // Default Page user sees, the Login Page.
+        contentPane.add(MainPanel, "Login Page");
+
+        // Page User sees after logging in.
         UserPage userPage = new UserPage(contentPane);
         contentPane.add(userPage.getUserPagePanel(), "User Page");
+
+        // Page User sees if signing up.
+        SignUpPage signUpPage = new SignUpPage(contentPane, usersInSystem);
+        contentPane.add(signUpPage.getSignUpPagePanel(), "Sign Up Page");
+
 
         frame = new JFrame("MainForm");
         frame.setContentPane(contentPane);
@@ -77,15 +85,14 @@ public class MainForm {
                 String enteredPassword = passwordPasswordField.getText();
 
                 if(usersInSystem.containsKey(enteredUserId)) {
-                    String realPassword = usersInSystem.get(enteredUserId);
+                    String realPassword = usersInSystem.get(enteredUserId).getPassword();
                     if(realPassword.equals(enteredPassword)) {
                         // they entered the correct password
                         clearTextFields();
                         // They entered their information correctly, so switch the panel to something else.
                         // Switch to the next pane.
                         CardLayout cl = (CardLayout) contentPane.getLayout();
-                        cl.next(contentPane);
-
+                        cl.show(contentPane, "User Page");
                     } else {
                         // they entered the wrong password
                         // TODO: WRITE A PROMPT TO DISPLAY
@@ -104,6 +111,14 @@ public class MainForm {
             public void actionPerformed(ActionEvent e) {
                 clearTextFields();
             }
+        });
+
+        signUpButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                CardLayout cl = (CardLayout) contentPane.getLayout();
+                cl.show(contentPane, "Sign Up Page");
+            }
+
         });
     }
 

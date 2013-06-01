@@ -26,6 +26,7 @@ public class UserPage {
             public void actionPerformed(ActionEvent e) {
                 CardLayout cl = (CardLayout) contentPane.getLayout();
                 cl.previous(contentPane);
+                cl.show(contentPane, "Login Page");
             }
         });
     }
