@@ -22,16 +22,17 @@ class HospitalFrame extends Frame implements ActionListener {
 		applet.init();
 		this.show();
 	}
+
 	public void actionPerformed(ActionEvent evt) {
 		String arg = evt.getActionCommand();
 		if (arg.equals("Quit")){
 			System.exit(0);
-		}
+		}/*
 		if (arg.equals("Scheduler")){
 			Applet applet = new ScheduleApplet();
 			Frame frame = new HospitalFrame(applet);
 			applet.init();
 			this.show();
-		}
+		}*/
 	}
 }

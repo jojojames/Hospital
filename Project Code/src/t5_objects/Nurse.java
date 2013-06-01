@@ -15,11 +15,13 @@ public class Nurse {
     public Doctor doctor;
     public Skills skills;
     public Ward ward;
-
+    private int skillID;
+    private int departmentID;
     /**
      *
      */
-    public Nurse() {
-
+    public Nurse(int skillID, int departmentID) {
+        this.skillID = skillID;
+        this.departmentID = departmentID;
     }
 }
