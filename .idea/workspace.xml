@@ -2,20 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad41140e-5724-41ca-98f7-3d5f4755823b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/LoginPage.form" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/LoginPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/NewUserPage.form" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/NewUserPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/ScheduleSurgery.form" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/ScheduleSurgery.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/NewUserPage.form" afterPath="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/NewUserPage.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/NewUserPage.java" afterPath="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/NewUserPage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Hospital.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="ad41140e-5724-41ca-98f7-3d5f4755823b" time="1370111356573" ignored="false" />
+    <file path="/Dummy.txt" changelist="ad41140e-5724-41ca-98f7-3d5f4755823b" time="1370115035638" ignored="false" />
     <file path="/Hospital.java" changelist="ad41140e-5724-41ca-98f7-3d5f4755823b" time="1370061379243" ignored="false" />
     <file path="/LoginPage.java" changelist="ad41140e-5724-41ca-98f7-3d5f4755823b" time="1370102760701" ignored="false" />
+    <file path="/NewUserPage.java" changelist="ad41140e-5724-41ca-98f7-3d5f4755823b" time="1370115642757" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,24 +31,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/Project Code/src/t5_domain_logic/Hospital.java" line="2" class="Hospital.java" package="">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -89,6 +67,24 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/Project Code/src/t5_domain_logic/Hospital.java" line="2" class="Hospital.java" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -120,8 +116,9 @@
         <option value="$PROJECT_DIR$/Project Code/src/t5_domain_logic/Hospital.java" />
         <option value="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/LoginPage.form" />
         <option value="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/LoginPage.java" />
-        <option value="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/NewUserPage.form" />
         <option value="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/ScheduleSurgery.form" />
+        <option value="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/NewUserPage.java" />
+        <option value="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/NewUserPage.form" />
       </list>
     </option>
   </component>
@@ -223,6 +220,54 @@
               <option name="myItemId" value="t5_presentation_layer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserPage" />
+              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hospital" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="t5_presentation_layer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SignUpPage" />
+              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hospital" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="t5_presentation_layer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ScheduleSurgery" />
+              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -244,6 +289,24 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="NewUserPage" />
               <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hospital" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="t5_presentation_layer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -313,13 +376,13 @@
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
+    <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -356,19 +419,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -394,6 +444,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -491,7 +554,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24980111" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10739857" sideWeight="0.67001545" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.10739857" sideWeight="0.67001545" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998455" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -566,13 +629,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_domain_logic/ScheduleApplet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="93" selection-end="93" vertical-scroll-proportion="0.071513705">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Project Code/src/t5_domain_logic/HospitalFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="6" selection-start="203" selection-end="203" vertical-scroll-proportion="0.071513705">
@@ -590,13 +646,6 @@
     <entry file="file://$PROJECT_DIR$/Project Code/src/t5_domain_logic/HospitalApplet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="8" selection-start="130" selection-end="130" vertical-scroll-proportion="0.08939213">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_domain_objects/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="141" selection-end="141" vertical-scroll-proportion="0.047393367">
           <folding />
         </state>
       </provider>
@@ -620,18 +669,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/LoginPage.java">
+    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/SignUpPage.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/ScheduleSurgery.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/UserPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="36" selection-start="3394" selection-end="3394" vertical-scroll-proportion="1.042654">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2515#3804#0" expanded="true" />
-            <element signature="e#3793#3794#0" expanded="true" />
-            <element signature="e#3846#4006#0" expanded="true" />
-            <element signature="e#3995#3996#0" expanded="true" />
-            <element signature="e#4048#4276#0" expanded="true" />
-            <element signature="e#4264#4265#0" expanded="true" />
-          </folding>
+        <state line="20" column="175" selection-start="447" selection-end="447" vertical-scroll-proportion="0.2011041">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/UserPage.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_domain_objects/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="183" selection-start="708" selection-end="708" vertical-scroll-proportion="0.27251184">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/ScheduleSurgery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="220" selection-end="220" vertical-scroll-proportion="0.13033175">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -642,38 +712,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/UserPage.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/SignUpPage.form">
+    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/NewUserPage.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/NewUserPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="20" column="35" selection-start="595" selection-end="595" vertical-scroll-proportion="0.23696682">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/ScheduleSurgery.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/ScheduleSurgery.java">
+    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/LoginPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="92" column="36" selection-start="3394" selection-end="3394" vertical-scroll-proportion="0.1484992">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/NewUserPage.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
       </provider>
     </entry>
   </component>

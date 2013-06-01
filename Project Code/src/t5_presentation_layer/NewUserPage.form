@@ -124,37 +124,6 @@
           <text value="Name:"/>
         </properties>
       </component>
-      <component id="59a9a" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
-          <forms defaultalign-horz="false"/>
-        </constraints>
-        <properties>
-          <font style="1"/>
-          <text value="Date of Birth:"/>
-        </properties>
-      </component>
-      <component id="81a83" class="javax.swing.JTextField" binding="dateOfBirthTextField" default-binding="true">
-        <constraints>
-          <grid row="10" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-          <forms defaultalign-horz="false"/>
-        </constraints>
-        <properties>
-          <text value="Date of Birth"/>
-        </properties>
-      </component>
-      <component id="912dd" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="12" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
-          <forms defaultalign-horz="false"/>
-        </constraints>
-        <properties>
-          <font style="1"/>
-          <text value="Age:"/>
-        </properties>
-      </component>
       <component id="e93ac" class="javax.swing.JLabel">
         <constraints>
           <grid row="14" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
@@ -165,139 +134,7 @@
           <text value="Social Security:"/>
         </properties>
       </component>
-      <component id="85752" class="javax.swing.JComboBox" binding="comboBox1" default-binding="true">
-        <constraints>
-          <grid row="12" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-          <forms/>
-        </constraints>
-        <properties>
-          <model>
-            <item value="1"/>
-            <item value="2"/>
-            <item value="3"/>
-            <item value="4"/>
-            <item value="5"/>
-            <item value="6"/>
-            <item value="7"/>
-            <item value="8"/>
-            <item value="9"/>
-            <item value="10"/>
-            <item value="11"/>
-            <item value="12"/>
-            <item value="13"/>
-            <item value="14"/>
-            <item value="15"/>
-            <item value="16"/>
-            <item value="17"/>
-            <item value="18"/>
-            <item value="19"/>
-            <item value="20"/>
-            <item value="21"/>
-            <item value="22"/>
-            <item value="23"/>
-            <item value="24"/>
-            <item value="25"/>
-            <item value="26"/>
-            <item value="27"/>
-            <item value="28"/>
-            <item value="29"/>
-            <item value="30"/>
-            <item value="31"/>
-            <item value="32"/>
-            <item value="33"/>
-            <item value="34"/>
-            <item value="35"/>
-            <item value="36"/>
-            <item value="37"/>
-            <item value="38"/>
-            <item value="39"/>
-            <item value="40"/>
-            <item value="41"/>
-            <item value="42"/>
-            <item value="43"/>
-            <item value="44"/>
-            <item value="45"/>
-            <item value="46"/>
-            <item value="47"/>
-            <item value="48"/>
-            <item value="49"/>
-            <item value="50"/>
-            <item value="51"/>
-            <item value="52"/>
-            <item value="53"/>
-            <item value="54"/>
-            <item value="55"/>
-            <item value="56"/>
-            <item value="57"/>
-            <item value="58"/>
-            <item value="59"/>
-            <item value="60"/>
-            <item value="61"/>
-            <item value="62"/>
-            <item value="63"/>
-            <item value="64"/>
-            <item value="65"/>
-            <item value="66"/>
-            <item value="67"/>
-            <item value="68"/>
-            <item value="69"/>
-            <item value="70"/>
-            <item value="71"/>
-            <item value="72"/>
-            <item value="73"/>
-            <item value="74"/>
-            <item value="75"/>
-            <item value="76"/>
-            <item value="77"/>
-            <item value="78"/>
-            <item value="79"/>
-            <item value="80"/>
-            <item value="81"/>
-            <item value="82"/>
-            <item value="83"/>
-            <item value="84"/>
-            <item value="85"/>
-            <item value="86"/>
-            <item value="87"/>
-            <item value="88"/>
-            <item value="89"/>
-            <item value="90"/>
-            <item value="91"/>
-            <item value="92"/>
-            <item value="93"/>
-            <item value="94"/>
-            <item value="95"/>
-            <item value="96"/>
-            <item value="97"/>
-            <item value="98"/>
-            <item value="99"/>
-            <item value="100"/>
-            <item value="101"/>
-            <item value="102"/>
-            <item value="103"/>
-            <item value="104"/>
-            <item value="105"/>
-            <item value="106"/>
-            <item value="107"/>
-            <item value="108"/>
-            <item value="109"/>
-            <item value="110"/>
-            <item value="111"/>
-            <item value="112"/>
-            <item value="113"/>
-            <item value="114"/>
-            <item value="115"/>
-            <item value="116"/>
-            <item value="117"/>
-            <item value="118"/>
-            <item value="119"/>
-            <item value="120"/>
-            <item value="121"/>
-            <item value="122"/>
-          </model>
-        </properties>
-      </component>
-      <component id="e017" class="javax.swing.JTextField" binding="XXXXXXXXXTextField" default-binding="true">
+      <component id="e017" class="javax.swing.JTextField" binding="socialSecurityTextField" default-binding="true">
         <constraints>
           <grid row="14" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -305,7 +142,7 @@
           <forms defaultalign-horz="false"/>
         </constraints>
         <properties>
-          <text value="XXX-XX-XXXX"/>
+          <text value="Social Security"/>
         </properties>
       </component>
       <component id="11deb" class="javax.swing.JSeparator">
@@ -387,7 +224,7 @@
           <text value="State:"/>
         </properties>
       </component>
-      <component id="728df" class="javax.swing.JComboBox" binding="comboBox2" default-binding="true">
+      <component id="728df" class="javax.swing.JComboBox" binding="stateComboBox">
         <constraints>
           <grid row="20" column="14" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
           <forms/>
@@ -537,7 +374,7 @@
           <text value="Name:"/>
         </properties>
       </component>
-      <component id="424df" class="javax.swing.JTextField" binding="firstNameTextField1" default-binding="true">
+      <component id="424df" class="javax.swing.JTextField" binding="ECfirstNameTextField">
         <constraints>
           <grid row="32" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -548,7 +385,7 @@
           <text value="First Name"/>
         </properties>
       </component>
-      <component id="62a71" class="javax.swing.JTextField" binding="lastNameTextField1" default-binding="true">
+      <component id="62a71" class="javax.swing.JTextField" binding="EClastNameTextField">
         <constraints>
           <grid row="32" column="7" row-span="1" col-span="8" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -569,7 +406,7 @@
           <text value="Home Phone:"/>
         </properties>
       </component>
-      <component id="73d" class="javax.swing.JTextField" binding="homePhoneTextField1" default-binding="true">
+      <component id="73d" class="javax.swing.JTextField" binding="EChomePhoneTextField">
         <constraints>
           <grid row="34" column="4" row-span="1" col-span="6" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -590,7 +427,7 @@
           <text value="Mobile Phone:"/>
         </properties>
       </component>
-      <component id="67ebd" class="javax.swing.JTextField" binding="mobilePhoneTextField1" default-binding="true">
+      <component id="67ebd" class="javax.swing.JTextField" binding="ECmobilePhoneTextField">
         <constraints>
           <grid row="36" column="4" row-span="1" col-span="6" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -693,6 +530,212 @@
           <forms defaultalign-horz="false" defaultalign-vert="false"/>
         </constraints>
         <properties/>
+      </component>
+      <component id="85752" class="javax.swing.JComboBox" default-binding="true">
+        <constraints>
+          <grid row="12" column="11" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <model>
+            <item value="1"/>
+            <item value="2"/>
+            <item value="3"/>
+            <item value="4"/>
+            <item value="5"/>
+            <item value="6"/>
+            <item value="7"/>
+            <item value="8"/>
+            <item value="9"/>
+            <item value="10"/>
+            <item value="11"/>
+            <item value="12"/>
+            <item value="13"/>
+            <item value="14"/>
+            <item value="15"/>
+            <item value="16"/>
+            <item value="17"/>
+            <item value="18"/>
+            <item value="19"/>
+            <item value="20"/>
+            <item value="21"/>
+            <item value="22"/>
+            <item value="23"/>
+            <item value="24"/>
+            <item value="25"/>
+            <item value="26"/>
+            <item value="27"/>
+            <item value="28"/>
+            <item value="29"/>
+            <item value="30"/>
+            <item value="31"/>
+            <item value="32"/>
+            <item value="33"/>
+            <item value="34"/>
+            <item value="35"/>
+            <item value="36"/>
+            <item value="37"/>
+            <item value="38"/>
+            <item value="39"/>
+            <item value="40"/>
+            <item value="41"/>
+            <item value="42"/>
+            <item value="43"/>
+            <item value="44"/>
+            <item value="45"/>
+            <item value="46"/>
+            <item value="47"/>
+            <item value="48"/>
+            <item value="49"/>
+            <item value="50"/>
+            <item value="51"/>
+            <item value="52"/>
+            <item value="53"/>
+            <item value="54"/>
+            <item value="55"/>
+            <item value="56"/>
+            <item value="57"/>
+            <item value="58"/>
+            <item value="59"/>
+            <item value="60"/>
+            <item value="61"/>
+            <item value="62"/>
+            <item value="63"/>
+            <item value="64"/>
+            <item value="65"/>
+            <item value="66"/>
+            <item value="67"/>
+            <item value="68"/>
+            <item value="69"/>
+            <item value="70"/>
+            <item value="71"/>
+            <item value="72"/>
+            <item value="73"/>
+            <item value="74"/>
+            <item value="75"/>
+            <item value="76"/>
+            <item value="77"/>
+            <item value="78"/>
+            <item value="79"/>
+            <item value="80"/>
+            <item value="81"/>
+            <item value="82"/>
+            <item value="83"/>
+            <item value="84"/>
+            <item value="85"/>
+            <item value="86"/>
+            <item value="87"/>
+            <item value="88"/>
+            <item value="89"/>
+            <item value="90"/>
+            <item value="91"/>
+            <item value="92"/>
+            <item value="93"/>
+            <item value="94"/>
+            <item value="95"/>
+            <item value="96"/>
+            <item value="97"/>
+            <item value="98"/>
+            <item value="99"/>
+            <item value="100"/>
+            <item value="101"/>
+            <item value="102"/>
+            <item value="103"/>
+            <item value="104"/>
+            <item value="105"/>
+            <item value="106"/>
+            <item value="107"/>
+            <item value="108"/>
+            <item value="109"/>
+            <item value="110"/>
+            <item value="111"/>
+            <item value="112"/>
+            <item value="113"/>
+            <item value="114"/>
+            <item value="115"/>
+            <item value="116"/>
+            <item value="117"/>
+            <item value="118"/>
+            <item value="119"/>
+            <item value="120"/>
+            <item value="121"/>
+            <item value="122"/>
+          </model>
+        </properties>
+      </component>
+      <component id="912dd" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="12" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <text value="Age:"/>
+        </properties>
+      </component>
+      <component id="81a83" class="javax.swing.JTextField" binding="dateOfBirthTextField" default-binding="true">
+        <constraints>
+          <grid row="12" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <text value="Date of Birth"/>
+        </properties>
+      </component>
+      <component id="f63b8" class="javax.swing.JTextField" binding="userNameTextField">
+        <constraints>
+          <grid row="10" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <text value="Username"/>
+        </properties>
+      </component>
+      <component id="59a9a" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="12" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <text value="Date of Birth:"/>
+        </properties>
+      </component>
+      <component id="a26d8" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <text value="Username:"/>
+        </properties>
+      </component>
+      <component id="ca6ab" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="14" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <text value="Sex:"/>
+        </properties>
+      </component>
+      <component id="c6950" class="javax.swing.JComboBox" binding="sexComboBox">
+        <constraints>
+          <grid row="14" column="11" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <model>
+            <item value="Male"/>
+            <item value="Female"/>
+          </model>
+        </properties>
       </component>
     </children>
   </grid>
