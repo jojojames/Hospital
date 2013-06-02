@@ -16,6 +16,10 @@ public class UserPage {
     private JButton pageButton;
     private JButton userButton;
     private JPanel userPagePanel;
+    private JButton surgeriesButton;
+    private JButton scheduleAppointmentButton;
+    private JButton viewAppointmentsButton;
+    private JButton viewBillingReportButton;
 
     JPanel contentPane;
 
@@ -25,8 +29,38 @@ public class UserPage {
             @Override
             public void actionPerformed(ActionEvent e) {
                 CardLayout cl = (CardLayout) contentPane.getLayout();
-                cl.previous(contentPane);
                 cl.show(contentPane, "Login Page");
+            }
+        });
+
+        surgeriesButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                CardLayout cl = (CardLayout) contentPane.getLayout();
+                cl.show(contentPane, "Surgery Page");
+            }
+        });
+        scheduleAppointmentButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                CardLayout cl = (CardLayout) contentPane.getLayout();
+                cl.show(contentPane, "Schedule Appointment Page");
+            }
+        });
+
+        viewAppointmentsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                CardLayout cl = (CardLayout) contentPane.getLayout();
+                cl.show(contentPane, "View Appointments Page");
+            }
+        });
+
+        viewBillingReportButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                CardLayout cl = (CardLayout) contentPane.getLayout();
+                cl.show(contentPane, "View Billing Report Page");
             }
         });
     }

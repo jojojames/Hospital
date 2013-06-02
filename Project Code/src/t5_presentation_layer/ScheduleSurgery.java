@@ -1,5 +1,7 @@
 package t5_presentation_layer;
 
+import t5_domain_logic.Hospital;
+
 import javax.swing.*;
 
 /**
@@ -10,7 +12,7 @@ import javax.swing.*;
  * To change this template use File | Settings | File Templates.
  */
 public class ScheduleSurgery {
-    private JPanel panel1;
+    private JPanel scheduleSurgeryPanel;
     private JTextField pIDtextField;
     private JTextField pNametextField;
     private JTextField pAddresstextField;
@@ -41,12 +43,21 @@ public class ScheduleSurgery {
     private JButton scheduleSurgeryButton;
     private JComboBox attnPhyscomboBox;
 
-    public JPanel getPanel1() {
-        return panel1;
+    JPanel contentPane;
+    Hospital hospital;
+
+    public ScheduleSurgery(JPanel _contentPane, Hospital _hospital) {
+        this.contentPane = _contentPane;
+        this.hospital = _hospital;
+
     }
 
-    public void setPanel1(JPanel panel1) {
-        this.panel1 = panel1;
+    public JPanel getScheduleSurgeryPanel() {
+        return scheduleSurgeryPanel;
+    }
+
+    public void setScheduleSurgeryPanel(JPanel scheduleSurgeryPanel) {
+        this.scheduleSurgeryPanel = scheduleSurgeryPanel;
     }
 
     public JTextField getpIDtextField() {

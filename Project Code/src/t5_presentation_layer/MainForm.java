@@ -7,7 +7,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.HashMap;
 
 /**
  * Created with IntelliJ IDEA.
@@ -45,6 +44,9 @@ public class MainForm {
                 BorderFactory.createEmptyBorder(5, 5, 5, 5));
         contentPane.setLayout(new CardLayout());
 
+        // TODO: POSSBILITY OF REFACTORING ALL OF THIS TO RELEVANT PAGES
+        // TODO: INSTEAD OF STICKING THEM ALL IN MAIN.
+
         // Default Page user sees, the Login Page.
         contentPane.add(MainPanel, "Login Page");
 
@@ -52,11 +54,39 @@ public class MainForm {
         UserPage userPage = new UserPage(contentPane);
         contentPane.add(userPage.getUserPagePanel(), "User Page");
 
+        // Page User sees if they are Staff after logging in.
+        AdminPage adminPage = new AdminPage(contentPane);
+        contentPane.add(adminPage.getAdminPagePanel(), "Admin Page");
+
         // Page User sees when signing up.
         NewUserPage newUserPage = new NewUserPage(contentPane, hospital);
-        JScrollPane scroller = new JScrollPane(newUserPage.getPanel1()); // NewUserPage requires scrolling.
-        contentPane.add(scroller, "New User Page");
-        //contentPane.add(newUserPage.getPanel1(), "New User Page");
+        JScrollPane scrollNewUserPage = new JScrollPane(newUserPage.getNewUserPagePanel()); // NewUserPage requires scrolling.
+        contentPane.add(scrollNewUserPage, "New User Page");
+
+        // Page User sees when clicking on the Surgery button in the User Page.
+        SurgeryPage surgeryPage = new SurgeryPage(contentPane, hospital);
+        JScrollPane scrollSurgery = new JScrollPane(surgeryPage.getSurgeryPagePanel());
+        contentPane.add(scrollSurgery, "Surgery Page");
+
+        // Page User sees when clicking on the View Surgery button in the Surgery Page.
+        ScheduleSurgery scheduleSurgery = new ScheduleSurgery(contentPane, hospital);
+        JScrollPane scrollScheduleSurgery = new JScrollPane(scheduleSurgery.getScheduleSurgeryPanel());
+        contentPane.add(scrollScheduleSurgery, "Schedule Surgery Page");
+
+        // Page User sees when clicking on the Schedule Appointment button in the User Page.
+        ScheduleAppointment scheduleAppointment = new ScheduleAppointment(contentPane, hospital);
+        JScrollPane scrollScheduleAppointment = new JScrollPane(scheduleAppointment.getScheduleAppointmentPanel());
+        contentPane.add(scrollScheduleAppointment, "Schedule Appointment Page");
+
+        // Page User sees when clicking on the View Appointments button in the User Page.
+        ViewAppointments viewAppointments = new ViewAppointments(contentPane, hospital);
+        JScrollPane scrollViewAppointments = new JScrollPane((viewAppointments.getViewAppointmentsPanel()));
+        contentPane.add(scrollViewAppointments, "View Appointments Page");
+
+        // Page User sees when clicking on the View Billing Reports button in the User Page.
+        ViewBillingReport viewBillingReport = new ViewBillingReport(contentPane, hospital);
+        JScrollPane scrollViewBillingReport = new JScrollPane(viewBillingReport.getViewBillingReportPanel());
+        contentPane.add(scrollViewBillingReport, "View Billing Report Page");
 
         frame = new JFrame("MainForm");
         frame.setContentPane(contentPane);
@@ -81,6 +111,9 @@ public class MainForm {
                 char[] pass = passwordPasswordField.getPassword();
                 String enteredPassword = new String (pass);
 
+                // TODO: This login section can only go to a user page currently.
+                // TODO: Rewrite it so that if the user logging in is an admin,
+                // TODO: change to the admin page instead.
                 if(hospital.getAllUsers().containsKey(enteredUserId)) {
                     String realPassword = hospital.getAllUsers().get(enteredUserId).getPassword();
                     if(realPassword.equals(enteredPassword)) {

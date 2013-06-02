@@ -18,7 +18,7 @@ import java.util.HashMap;
  */
 public class NewUserPage {
     private JTextField firstNameTextField;
-    private JPanel panel1;
+    private JPanel newUserPagePanel;
     private JTextField lastNameTextField;
     private JTextField dateOfBirthTextField;
     private JTextField socialSecurityTextField;
@@ -125,12 +125,12 @@ public class NewUserPage {
         });
     }
 
-    public JPanel getPanel1() {
-        return panel1;
+    public JPanel getNewUserPagePanel() {
+        return newUserPagePanel;
     }
 
-    public void setPanel1(JPanel panel1) {
-        this.panel1 = panel1;
+    public void setNewUserPagePanel(JPanel newUserPagePanel) {
+        this.newUserPagePanel = newUserPagePanel;
     }
 
     private void clearTextFields() {
