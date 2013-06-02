@@ -68,13 +68,18 @@ public class MainForm {
     public MainForm() {
         init_frame();
 
+        // Make a user to test functionality. Userid = 100, Password = 100.
+        Person testPerson = new Person("100", "James", "Test", "9/8/93", "88211-924-123", "Address", "City", "198-123-123",
+                "326-822-8823", "jamesemail.com", "eEC", "EEC", "123-853-8228", "3923-124-138", "InsuranceProvider",
+                "InsuranceAccount", "Contact", "m", "CA", "20", "100");
+        hospital.getAllUsers().put(testPerson.getUserId(), testPerson);
+
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String enteredUserId = userIdTextField.getText();
-
-                // TODO: getText() is a deprecated function. Figure out how to use getPassword() instead.
-                String enteredPassword = passwordPasswordField.getText();
+                char[] pass = passwordPasswordField.getPassword();
+                String enteredPassword = new String (pass);
 
                 if(hospital.getAllUsers().containsKey(enteredUserId)) {
                     String realPassword = hospital.getAllUsers().get(enteredUserId).getPassword();
@@ -88,11 +93,13 @@ public class MainForm {
                     } else {
                         // they entered the wrong password
                         // TODO: WRITE A PROMPT TO DISPLAY
+                        System.out.println("Wrong Password");
                         clearTextFields();
                     }
                 } else {
                     // their userid was wrong, prompt them for it
                     // TODO: WRITE A PROMPT TO DISPLAY
+                    System.out.println("Wrong User ID");
                     clearTextFields();
                 }
             }

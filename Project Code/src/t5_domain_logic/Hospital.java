@@ -54,9 +54,6 @@ public class Hospital {
     Nurse   - 4
     */
 
-
-    private int USER_COUNTER = 0; // Counter to ensure unique user ids.
-
     public Hospital() {
         build_beds();
         build_exam_rooms();
@@ -65,8 +62,8 @@ public class Hospital {
         hire_nurses();
         hire_surgeons();
         hire_doctors();
-        build_departments();
         hire_heads();
+        build_departments();
         hire_skills();
         build_insurance();
         build_insurance_policy();
@@ -79,29 +76,27 @@ public class Hospital {
         Person a = new Person(getUniqueUserID(), "a", "A", "1/1/92", "123-123-123", "Address", "City", "310-123-123",
                 "323-123-123", "email.com", "aEC", "AEC", "123-123-123", "323-123-122", "InsuranceProvider",
                 "InsuranceAccount", "aUserName", "m", "CA", "20", "Password");
+        allUsers.put(a.getUserId(), a);
 
         Person b = new Person(getUniqueUserID(), "b", "B", "1/1/91", "223-124-123", "Address", "City", "311-123-123",
                 "323-125-123", "email.com", "bEC", "BEC", "123-153-123", "323-124-122", "InsuranceProvider",
                 "InsuranceAccount", "bUserName", "m", "CA", "21", "Password");
+        allUsers.put(b.getUserId(), b);
 
         Person c = new Person(getUniqueUserID(), "c", "C", "1/1/93", "253-124-123", "Address", "City", "111-123-123",
                 "326-122-123", "email.com", "cEC", "CEC", "123-753-523", "323-124-132", "InsuranceProvider",
                 "InsuranceAccount", "cUserName", "m", "CA", "26", "Password");
+        allUsers.put(c.getUserId(), c);
 
         Person d = new Person(getUniqueUserID(), "d", "D", "9/1/93", "953-924-123", "Address", "City", "191-123-123",
                 "326-822-193", "email.com", "dEC", "DEC", "123-853-528", "393-124-130", "InsuranceProvider",
                 "InsuranceAccount", "dUserName", "f", "CA", "29", "Password");
+        allUsers.put(d.getUserId(), d);
 
         Person e = new Person(getUniqueUserID(), "e", "E", "9/8/93", "883-924-123", "Address", "City", "198-123-123",
                 "326-822-883", "email.com", "eEC", "EEC", "123-853-828", "393-124-138", "InsuranceProvider",
                 "InsuranceAccount", "eUserName", "f", "CA", "27", "Password");
-
-        allUsers.put(a.getUserId(), a);
-        allUsers.put(b.getUserId(), b);
-        allUsers.put(c.getUserId(), c);
-        allUsers.put(d.getUserId(), d);
         allUsers.put(e.getUserId(), e);
-        USER_COUNTER = 0; // counter gets set back to 0 when all the users are added
     }
 
 
@@ -109,7 +104,7 @@ public class Hospital {
     public String getUniqueUserID() {
         // Create a user id based on the count of all users. User ID is guaranteed to be unique this way.
         return String.valueOf(allUsers.size() + allSurgeons.size() +
-                allDoctors.size() + allHeads.size() + allNurses.size() + USER_COUNTER++);
+                allDoctors.size() + allHeads.size() + allNurses.size());
     }
 
 

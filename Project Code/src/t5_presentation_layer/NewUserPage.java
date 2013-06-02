@@ -90,16 +90,37 @@ public class NewUserPage {
                 String sex = (String) sexComboBox.getSelectedItem();
                 String state = (String) stateComboBox.getSelectedItem();
                 String age = (String) ageComboBox.getSelectedItem();
-                // TODO: getText() is deprecated, figure out how to use getPassword() instead.
-                String password = passwordPasswordField.getText();
+                char[] pass = passwordPasswordField.getPassword();
+                String password = new String (pass);
 
                 // Check against user hash map.
                 HashMap<String, Person> allUsers = hospital.getAllUsers();
+                Boolean differentUser = true;
                 for(Person person : allUsers.values()) {
-                    System.out.println("Value - " + person.getUserId());
+                    if(person.getSocialSecurity().equals(socialSecurity)) {
+                        // If the unique Social Security matches, the user is already registered
+                        // in the system. Prompt them about it. Do not sign them up.
+                        // TODO: WRITE A PROMPT.
+                        System.out.println("Entered Social Security: " + socialSecurity +
+                        " matches a user in our system.");
+                        differentUser = false;
+                    }
                 }
 
+                if(differentUser) {
+                    // The user doesn't match any in the system, so create the user and add it.
+                    Person newPerson = new Person(hospital.getUniqueUserID(), firstName, lastName,
+                            dateOfBirth, socialSecurity, addressField, city, homePhone, mobilePhone,
+                            emailAddress, ECfirstName, EClastName, EChomePhone, ECmobilePhone,
+                            insuranceProvider, insuranceAccount, userName, sex, state, age, password);
+                    allUsers.put(newPerson.getUserId(), newPerson);
+                }
 
+                /*
+                HashMap<String, Person>testAllUsers = hospital.getAllUsers();
+                for(Person person : testAllUsers.values()) {
+                    System.out.println(person.getAddress()); //test
+                }*/
             }
         });
     }

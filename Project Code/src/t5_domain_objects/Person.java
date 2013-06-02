@@ -43,23 +43,7 @@ public class Person extends PersonElement {
 
     }
 
-    // Getters and Setters
-    public String getPassword() {
-        return password;
-    }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getUserId() {
-
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
 
     // TODO: @param VALUES ARE OUTDATED, UPDATE THEM
 
@@ -118,6 +102,176 @@ public class Person extends PersonElement {
 
     public String toString() {
         return "";
+    }
+
+    // Getters and Setters
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getUserId() {
+
+        return userId;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public String getSocialSecurity() {
+        return socialSecurity;
+    }
+
+    public void setSocialSecurity(String socialSecurity) {
+        this.socialSecurity = socialSecurity;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getHomePhone() {
+        return homePhone;
+    }
+
+    public void setHomePhone(String homePhone) {
+        this.homePhone = homePhone;
+    }
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
+
+    public String getMobilePhone() {
+        return mobilePhone;
+    }
+
+    public void setMobilePhone(String mobilePhone) {
+        this.mobilePhone = mobilePhone;
+    }
+
+    public String getECfirstName() {
+        return ECfirstName;
+    }
+
+    public void setECfirstName(String ECfirstName) {
+        this.ECfirstName = ECfirstName;
+    }
+
+    public String getEClastName() {
+        return EClastName;
+    }
+
+    public void setEClastName(String EClastName) {
+        this.EClastName = EClastName;
+    }
+
+    public String getECmobilePhone() {
+        return ECmobilePhone;
+    }
+
+    public void setECmobilePhone(String ECmobilePhone) {
+        this.ECmobilePhone = ECmobilePhone;
+    }
+
+    public String getEChomePhone() {
+        return EChomePhone;
+    }
+
+    public void setEChomePhone(String EChomePhone) {
+        this.EChomePhone = EChomePhone;
+    }
+
+    public String getInsuranceProvider() {
+        return insuranceProvider;
+    }
+
+    public void setInsuranceProvider(String insuranceProvider) {
+        this.insuranceProvider = insuranceProvider;
+    }
+
+    public String getInsuranceAccount() {
+        return insuranceAccount;
+    }
+
+    public void setInsuranceAccount(String insuranceAccount) {
+        this.insuranceAccount = insuranceAccount;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
 }
