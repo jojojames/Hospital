@@ -43,10 +43,12 @@ public class NewUserPage {
     private JPasswordField passwordPasswordField;
 
     JPanel contentPane;
+    Hospital hospital;
 
-    public NewUserPage(JPanel contentPage, Hospital hospital) {
+    public NewUserPage(JPanel _contentPage, Hospital _hospital) {
 
-        this.contentPane = contentPage;
+        this.contentPane = _contentPage;
+        this.hospital = _hospital;
 
         clearButton.addActionListener(new ActionListener() {
             @Override
@@ -67,6 +69,36 @@ public class NewUserPage {
         registerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
+                // Get all the input fields.
+                String firstName = firstNameTextField.getText();
+                String lastName = lastNameTextField.getText();
+                String dateOfBirth = dateOfBirthTextField.getText();
+                String socialSecurity = socialSecurityTextField.getText();
+                String addressField = addressTextField.getText();
+                String city = cityTextField.getText();
+                String homePhone = homePhoneTextField.getText();
+                String mobilePhone = mobilePhoneTextField.getText();
+                String emailAddress = emailAddressTextField.getText();
+                String ECfirstName = ECfirstNameTextField.getText();
+                String EClastName = EClastNameTextField.getText();
+                String EChomePhone= EChomePhoneTextField.getText();
+                String ECmobilePhone = ECmobilePhoneTextField.getText();
+                String insuranceProvider = insuranceProviderTextField.getText();
+                String insuranceAccount = insuranceAccountTextField.getText();
+                String userName = userNameTextField.getText();
+                String sex = (String) sexComboBox.getSelectedItem();
+                String state = (String) stateComboBox.getSelectedItem();
+                String age = (String) ageComboBox.getSelectedItem();
+                // TODO: getText() is deprecated, figure out how to use getPassword() instead.
+                String password = passwordPasswordField.getText();
+
+                // Check against user hash map.
+                HashMap<String, Person> allUsers = hospital.getAllUsers();
+                for(Person person : allUsers.values()) {
+                    System.out.println("Value - " + person.getUserId());
+                }
+
 
             }
         });

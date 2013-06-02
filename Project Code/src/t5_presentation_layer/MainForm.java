@@ -54,7 +54,9 @@ public class MainForm {
 
         // Page User sees when signing up.
         NewUserPage newUserPage = new NewUserPage(contentPane, hospital);
-        contentPane.add(newUserPage.getPanel1(), "New User Page");
+        JScrollPane scroller = new JScrollPane(newUserPage.getPanel1()); // NewUserPage requires scrolling.
+        contentPane.add(scroller, "New User Page");
+        //contentPane.add(newUserPage.getPanel1(), "New User Page");
 
         frame = new JFrame("MainForm");
         frame.setContentPane(contentPane);
