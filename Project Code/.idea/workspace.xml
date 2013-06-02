@@ -2,24 +2,60 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1249366-a360-458a-8677-20fbe2b71201" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/t5_presentation_layer/AdminPage.form" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/t5_presentation_layer/AdminPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/t5_presentation_layer/ScheduleAppointment.form" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/t5_presentation_layer/ScheduleAppointment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/t5_presentation_layer/SurgeryPage.form" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/t5_presentation_layer/SurgeryPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/t5_presentation_layer/ViewAppointments.form" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/t5_presentation_layer/ViewAppointments.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/t5_presentation_layer/ViewBillingReport.form" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/t5_presentation_layer/ViewBillingReport.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/t5_presentation_layer/MainForm.java" afterPath="$PROJECT_DIR$/src/t5_presentation_layer/MainForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/t5_presentation_layer/NewUserPage.form" afterPath="$PROJECT_DIR$/src/t5_presentation_layer/NewUserPage.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/t5_presentation_layer/NewUserPage.java" afterPath="$PROJECT_DIR$/src/t5_presentation_layer/NewUserPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/t5_presentation_layer/ScheduleSurgery.form" afterPath="$PROJECT_DIR$/src/t5_presentation_layer/ScheduleSurgery.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/t5_presentation_layer/ScheduleSurgery.java" afterPath="$PROJECT_DIR$/src/t5_presentation_layer/ScheduleSurgery.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/t5_presentation_layer/UserPage.form" afterPath="$PROJECT_DIR$/src/t5_presentation_layer/UserPage.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/t5_presentation_layer/UserPage.java" afterPath="$PROJECT_DIR$/src/t5_presentation_layer/UserPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Hospital System OLD.docx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../OOD_old.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 4/Class Diagram1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 4/Database Design.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 4/Hospital - Interface Design.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 4/OOD.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 4/OODnew.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 4/Week 4.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/Domain Objects.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/Week 6.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/Allergies.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/Appointment.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/Assistant.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/AssistantSurgery.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/Bed.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/BillingStatement.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/Cash.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/Check.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/CreditCard.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/Department.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/Diagnosis.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/Doctor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/DoctorAssistant.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/DoctorExaminationRoom.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/ExaminationRoom.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/Head.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/Insurance.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/InsurancePolicy.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/Medicine.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/Nurse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/Office.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/OperatingRoom.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/Patient.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/PatientNurse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/PatientSurgeon.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/Person.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/PersonAssistant.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/PersonDoctor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/PersonHead.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/PersonNurse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/PersonPatient.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/PersonSurgeon.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/Prescription.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/Room.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/Skills.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/Surgeon.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/SurgeonSurgery.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/Surgery.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/SurgeryNurse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/SurgicalEquipment.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/Visit.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week 6/src/OOD/Ward.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../software1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../software2.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Project Code.iws" />
@@ -43,7 +79,7 @@
     <file path="/Surgeon.java" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1370133539330" ignored="false" />
     <file path="/Surgery.java" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1368844040200" ignored="false" />
     <file path="/ExaminationRoom.java" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1368847700106" ignored="false" />
-    <file path="/Dummy.txt" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1370141416286" ignored="false" />
+    <file path="/Dummy.txt" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1370147377751" ignored="false" />
     <file path="$PROJECT_DIR$/../../Java/IntExpo/src/Expo/Main.java" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1369331315589" ignored="false" />
     <file path="/Main.java" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1369941443310" ignored="false" />
     <file path="/PlannerApplet.java" changelist="a1249366-a360-458a-8677-20fbe2b71201" time="1369959345226" ignored="false" />
@@ -88,6 +124,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -124,7 +161,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
@@ -150,18 +186,15 @@
             <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/UserPage.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state line="25" column="41" selection-start="662" selection-end="662" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="e#1967#2228#0" expanded="true" />
-                    <element signature="e#2217#2218#0" expanded="true" />
-                  </folding>
+                  <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ViewAppointments.java" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="ViewAppointments.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/ViewAppointments.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="30" column="49" selection-start="893" selection-end="893" vertical-scroll-proportion="0.50291544">
+                <state line="41" column="4" selection-start="1157" selection-end="1157" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -188,10 +221,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="MainForm.java" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="MainForm.java" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/MainForm.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="90" column="38" selection-start="3973" selection-end="3973" vertical-scroll-proportion="0.0">
+                <state line="32" column="43" selection-start="900" selection-end="901" vertical-scroll-proportion="-0.46868688">
                   <folding />
                 </state>
               </provider>
@@ -233,13 +266,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="SurgeryPage.java" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="SurgeryPage.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/SurgeryPage.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="29" column="0" selection-start="734" selection-end="734" vertical-scroll-proportion="0.50291544">
-                  <folding>
-                    <element signature="e#958#959#0" expanded="true" />
-                  </folding>
+                <state line="29" column="0" selection-start="734" selection-end="734" vertical-scroll-proportion="0.0">
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -248,11 +279,7 @@
             <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/ViewBillingReport.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state line="32" column="4" selection-start="927" selection-end="927" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#674#920#0" expanded="true" />
-                    <element signature="e#909#910#0" expanded="true" />
-                  </folding>
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -264,10 +291,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ScheduleAppointment.java" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="ScheduleAppointment.java" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/ScheduleAppointment.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="31" column="16" selection-start="870" selection-end="870" vertical-scroll-proportion="0.0">
+                <state line="31" column="16" selection-start="870" selection-end="870" vertical-scroll-proportion="0.48686868">
                   <folding />
                 </state>
               </provider>
@@ -354,9 +381,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1280" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="y" value="22" />
+    <option name="width" value="1280" />
+    <option name="height" value="723" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -400,7 +427,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -604,6 +630,32 @@
               <option name="myItemId" value="t5_presentation_layer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NewUserPage" />
+              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="t5_presentation_layer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MainForm" />
+              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -665,6 +717,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -682,12 +735,12 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RunManager" selected="Application.MainForm">
     <configuration default="false" name="LoginView" type="Applet" factoryName="Applet" temporary="true">
@@ -838,13 +891,18 @@
       <created>1368836096677</created>
       <updated>1368836096677</updated>
     </task>
+    <task id="LOCAL-00001" summary="Created new pages.">
+      <created>1370141584089</created>
+      <updated>1370141584089</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="0" width="1920" height="1080" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="22" width="1280" height="723" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1307364" sideWeight="0.76770836" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13047002" sideWeight="0.76770836" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17502668" sideWeight="0.76770836" order="3" side_tool="false" content_ui="tabs" />
@@ -853,17 +911,17 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23229167" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24919957" sideWeight="0.58125" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1398079" sideWeight="0.76770836" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19286872" sideWeight="0.76770836" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JFormDesigner Bindings" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23229167" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -934,94 +992,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/NewUserPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="48" selection-start="1126" selection-end="1126" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/t5_domain_logic/Hospital.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="33" selection-start="1465" selection-end="1465" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/ScheduleAppointment.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/NewUserPage.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/ScheduleAppointment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="16" selection-start="870" selection-end="870" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/SurgeryPage.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/t5_domain_objects/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="30" selection-start="1425" selection-end="1425" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/MainForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="38" selection-start="3973" selection-end="3973" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/UserPage.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/ViewBillingReport.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/ViewBillingReport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="4" selection-start="927" selection-end="927" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#674#920#0" expanded="true" />
-            <element signature="e#909#910#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/SurgeryPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="734" selection-end="734" vertical-scroll-proportion="0.50291544">
-          <folding>
-            <element signature="e#958#959#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/UserPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="41" selection-start="662" selection-end="662" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1967#2228#0" expanded="true" />
-            <element signature="e#2217#2218#0" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/ScheduleSurgery.form">
@@ -1036,7 +1009,85 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/ViewAppointments.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="49" selection-start="893" selection-end="893" vertical-scroll-proportion="0.50291544">
+        <state line="41" column="4" selection-start="1157" selection-end="1157" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/UserPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="41" selection-start="662" selection-end="662" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/MainForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="43" selection-start="900" selection-end="901" vertical-scroll-proportion="-0.46868688">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/t5_domain_logic/Hospital.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="3" selection-start="2901" selection-end="2901" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/SurgeryPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="734" selection-end="734" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/ViewBillingReport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="4" selection-start="927" selection-end="927" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/ViewBillingReport.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/ScheduleAppointment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="16" selection-start="870" selection-end="870" vertical-scroll-proportion="0.48686868">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/ScheduleAppointment.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/AdminPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="39" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/AdminPage.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/t5_presentation_layer/ScheduleSurgery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="33" selection-start="1708" selection-end="1708" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/t5_domain_objects/Patient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="13" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
