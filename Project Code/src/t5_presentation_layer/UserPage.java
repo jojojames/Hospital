@@ -16,6 +16,7 @@ public class UserPage {
     private JButton pageButton;
     private JButton userButton;
     private JPanel userPagePanel;
+<<<<<<< HEAD
     private JTabbedPane tabbedPane1;
     private JTextField textField1;
     private JTextField textField2;
@@ -73,6 +74,12 @@ public class UserPage {
     private JButton scheduleAppointmentButton1;
     private JTable table6;
     private JTable table7;
+=======
+    private JButton surgeriesButton;
+    private JButton scheduleAppointmentButton;
+    private JButton viewAppointmentsButton;
+    private JButton viewBillingReportButton;
+>>>>>>> 71c19ce1e83492caafdd5e360d0666d5651ff10f
 
     JPanel contentPane;
 
