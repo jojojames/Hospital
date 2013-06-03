@@ -7,6 +7,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Iterator;
+import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
@@ -102,7 +104,12 @@ public class MainForm {
         Person testPerson = new Person("100", "James", "Test", "9/8/93", "88211-924-123", "Address", "City", "198-123-123",
                 "326-822-8823", "jamesemail.com", "eEC", "EEC", "123-853-8228", "3923-124-138", "InsuranceProvider",
                 "InsuranceAccount", "Contact", "m", "CA", "20", "100");
+
+        Person adminPerson = new Person("admin", "James", "Test", "9/8/93", "88211-924-123", "Address", "City", "198-123-123",
+                "326-822-8823", "jamesemail.com", "eEC", "EEC", "123-853-8228", "3923-124-138", "InsuranceProvider",
+                "InsuranceAccount", "Contact", "m", "CA", "20", "admin");
         hospital.getAllUsers().put(testPerson.getUserId(), testPerson);
+        hospital.getAllUsers().put(adminPerson.getUserId(), adminPerson);
 
         loginButton.addActionListener(new ActionListener() {
             @Override
@@ -114,15 +121,26 @@ public class MainForm {
                 // TODO: This login section can only go to a user page currently.
                 // TODO: Rewrite it so that if the user logging in is an admin,
                 // TODO: change to the admin page instead.
+
                 if(hospital.getAllUsers().containsKey(enteredUserId)) {
                     String realPassword = hospital.getAllUsers().get(enteredUserId).getPassword();
                     if(realPassword.equals(enteredPassword)) {
                         // they entered the correct password
-                        clearTextFields();
+
+                        //Logic to test Admin page and User Page
+                        if(hospital.getAllUsers().get(enteredUserId).getUserId() == "admin"){
+
+                            clearTextFields();
                         // They entered their information correctly, so switch the panel to something else.
                         // Switch to the next pane.
-                        CardLayout cl = (CardLayout) contentPane.getLayout();
-                        cl.show(contentPane, "User Page");
+
+                            CardLayout cl = (CardLayout) contentPane.getLayout();
+                            cl.show(contentPane, "Admin Page");
+                        } else {
+                            clearTextFields();
+                            CardLayout c1 = (CardLayout) contentPane.getLayout();
+                            c1.show(contentPane, "User Page");
+                        }
                     } else {
                         // they entered the wrong password
                         // TODO: WRITE A PROMPT TO DISPLAY
