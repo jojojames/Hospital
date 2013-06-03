@@ -200,8 +200,4 @@ public class MainForm {
     public void setMainPanel(JPanel mainPanel) {
         MainPanel = mainPanel;
     }
-
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
-    }
 }
