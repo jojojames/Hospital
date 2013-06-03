@@ -2,105 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad41140e-5724-41ca-98f7-3d5f4755823b" name="Default" comment="Merge branch 'master' of https://github.com/jojojames/Hospital&#10;&#10;Conflicts:&#10;&#9;.DS_Store&#10;&#9;Project Code/.DS_Store&#10;&#9;Project Code/out/production/Project Code/t5_presentation_layer/AdminPage.class&#10;&#9;Project Code/src/.DS_Store&#10;&#9;Project Code/src/t5_presentation_layer/.DS_Store&#10;&#9;Project Code/src/t5_presentation_layer/AdminPage.form&#10;&#9;Project Code/src/t5_presentation_layer/AdminPage.java&#10;">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/.idea/copyright/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/.idea/description.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/.idea/project-template.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/.idea/scopes/scope_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/.idea/uiDesigner.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/com/intellij/uiDesigner/core/AbstractLayout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/com/intellij/uiDesigner/core/DimensionInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/com/intellij/uiDesigner/core/GridConstraints.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/com/intellij/uiDesigner/core/GridLayoutManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/com/intellij/uiDesigner/core/HorizontalInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/com/intellij/uiDesigner/core/LayoutState.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/com/intellij/uiDesigner/core/Spacer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/com/intellij/uiDesigner/core/SupportCode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/com/intellij/uiDesigner/core/Util.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/com/intellij/uiDesigner/core/VerticalInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/hospital.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_logic/Hospital.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_objects/Allergies.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_objects/Appointment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_objects/Assistant.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_objects/Bed.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_objects/BillingStatement.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_objects/Cash.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_objects/Check.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_objects/CreditCard.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_objects/Department.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_objects/Diagnosis.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_objects/Doctor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_objects/ExaminationRoom.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_objects/Head.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_objects/Insurance.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_objects/InsurancePolicy.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_objects/Medicine.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_objects/Nurse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_objects/Office.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_objects/OperatingRoom.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_objects/Patient.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_objects/Person.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_objects/PersonElement.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_objects/PersonInterface.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_objects/Prescription.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_objects/Room.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_objects/Skills.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_objects/Surgeon.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_objects/Surgery.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_objects/SurgicalEquipment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_objects/Visit.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_domain_objects/Ward.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_presentation_layer/AdminPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_presentation_layer/MainForm$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_presentation_layer/MainForm$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_presentation_layer/MainForm$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_presentation_layer/MainForm$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_presentation_layer/MainForm.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_presentation_layer/NewUserPage$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_presentation_layer/NewUserPage$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_presentation_layer/NewUserPage$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_presentation_layer/NewUserPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_presentation_layer/ScheduleAppointment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_presentation_layer/ScheduleAppointment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_presentation_layer/ScheduleSurgery.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_presentation_layer/SurgeryPage$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_presentation_layer/SurgeryPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_presentation_layer/UserPage$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_presentation_layer/UserPage$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_presentation_layer/UserPage$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_presentation_layer/UserPage$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_presentation_layer/UserPage$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_presentation_layer/UserPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_presentation_layer/ViewAppointments$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_presentation_layer/ViewAppointments.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_presentation_layer/ViewBillingReport$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_presentation_layer/ViewBillingReport.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_relations/Doctor_Assistant.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_relations/Doctor_ExaminationRoom.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_relations/Patient_Nurse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_relations/Patient_Surgeon.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_relations/Person_Assistant.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_relations/Person_Doctor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_relations/Person_Head.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_relations/Person_Nurse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_relations/Person_Patient.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_relations/Person_Surgeon.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_relations/Surgeon_Surgery.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_relations/Surgery_Assistant.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project Code/out/production/Project Code/t5_relations/Surgery_Nurse.class" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Project Code/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/AdminPageALT.form" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/AdminPageALT.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/UserPage.form" afterPath="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/UserPage.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/UserPage.java" afterPath="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/UserPage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Hospital.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="ad41140e-5724-41ca-98f7-3d5f4755823b" time="1370221954351" ignored="false" />
+    <file path="/Dummy.txt" changelist="ad41140e-5724-41ca-98f7-3d5f4755823b" time="1370276091422" ignored="false" />
     <file path="/Hospital.java" changelist="ad41140e-5724-41ca-98f7-3d5f4755823b" time="1370061379243" ignored="false" />
     <file path="/LoginPage.java" changelist="ad41140e-5724-41ca-98f7-3d5f4755823b" time="1370102760701" ignored="false" />
     <file path="/NewUserPage.java" changelist="ad41140e-5724-41ca-98f7-3d5f4755823b" time="1370115642757" ignored="false" />
@@ -140,7 +51,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </line_breakpoints>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -177,6 +87,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -185,7 +96,31 @@
     <favorites_list name="Hospital" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="AdminPageALT.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/AdminPageALT.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminPageALT.form" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/AdminPageALT.form">
+          <provider selected="true" editor-type-id="ui-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserPage.form" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/UserPage.form">
+          <provider selected="true" editor-type-id="ui-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -214,6 +149,7 @@
         <option value="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/ScheduleSurgery.form" />
         <option value="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/MainForm.form" />
         <option value="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/AdminPage.form" />
+        <option value="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/AdminPageALT.form" />
       </list>
     </option>
   </component>
@@ -492,6 +428,24 @@
               <option name="myItemId" value="t5_presentation_layer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hospital" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="t5_presentation_layer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="AdminPage" />
               <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
@@ -541,13 +495,13 @@
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
+    <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -584,19 +538,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -622,6 +563,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -709,13 +663,12 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19291966" sideWeight="0.6707882" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975337" sideWeight="0.67001545" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11376293" sideWeight="0.6707882" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11376293" sideWeight="0.6707882" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998455" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24980111" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -725,6 +678,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294753" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998455" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
@@ -795,21 +749,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/NewUserPage.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/ScheduleAppointment.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/ScheduleSurgery.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/SurgeryPage.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
@@ -837,11 +776,6 @@
             <element signature="imports" expanded="true" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/MainForm.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project Code/src/t5_domain_objects/Person.java">
@@ -872,7 +806,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/UserPage.form">
+    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/MainForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/AdminPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="13" selection-start="221" selection-end="221" vertical-scroll-proportion="0.14195584">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/AdminPageALT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/AdminPageALT.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/NewUserPage.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
       </provider>
@@ -882,11 +840,9 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/AdminPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="221" selection-end="221" vertical-scroll-proportion="0.09542587">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/UserPage.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
       </provider>
     </entry>
   </component>
