@@ -73,8 +73,6 @@ public class UserPage {
     private JButton scheduleAppointmentButton1;
     private JTable table6;
     private JTable table7;
-<<<<<<< HEAD
-=======
 
     //private JButton pageButton;
     //private JButton userButton;
@@ -83,7 +81,6 @@ public class UserPage {
     //private JButton scheduleAppointmentButton;
     private JButton viewAppointmentsButton;
     private JButton viewBillingReportButton;
->>>>>>> 82bf36d7aa8ab2c6aa95753668722273e137482a
 
     JPanel contentPane;
 
