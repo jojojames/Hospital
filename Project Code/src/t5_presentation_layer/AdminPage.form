@@ -8,7 +8,7 @@
     <rowspec value="center:max(d;4px):noGrow"/>
     <colspec value="fill:893px:grow"/>
     <constraints>
-      <xy x="20" y="20" width="1115" height="476"/>
+      <xy x="20" y="20" width="1115" height="588"/>
     </constraints>
     <properties/>
     <border type="none" title="Admin"/>
