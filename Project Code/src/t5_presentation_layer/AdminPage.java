@@ -1,22 +1,24 @@
 package t5_presentation_layer;
 
-import com.jgoodies.forms.layout.FormLayout;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Iterator;
+import java.util.Map;
 
+import t5_domain_logic.Hospital;
+import t5_domain_objects.*;
 
 /**
- * Created with IntelliJ IDEA.
- * User: james
- * Date: 6/1/13
- * Time: 7:00 PM
- * To change this template use File | Settings | File Templates.
- */
+* Created with IntelliJ IDEA.
+* User: james
+* Date: 6/1/13
+* Time: 7:00 PM
+* To change this template use File | Settings | File Templates.
+*/
 
-public class AdminPage {
+public class AdminPage implements ActionListener {
     private JPanel panel1;
     private JTextField searchTextField;
     private JButton searchButton;
@@ -28,7 +30,7 @@ public class AdminPage {
     private JComboBox comboBox1;
     private JTextField insuranceProviderTextField;
     private JTextField accountNumberTextField;
-    private JComboBox comboBox2;
+    private JComboBox sexcomboBox2;
     private JTextField ageTextField;
     private JTextField socialSecurityTextField;
     private JTextField mobileNumberTextField;
@@ -42,7 +44,6 @@ public class AdminPage {
     private JTextField zipTextField;
     private JTextField cityTextField;
     private JTextField addressTextField;
-    private JTextField stateTextField;
     private JButton createPatientButton;
     private JTextField enterPatientIDTextField;
     private JComboBox comboBox3;
@@ -56,13 +57,7 @@ public class AdminPage {
     private JTextField emailTextField1;
     private JButton admitButton;
     private JTextPane textPane1;
-    private JTextField firstNameTextField2;
-    private JTextField lastNameTextField2;
     private JTextField emailAddressTextField;
-    private JTextField phoneTextField;
-    private JTextField addressTextField2;
-    private JTextField cityTextField1;
-    private JTextField stateTextField1;
     private JTabbedPane tabbedPane2;
     private JFormattedTextField RMpatientIDFormattedTextField;
 
@@ -134,18 +129,36 @@ public class AdminPage {
     private JComboBox comboBox21;
     private JButton sendOrderRequestButton;
     private JTable table1;
+    private JComboBox statecomboBox2;
+    private JButton findPatientButton1;
+    private JTextArea firstNameTextArea;
+    private JTextArea lastNameTextArea;
+    private JTextArea emailAddressTextArea;
+    private JTextArea phoneNumberTextArea;
+    private JTextArea addressTextArea;
+    private JTextArea cityTextArea;
+    private JTextArea stateTextArea;
+    private JComboBox patientcomboBox2;
 
     JPanel contentPane;
+    Patient p;
+    private Hospital hospital = new Hospital();
+
 
     public AdminPage(JPanel _contentPane) {
         this.contentPane = _contentPane;
-        logoutButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                CardLayout cl = (CardLayout) contentPane.getLayout();
-                cl.show(contentPane, "Login Page");
-            }
-        });
+
+
+        //populate patient combobox
+        for(Object o: Person.hashMap.keySet())
+            patientcomboBox2.addItem(o);
+
+        //button listener
+        logoutButton.addActionListener(this);
+        createPatientButton.addActionListener(this);
+        findPatientButton1.addActionListener(this);
+
+
     }
 
     public JPanel getAdminPagePanel() {
@@ -158,5 +171,75 @@ public class AdminPage {
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        String cmd = e.getActionCommand();
+
+        String newPatientFirstName = firstNameTextField.getText();
+        String newPatientLastName = lastNameTextField.getText();
+        String newPatientMiddleName = mITextField.getText();
+        String newPatientDOB = DOBtextField.getText();
+        String newPatientAge = ageTextField.getText();
+        String newPatientSSN = socialSecurityTextField.getText();
+        String newPatientAddress = addressTextField.getText();
+        String newPatientCity = cityTextField.getText();
+        String newPatientZip = zipTextField.getText();
+        String newPatientHomePhone = homePhoneTextField.getText();
+        String newPatientMobilePhone = mobilePhoneTextField.getText();
+        String newPatientEmail = emailAddressTextField1.getText();
+        String newPatientECFirstName = firstNameTextField1.getText();
+        String newPatientECLastName = lastNameTextField1.getText();
+        String newPatientECRelationship = relationshipTextField.getText();
+        String newPatientECHomePhone = homeNumberTextField.getText();
+        String newPatientECMobilePhone = mobileNumberTextField.getText();
+        String newPatientInsuranceProvider = insuranceProviderTextField.getText();
+        String newPatientInsuranceAccountNum = accountNumberTextField.getText();
+        String userID = "100";
+
+        if(cmd.equals("Logout")){
+            CardLayout c1 = (CardLayout) contentPane.getLayout();
+            c1.show(contentPane,"Login Page");
+        }
+
+        if(cmd.equals("Create Patient")){
+            //add new patient
+            Person newPatient = new Person(userID,newPatientFirstName,newPatientLastName,newPatientDOB,newPatientSSN,
+                    newPatientAddress,newPatientCity,newPatientHomePhone,newPatientMobilePhone,newPatientEmail,
+                    newPatientECFirstName,newPatientECLastName,newPatientECHomePhone,newPatientECMobilePhone,
+                    newPatientInsuranceProvider,newPatientInsuranceAccountNum,"UserName",sexcomboBox2.getSelectedItem().toString(),
+                    statecomboBox2.getSelectedItem().toString(),newPatientAge,"123",newPatientMiddleName,newPatientECRelationship,
+                    newPatientZip);
+            patientcomboBox2.addItem(newPatientFirstName);
+        }
+
+        if(cmd.equals("Find")){
+           for(Iterator<Map.Entry<String,Person>> it = Person.hashMap.entrySet().iterator();it.hasNext();){
+               Map.Entry<String,Person> entry = it.next();
+               if(entry.getKey().equals(patientcomboBox2.getSelectedItem())){
+
+                   //clear text area before populating
+                   firstNameTextArea.setText("");
+                   lastNameTextArea.setText("");
+                   emailAddressTextArea.setText("");
+                   phoneNumberTextArea.setText("");
+                   addressTextArea.setText("");
+                   cityTextArea.setText("");
+                   stateTextArea.setText("");
+
+                   firstNameTextArea.append(entry.getValue().getFirstName());
+                   lastNameTextArea.append(entry.getValue().getLastName());
+                   emailAddressTextArea.append(entry.getValue().getEmailAddress());
+                   phoneNumberTextArea.append(entry.getValue().getHomePhone());
+                   addressTextArea.append(entry.getValue().getAddress());
+                   cityTextArea.append(entry.getValue().getCity());
+                   stateTextArea.append(entry.getValue().getState());
+
+               }
+           }
+
+        }
+
     }
 }

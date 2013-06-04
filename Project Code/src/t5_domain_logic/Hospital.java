@@ -75,27 +75,27 @@ public class Hospital {
     private void generate_users() {
         Person a = new Person(getUniqueUserID(), "a", "A", "1/1/92", "123-123-123", "Address", "City", "310-123-123",
                 "323-123-123", "email.com", "aEC", "AEC", "123-123-123", "323-123-122", "InsuranceProvider",
-                "InsuranceAccount", "aUserName", "m", "CA", "20", "Password");
+                "InsuranceAccount", "aUserName", "m", "CA", "20", "Password","middle","spouse","95112");
         allUsers.put(a.getUserId(), a);
 
         Person b = new Person(getUniqueUserID(), "b", "B", "1/1/91", "223-124-123", "Address", "City", "311-123-123",
                 "323-125-123", "email.com", "bEC", "BEC", "123-153-123", "323-124-122", "InsuranceProvider",
-                "InsuranceAccount", "bUserName", "m", "CA", "21", "Password");
+                "InsuranceAccount", "bUserName", "m", "CA", "21", "Password","middle","spouse","95112");
         allUsers.put(b.getUserId(), b);
 
         Person c = new Person(getUniqueUserID(), "c", "C", "1/1/93", "253-124-123", "Address", "City", "111-123-123",
                 "326-122-123", "email.com", "cEC", "CEC", "123-753-523", "323-124-132", "InsuranceProvider",
-                "InsuranceAccount", "cUserName", "m", "CA", "26", "Password");
+                "InsuranceAccount", "cUserName", "m", "CA", "26", "Password","middle","spouse","95112");
         allUsers.put(c.getUserId(), c);
 
         Person d = new Person(getUniqueUserID(), "d", "D", "9/1/93", "953-924-123", "Address", "City", "191-123-123",
                 "326-822-193", "email.com", "dEC", "DEC", "123-853-528", "393-124-130", "InsuranceProvider",
-                "InsuranceAccount", "dUserName", "f", "CA", "29", "Password");
+                "InsuranceAccount", "dUserName", "f", "CA", "29", "Password","middle","spouse","95112");
         allUsers.put(d.getUserId(), d);
 
         Person e = new Person(getUniqueUserID(), "e", "E", "9/8/93", "883-924-123", "Address", "City", "198-123-123",
                 "326-822-883", "email.com", "eEC", "EEC", "123-853-828", "393-124-138", "InsuranceProvider",
-                "InsuranceAccount", "eUserName", "f", "CA", "27", "Password");
+                "InsuranceAccount", "eUserName", "f", "CA", "27", "Password","middle","spouse","95112");
         allUsers.put(e.getUserId(), e);
     }
 
