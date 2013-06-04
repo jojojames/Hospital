@@ -2,20 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad41140e-5724-41ca-98f7-3d5f4755823b" name="Default" comment="Merge branch 'master' of https://github.com/jojojames/Hospital&#10;&#10;Conflicts:&#10;&#9;.DS_Store&#10;&#9;Project Code/.DS_Store&#10;&#9;Project Code/out/production/Project Code/t5_presentation_layer/AdminPage.class&#10;&#9;Project Code/src/.DS_Store&#10;&#9;Project Code/src/t5_presentation_layer/.DS_Store&#10;&#9;Project Code/src/t5_presentation_layer/AdminPage.form&#10;&#9;Project Code/src/t5_presentation_layer/AdminPage.java&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/AdminPage.form" afterPath="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/AdminPage.form" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/AdminPage.java" afterPath="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/AdminPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/MainForm.form" afterPath="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/MainForm.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/UserPage.form" afterPath="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/UserPage.form" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/UserPage.java" afterPath="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/UserPage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Hospital.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="ad41140e-5724-41ca-98f7-3d5f4755823b" time="1370298988538" ignored="false" />
+    <file path="/Dummy.txt" changelist="ad41140e-5724-41ca-98f7-3d5f4755823b" time="1370304231997" ignored="false" />
     <file path="/Hospital.java" changelist="ad41140e-5724-41ca-98f7-3d5f4755823b" time="1370061379243" ignored="false" />
     <file path="/LoginPage.java" changelist="ad41140e-5724-41ca-98f7-3d5f4755823b" time="1370102760701" ignored="false" />
     <file path="/NewUserPage.java" changelist="ad41140e-5724-41ca-98f7-3d5f4755823b" time="1370115642757" ignored="false" />
     <file path="/fragment.java" changelist="ad41140e-5724-41ca-98f7-3d5f4755823b" time="1370279312768" ignored="false" />
+    <file path="/UserPage.java" changelist="ad41140e-5724-41ca-98f7-3d5f4755823b" time="1370304397545" ignored="false" />
+    <file path="/AdminPage.java" changelist="ad41140e-5724-41ca-98f7-3d5f4755823b" time="1370305014089" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +51,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </line_breakpoints>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -89,6 +87,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -125,10 +124,11 @@
         <option value="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/ScheduleSurgery.java" />
         <option value="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/ScheduleSurgery.form" />
         <option value="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/AdminPageALT.form" />
-        <option value="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/UserPage.java" />
         <option value="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/MainForm.form" />
         <option value="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/UserPage.form" />
         <option value="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/AdminPage.form" />
+        <option value="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/UserPage.java" />
+        <option value="$PROJECT_DIR$/Project Code/src/t5_presentation_layer/AdminPage.java" />
       </list>
     </option>
   </component>
@@ -471,21 +471,21 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="dynamic.classpath" value="false" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -522,6 +522,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -547,19 +560,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -644,25 +644,25 @@
     <frame x="0" y="22" width="2560" height="1414" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19291966" sideWeight="0.67233384" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19291966" sideWeight="0.6731067" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975337" sideWeight="0.67001545" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11376293" sideWeight="0.67233384" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11376293" sideWeight="0.6731067" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998455" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24980111" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.10739857" sideWeight="0.67233384" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32752085" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.10739857" sideWeight="0.6731067" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32689336" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294753" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998455" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
@@ -763,13 +763,6 @@
         <state line="5" column="13" selection-start="90" selection-end="90" vertical-scroll-proportion="0.071428575" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/AdminPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="221" selection-end="221" vertical-scroll-proportion="0.14195584">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/NewUserPage.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
@@ -778,11 +771,6 @@
     <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/ScheduleAppointment.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/UserPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="196" selection-start="986" selection-end="986" vertical-scroll-proportion="0.011848342" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/AdminPageALT.java">
@@ -808,6 +796,24 @@
     <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/UserPage.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/UserPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/AdminPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="139" column="16" selection-start="5160" selection-end="5160" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project Code/src/t5_presentation_layer/AdminPage.form">

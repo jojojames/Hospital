@@ -1,6 +1,12 @@
 package t5_presentation_layer;
 
+import com.jgoodies.forms.layout.FormLayout;
+
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 
 /**
  * Created with IntelliJ IDEA.
@@ -133,6 +139,13 @@ public class AdminPage {
 
     public AdminPage(JPanel _contentPane) {
         this.contentPane = _contentPane;
+        logoutButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                CardLayout cl = (CardLayout) contentPane.getLayout();
+                cl.show(contentPane, "Login Page");
+            }
+        });
     }
 
     public JPanel getAdminPagePanel() {
