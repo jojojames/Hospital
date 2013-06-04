@@ -112,7 +112,7 @@ public class NewUserPage {
                     Person newPerson = new Person(hospital.getUniqueUserID(), firstName, lastName,
                             dateOfBirth, socialSecurity, addressField, city, homePhone, mobilePhone,
                             emailAddress, ECfirstName, EClastName, EChomePhone, ECmobilePhone,
-                            insuranceProvider, insuranceAccount, userName, sex, state, age, password);
+                            insuranceProvider, insuranceAccount, userName, sex, state, age, password,"","","");
                     allUsers.put(newPerson.getUserId(), newPerson);
                 }
 

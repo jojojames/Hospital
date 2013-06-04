@@ -1,5 +1,7 @@
 package t5_domain_objects;
 
+import t5_domain_logic.Hospital;
+
 import java.util.Vector;
 
 public class PersonElement implements PersonInterface {

@@ -103,11 +103,11 @@ public class MainForm {
         // Make a user to test functionality. Userid = 100, Password = 100.
         Person testPerson = new Person("100", "James", "Test", "9/8/93", "88211-924-123", "Address", "City", "198-123-123",
                 "326-822-8823", "jamesemail.com", "eEC", "EEC", "123-853-8228", "3923-124-138", "InsuranceProvider",
-                "InsuranceAccount", "Contact", "m", "CA", "20", "100");
+                "InsuranceAccount", "Contact", "m", "CA", "20", "100","","","");
 
         Person adminPerson = new Person("admin", "James", "Test", "9/8/93", "88211-924-123", "Address", "City", "198-123-123",
                 "326-822-8823", "jamesemail.com", "eEC", "EEC", "123-853-8228", "3923-124-138", "InsuranceProvider",
-                "InsuranceAccount", "Contact", "m", "CA", "20", "admin");
+                "InsuranceAccount", "Contact", "m", "CA", "20", "admin","","","");
         hospital.getAllUsers().put(testPerson.getUserId(), testPerson);
         hospital.getAllUsers().put(adminPerson.getUserId(), adminPerson);
 

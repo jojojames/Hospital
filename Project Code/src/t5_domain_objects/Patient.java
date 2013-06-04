@@ -1,12 +1,13 @@
 package t5_domain_objects;
 
+import t5_domain_logic.Hospital;
 import t5_relations.Patient_Nurse;
 import t5_relations.Patient_Surgeon;
 import t5_relations.Person_Patient;
 
 import java.util.Vector;
 
-public class Patient {
+public class Patient extends Person{
     public Vector<Patient_Nurse> patientNurse = new Vector<Patient_Nurse>();
     public Vector<Visit> visit = new Vector<Visit>();
     public Vector<Appointment> appointment = new Vector<Appointment>();
@@ -21,6 +22,6 @@ public class Patient {
     /**
      *
      */
-    public Patient() {
+    public Patient(Person p) {
     }
 }

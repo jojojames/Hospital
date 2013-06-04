@@ -258,7 +258,7 @@
                   <text value="Sex:"/>
                 </properties>
               </component>
-              <component id="f506e" class="javax.swing.JComboBox" binding="comboBox2" default-binding="true">
+              <component id="f506e" class="javax.swing.JComboBox" binding="sexcomboBox2">
                 <constraints>
                   <grid row="10" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                   <forms/>
@@ -533,17 +533,6 @@
                   <text value="Address"/>
                 </properties>
               </component>
-              <component id="73933" class="javax.swing.JTextField" binding="stateTextField" default-binding="true">
-                <constraints>
-                  <grid row="26" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                    <preferred-size width="150" height="-1"/>
-                  </grid>
-                  <forms defaultalign-horz="false"/>
-                </constraints>
-                <properties>
-                  <text value="State"/>
-                </properties>
-              </component>
               <component id="4e021" class="javax.swing.JSeparator">
                 <constraints>
                   <grid row="42" column="10" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -706,6 +695,79 @@
                   <text value="Create Patient"/>
                 </properties>
               </component>
+              <component id="c499a" class="javax.swing.JComboBox" binding="statecomboBox2">
+                <constraints>
+                  <grid row="26" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                  <forms/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="State"/>
+                    <item value="AL"/>
+                    <item value="AK"/>
+                    <item value="AS"/>
+                    <item value="AZ"/>
+                    <item value="AR"/>
+                    <item value="AE"/>
+                    <item value="AA"/>
+                    <item value="AP"/>
+                    <item value="CA"/>
+                    <item value="CO"/>
+                    <item value="CT"/>
+                    <item value="DE"/>
+                    <item value="DC"/>
+                    <item value="FM"/>
+                    <item value="FL"/>
+                    <item value="GA"/>
+                    <item value="GU"/>
+                    <item value="HI"/>
+                    <item value="ID"/>
+                    <item value="IL"/>
+                    <item value="IN"/>
+                    <item value="IA"/>
+                    <item value="KS"/>
+                    <item value="KY"/>
+                    <item value="LA"/>
+                    <item value="ME"/>
+                    <item value="MH"/>
+                    <item value="MD"/>
+                    <item value="MA"/>
+                    <item value="MI"/>
+                    <item value="MN"/>
+                    <item value="MS"/>
+                    <item value="MO"/>
+                    <item value="MT"/>
+                    <item value="NE"/>
+                    <item value="NV"/>
+                    <item value="NH"/>
+                    <item value="NJ"/>
+                    <item value="NM"/>
+                    <item value="NY"/>
+                    <item value="NC"/>
+                    <item value="ND"/>
+                    <item value="MP"/>
+                    <item value="OH"/>
+                    <item value="OK"/>
+                    <item value="OR"/>
+                    <item value="PM"/>
+                    <item value="PA"/>
+                    <item value="PR"/>
+                    <item value="RI"/>
+                    <item value="SC"/>
+                    <item value="SD"/>
+                    <item value="TN"/>
+                    <item value="TX"/>
+                    <item value="VI"/>
+                    <item value="UT"/>
+                    <item value="VT"/>
+                    <item value="VA"/>
+                    <item value="WA"/>
+                    <item value="WV"/>
+                    <item value="WI"/>
+                    <item value="WY"/>
+                  </model>
+                </properties>
+              </component>
             </children>
           </grid>
           <grid id="2dc24" layout-manager="FormLayout">
@@ -753,50 +815,6 @@
             </properties>
             <border type="none"/>
             <children>
-              <component id="62895" class="javax.swing.JTextField" binding="enterPatientIDTextField" default-binding="true">
-                <constraints>
-                  <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                    <preferred-size width="150" height="-1"/>
-                  </grid>
-                  <forms defaultalign-horz="false"/>
-                </constraints>
-                <properties>
-                  <text value="Enter Patient ID"/>
-                </properties>
-              </component>
-              <component id="9fd5b" class="javax.swing.JComboBox" binding="comboBox3" default-binding="true">
-                <constraints>
-                  <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-                  <forms/>
-                </constraints>
-                <properties>
-                  <model>
-                    <item value="Select Location"/>
-                  </model>
-                </properties>
-              </component>
-              <component id="61fa1" class="javax.swing.JComboBox" binding="comboBox4" default-binding="true">
-                <constraints>
-                  <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-                  <forms/>
-                </constraints>
-                <properties>
-                  <model>
-                    <item value="Select Room Number"/>
-                  </model>
-                </properties>
-              </component>
-              <component id="8c58f" class="javax.swing.JComboBox" binding="comboBox5" default-binding="true">
-                <constraints>
-                  <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-                  <forms/>
-                </constraints>
-                <properties>
-                  <model>
-                    <item value="Select Doctor to See"/>
-                  </model>
-                </properties>
-              </component>
               <component id="a8a1c" class="javax.swing.JTextField" binding="reasonForAdmissionTextField" default-binding="true">
                 <constraints>
                   <grid row="8" column="4" row-span="1" col-span="5" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
@@ -877,83 +895,6 @@
                   </component>
                 </children>
               </scrollpane>
-              <component id="21045" class="javax.swing.JTextField" binding="firstNameTextField2" default-binding="true">
-                <constraints>
-                  <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                    <preferred-size width="150" height="-1"/>
-                  </grid>
-                  <forms defaultalign-horz="false"/>
-                </constraints>
-                <properties>
-                  <text value="First Name"/>
-                </properties>
-              </component>
-              <component id="ad3d" class="javax.swing.JTextField" binding="lastNameTextField2" default-binding="true">
-                <constraints>
-                  <grid row="2" column="6" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                    <preferred-size width="150" height="-1"/>
-                  </grid>
-                  <forms defaultalign-horz="false"/>
-                </constraints>
-                <properties>
-                  <text value="Last Name"/>
-                </properties>
-              </component>
-              <component id="42cf2" class="javax.swing.JTextField" binding="emailAddressTextField" default-binding="true">
-                <constraints>
-                  <grid row="4" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                    <preferred-size width="150" height="-1"/>
-                  </grid>
-                  <forms defaultalign-horz="false"/>
-                </constraints>
-                <properties>
-                  <text value="Email Address"/>
-                </properties>
-              </component>
-              <component id="a67e1" class="javax.swing.JTextField" binding="addressTextField2" default-binding="true">
-                <constraints>
-                  <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                    <preferred-size width="150" height="-1"/>
-                  </grid>
-                  <forms defaultalign-horz="false"/>
-                </constraints>
-                <properties>
-                  <text value="Address"/>
-                </properties>
-              </component>
-              <component id="4a643" class="javax.swing.JTextField" binding="cityTextField1" default-binding="true">
-                <constraints>
-                  <grid row="6" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                    <preferred-size width="150" height="-1"/>
-                  </grid>
-                  <forms defaultalign-horz="false"/>
-                </constraints>
-                <properties>
-                  <text value="City"/>
-                </properties>
-              </component>
-              <component id="c9a6a" class="javax.swing.JTextField" binding="stateTextField1" default-binding="true">
-                <constraints>
-                  <grid row="6" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                    <preferred-size width="150" height="-1"/>
-                  </grid>
-                  <forms defaultalign-horz="false"/>
-                </constraints>
-                <properties>
-                  <text value="State"/>
-                </properties>
-              </component>
-              <component id="f230f" class="javax.swing.JTextField" binding="phoneTextField" default-binding="true">
-                <constraints>
-                  <grid row="4" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                    <preferred-size width="150" height="-1"/>
-                  </grid>
-                  <forms defaultalign-horz="false"/>
-                </constraints>
-                <properties>
-                  <text value="Phone #"/>
-                </properties>
-              </component>
               <component id="d0eb8" class="javax.swing.JButton" binding="admitButton" default-binding="true">
                 <constraints>
                   <grid row="22" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
@@ -961,6 +902,136 @@
                 </constraints>
                 <properties>
                   <text value="Admit"/>
+                </properties>
+              </component>
+              <component id="8c58f" class="javax.swing.JComboBox" binding="comboBox5" default-binding="true">
+                <constraints>
+                  <grid row="9" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                  <forms/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="Select Doctor to See"/>
+                  </model>
+                </properties>
+              </component>
+              <component id="61fa1" class="javax.swing.JComboBox" binding="comboBox4" default-binding="true">
+                <constraints>
+                  <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                  <forms/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="Select Room Number"/>
+                  </model>
+                </properties>
+              </component>
+              <component id="9fd5b" class="javax.swing.JComboBox" binding="comboBox3" default-binding="true">
+                <constraints>
+                  <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                  <forms/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="Select Location"/>
+                  </model>
+                </properties>
+              </component>
+              <component id="b0e24" class="javax.swing.JButton" binding="findPatientButton1">
+                <constraints>
+                  <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <forms/>
+                </constraints>
+                <properties>
+                  <text value="Find"/>
+                </properties>
+              </component>
+              <component id="90b54" class="javax.swing.JTextArea" binding="firstNameTextArea" default-binding="true">
+                <constraints>
+                  <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="50"/>
+                  </grid>
+                  <forms defaultalign-horz="false" defaultalign-vert="false"/>
+                </constraints>
+                <properties>
+                  <text value="First Name"/>
+                </properties>
+              </component>
+              <component id="3737" class="javax.swing.JTextArea" binding="lastNameTextArea" default-binding="true">
+                <constraints>
+                  <grid row="2" column="6" row-span="1" col-span="3" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="50"/>
+                  </grid>
+                  <forms defaultalign-horz="false" defaultalign-vert="false"/>
+                </constraints>
+                <properties>
+                  <text value="Last Name"/>
+                </properties>
+              </component>
+              <component id="2b17b" class="javax.swing.JTextArea" binding="emailAddressTextArea" default-binding="true">
+                <constraints>
+                  <grid row="4" column="4" row-span="1" col-span="3" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="50"/>
+                  </grid>
+                  <forms defaultalign-horz="false" defaultalign-vert="false"/>
+                </constraints>
+                <properties>
+                  <text value="Email Address"/>
+                </properties>
+              </component>
+              <component id="5c66" class="javax.swing.JTextArea" binding="phoneNumberTextArea" default-binding="true">
+                <constraints>
+                  <grid row="4" column="8" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="50"/>
+                  </grid>
+                  <forms defaultalign-horz="false" defaultalign-vert="false"/>
+                </constraints>
+                <properties>
+                  <text value="Phone Number"/>
+                </properties>
+              </component>
+              <component id="91158" class="javax.swing.JTextArea" binding="addressTextArea" default-binding="true">
+                <constraints>
+                  <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="50"/>
+                  </grid>
+                  <forms defaultalign-horz="false" defaultalign-vert="false"/>
+                </constraints>
+                <properties>
+                  <text value="Address"/>
+                </properties>
+              </component>
+              <component id="ac314" class="javax.swing.JTextArea" binding="cityTextArea" default-binding="true">
+                <constraints>
+                  <grid row="6" column="6" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="50"/>
+                  </grid>
+                  <forms defaultalign-horz="false" defaultalign-vert="false"/>
+                </constraints>
+                <properties>
+                  <text value="City"/>
+                </properties>
+              </component>
+              <component id="29921" class="javax.swing.JTextArea" binding="stateTextArea" default-binding="true">
+                <constraints>
+                  <grid row="6" column="8" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="50"/>
+                  </grid>
+                  <forms defaultalign-horz="false" defaultalign-vert="false"/>
+                </constraints>
+                <properties>
+                  <text value="State"/>
+                </properties>
+              </component>
+              <component id="3e01b" class="javax.swing.JComboBox" binding="patientcomboBox2">
+                <constraints>
+                  <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                  <forms/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="Patient"/>
+                  </model>
                 </properties>
               </component>
             </children>

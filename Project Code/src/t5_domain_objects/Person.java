@@ -11,6 +11,7 @@ public class Person extends PersonElement {
     private String userId;
     private String firstName;
     private String lastName;
+    private String middleName;
     private String dateOfBirth;
     private String socialSecurity;
     private String address;
@@ -22,6 +23,7 @@ public class Person extends PersonElement {
     private String EClastName;
     private String EChomePhone;
     private String ECmobilePhone;
+    private String ECRelationship;
     private String insuranceProvider;
     private String insuranceAccount;
     private String userName;
@@ -29,6 +31,7 @@ public class Person extends PersonElement {
     private String state;
     private String age;
     private String password;
+    private String zip;
 
     public Vector<Person_Assistant> personAssistant = new Vector<Person_Assistant>();
     public Vector<Person_Nurse> personNurse = new Vector<Person_Nurse>();
@@ -72,7 +75,8 @@ public class Person extends PersonElement {
             String emailAddress, String ECfirstName, String EClastName, 
             String EChomePhone, String ECmobilePhone, 
             String insuranceProvider, String insuranceAccount, String userName, 
-            String sex, String state, String age, String password) {
+            String sex, String state, String age, String password,String middleName,
+            String ECRelationship, String zip) {
 
         this.userId = userId;
         this.firstName = firstName;
@@ -95,9 +99,12 @@ public class Person extends PersonElement {
         this.state = state;
         this.age = age;
         this.password = password;
+        this.middleName = middleName;
+        this.ECRelationship = ECRelationship;
+        this.zip = zip;
 
         // TODO: VERIFY THIS HASHMAP IS NEEDED.
-        hashMap.put(userName, this);
+        hashMap.put(firstName, this);
     }
 
     public String toString() {
