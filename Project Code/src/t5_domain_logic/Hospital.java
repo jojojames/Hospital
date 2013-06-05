@@ -17,7 +17,7 @@ import java.util.Date;
  * Time: 6:12 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Hospital {
+public class Hospital extends PersonElement{
     private Vector<Bed> allBeds = new Vector<Bed>();
     private Vector<ExaminationRoom> allExamRooms = new Vector<ExaminationRoom>();
     private Vector<Office> allOffices = new Vector<Office>();
@@ -48,6 +48,7 @@ public class Hospital {
     private int NUM_OFFICES = 5;
     private int NUM_BEDS = 20;
     private int NUM_EXAM_ROOMS = 3;
+    private int NUM_ROOMS = 30;
 
     /*
     Staff Type will be as followed:
@@ -70,6 +71,7 @@ public class Hospital {
         hire_skills();
         build_insurance();
         build_insurance_policy();
+        build_rooms();
 
         generate_users();
 
@@ -109,6 +111,8 @@ public class Hospital {
         return String.valueOf(allUsers.size() + allSurgeons.size() +
                 allDoctors.size() + allHeads.size() + allNurses.size());
     }
+
+
 
 
     private void hire_surgeons() {
@@ -164,10 +168,24 @@ public class Hospital {
         }
     }
 
+    private void build_rooms(){
+        int[] roomNum = {101,102,103,104,105,106,107,108,109,110,
+        201,202,203,204,205,206,207,208,209,210,
+        301,302,303,304,305,306,307,308,309,310};
+        for(int i=0; i<NUM_ROOMS;i++){
+            Room room = new Room(roomNum[i]);
+        }
+    }
+
     private void build_departments() {
-        String[] departmentName = {"Dep1", "Dep2", "Dep3"};
-        for(int i=0; i<NUM_DEPARTMENTS; i++) {
-            Department newDepartment = new Department(departmentName[i], i, i); //Dname, DID, HID
+        String[] departmentName = {"Accident and Emergency", "Anaesthetics", "Breast screening","Cardiology","Chaplaincy",
+                "Critical care","Diagnostic imaging","Discharge lounge","Ear nose and throat (ENT)","Elderly services department",
+                "Gastroenterology","General surgery","Gynaecology","Haematology","Maternity departments","Microbiology","Neonatal unit",
+                "Nephrology","Neurology","Nutrition and dietetics","Obstetrics and gynaecology units","Occupational therapy",
+                "Oncology","Ophthalmology","Orthopaedics","Pain management clinics","Pharmacy","Physiotherapy","Radiotherapy",
+                "Renal unit","Rheumatology","Sexual health (genitourinary medicine)","Urology"};
+        for(int i=0; i<departmentName.length; i++) {
+            Department newDepartment = new Department(departmentName[i]); //Dname
             allDepartments.add(newDepartment);
         }
     }
