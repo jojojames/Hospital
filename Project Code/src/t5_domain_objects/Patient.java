@@ -2,6 +2,7 @@ package t5_domain_objects;
 
 import t5_relations.*;
 
+import java.util.HashMap;
 import java.util.Vector;
 
 public class Patient extends RPerson {
@@ -47,6 +48,7 @@ public class Patient extends RPerson {
     public Vector<BillingStatement> billingStatement = new Vector<BillingStatement>();
     public Vector<Prescription> prescription = new Vector<Prescription>();
     public InsurancePolicy insurancePolicy;
+    public static HashMap<String, Patient> hashMap = new HashMap<String, Patient>();
 
     public Patient(String userName, String password, String firstName, String lastName,
                    String dateOfBirth, String socialSecurity, String address,
@@ -79,6 +81,56 @@ public class Patient extends RPerson {
         this.zip = zip;
         this.address = address;
         this.city = city;
+        this.age = age;
+        hashMap.put(lastName + ", " + firstName ,this);
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getECfirstName() {
+        return ECfirstName;
+    }
+
+    public String getEChomePhone() {
+        return EChomePhone;
+    }
+
+    public String getEClastName() {
+        return EClastName;
+    }
+
+    public String getECmobilePhone() {
+        return ECmobilePhone;
+    }
+
+    public String getECRelationship() {
+        return ECRelationship;
+    }
+
+    public String getInsuranceAccount() {
+        return insuranceAccount;
+    }
+
+    public String getInsuranceProvider() {
+        return insuranceProvider;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public String getZip() {
+        return zip;
     }
 
 

@@ -5,6 +5,7 @@ import t5_relations.Doctor_ExaminationRoom;
 import t5_relations.Patient_Doctor;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Vector;
 
 public class Doctor extends RPerson {
@@ -39,6 +40,8 @@ public class Doctor extends RPerson {
     private Vector<Nurse> nurse = new Vector<Nurse>();
     private Department department;
 
+    public static HashMap<String, Doctor> hashMap = new HashMap<String, Doctor>();
+
     /**
      *
      * @param skillId
@@ -65,6 +68,8 @@ public class Doctor extends RPerson {
         this.yearsOfExperience = yearsOfExperience;
         this.hiredDate = hiredDate;
         this.departmentID = departmentID;
+
+        hashMap.put(lastName + ", " + firstName, this);
     }
 
 

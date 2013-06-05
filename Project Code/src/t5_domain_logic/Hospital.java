@@ -34,8 +34,8 @@ public class Hospital {
     private Vector<Head> allHeads = new Vector<Head>();
     private Vector<Nurse> allNurses = new Vector<Nurse>();
 
-    private HashMap<String, Person> allUsers = new HashMap<String, Person>();
-    private HashMap<String, Person> allStaff = new HashMap<String, Person>();
+    public static HashMap<String, Person> allUsers = new HashMap<String, Person>();
+    public static HashMap<String, Person> allStaff = new HashMap<String, Person>();
 
 
     private int NUM_INSURANCE_POLICY = 3;
@@ -144,19 +144,19 @@ public class Hospital {
         int skillId, int yearsOfExperience, Date hiredDate, int departmentID) {
         */
 
-        Person aDoc = new Doctor("aDoc", "aDocPass", "adoc", "doclast", "docmiddle",
+        Person aDoc = new Doctor("aDoc", "aDocPass", "Mutahar", "Ahmed", "docmiddle",
                 "dateof", "m", "social", "doc@email", "mobile1232", 2, 1, "3", 3);
-        Person bDoc = new Doctor("bDoc", "bDocPbss", "bdoc", "doclbst", "docmiddle",
+        Person bDoc = new Doctor("bDoc", "bDocPbss", "Patrick", "Anderson", "docmiddle",
                 "dbteof", "m", "socibl", "doc@embil", "mobile1232", 2, 1, "3", 3);
-        Person cDoc = new Doctor("cDoc", "cDocPcss", "cdoc", "doclcst", "docmiddle",
+        Person cDoc = new Doctor("cDoc", "cDocPcss", "Andrews", "Alan", "docmiddle",
                 "dcteof", "m", "socicl", "doc@emcil", "mobile1232", 2, 1, "3", 3);
-        Person dDoc = new Doctor("dDoc", "dDocPdss", "ddoc", "docldst", "docmiddle",
+        Person dDoc = new Doctor("dDoc", "dDocPdss", "Stephen", "Angeli", "docmiddle",
                 "ddteof", "m", "socidl", "doc@emdil", "mobile1232", 2, 1, "3", 3);
-        Person eDoc = new Doctor("eDoc", "eDocPess", "edoc", "doclest", "docmiddle",
+        Person eDoc = new Doctor("eDoc", "eDocPess", "Lewis", "Attas", "docmiddle",
                 "deteof", "m", "sociel", "doc@emeil", "mobile1232", 2, 1, "3", 3);
-        Person fDoc = new Doctor("fDoc", "fDocPfss", "fdoc", "doclfst", "docmiddle",
+        Person fDoc = new Doctor("fDoc", "fDocPfss", "Kevin", "Basralian", "docmiddle",
                 "dfteof", "m", "socifl", "doc@emfil", "mobile1232", 2, 1, "3", 3);
-        Person zDoc = new Doctor("zDoc", "zDocPzss", "zdoc", "doclzst", "docmiddle",
+        Person zDoc = new Doctor("zDoc", "zDocPzss", "Mark", "Berman", "docmiddle",
                 "dzteof", "m", "socizl", "doc@emzil", "mobile1232", 2, 1, "3", 3);
         allStaff.put(aDoc.getUserName(), aDoc);
         allStaff.put(bDoc.getUserName(), bDoc);
