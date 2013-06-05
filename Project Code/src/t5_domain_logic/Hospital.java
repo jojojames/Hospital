@@ -28,6 +28,7 @@ public class Hospital {
     private Vector<InsurancePolicy> allInsurancePolicy = new Vector<InsurancePolicy>();
 
 
+    // TODO: REMOVE ANY CODE THAT USES THESE VECTORS AND REPLACE THEM WITH THE ALLUSER HASHMAP
     private Vector<Surgeon> allSurgeons = new Vector<Surgeon>();
     private Vector<Doctor> allDoctors = new Vector<Doctor>();
     private Vector<Head> allHeads = new Vector<Head>();
