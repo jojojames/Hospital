@@ -131,14 +131,14 @@ public class AdminPage implements ActionListener {
     private JTable table1;
     private JComboBox statecomboBox2;
     private JButton findPatientButton1;
-    private JTextArea firstNameTextArea;
-    private JTextArea lastNameTextArea;
-    private JTextArea emailAddressTextArea;
-    private JTextArea phoneNumberTextArea;
-    private JTextArea addressTextArea;
-    private JTextArea cityTextArea;
-    private JTextArea stateTextArea;
     private JComboBox patientcomboBox2;
+    private JTextField firstNameTextField2;
+    private JTextField lastNameTextField2;
+    private JTextField emailTextField;
+    private JTextField phoneNumberTextField;
+    private JTextField addressTextField2;
+    private JTextField cityTextField1;
+    private JTextField stateTextField;
 
     JPanel contentPane;
     Patient p;
@@ -150,15 +150,22 @@ public class AdminPage implements ActionListener {
 
 
         //populate patient combobox
-        for(Object o: Person.hashMap.keySet())
+        for(Object o: Patient.hashMap.keySet())
             patientcomboBox2.addItem(o);
+
+        //location/department combobox
+        for(Object o: Department.hashMap.keySet())
+            comboBox3.addItem(o);
+
+        //Room number combobox
+        for(Object o: Room.hashMap.keySet())
+            comboBox4.addItem(o);
+
 
         //button listener
         logoutButton.addActionListener(this);
         createPatientButton.addActionListener(this);
         findPatientButton1.addActionListener(this);
-
-
     }
 
     public JPanel getAdminPagePanel() {
@@ -205,12 +212,33 @@ public class AdminPage implements ActionListener {
 
         if(cmd.equals("Create Patient")){
             //add new patient
-            Person newPatient = new Person(userID,newPatientFirstName,newPatientLastName,newPatientDOB,newPatientSSN,
+            hospital.add(new Patient(new Person(userID,newPatientFirstName,newPatientLastName,newPatientDOB,newPatientSSN,
                     newPatientAddress,newPatientCity,newPatientHomePhone,newPatientMobilePhone,newPatientEmail,
                     newPatientECFirstName,newPatientECLastName,newPatientECHomePhone,newPatientECMobilePhone,
                     newPatientInsuranceProvider,newPatientInsuranceAccountNum,"UserName",sexcomboBox2.getSelectedItem().toString(),
                     statecomboBox2.getSelectedItem().toString(),newPatientAge,"123",newPatientMiddleName,newPatientECRelationship,
-                    newPatientZip);
+                    newPatientZip)));
+
+            firstNameTextField.setText("");
+            lastNameTextField.setText("");
+            mITextField.setText("");
+            DOBtextField.setText("");
+            ageTextField.setText("");
+            socialSecurityTextField.setText("");
+            addressTextField.setText("");
+            cityTextField.setText("");
+            zipTextField.setText("");
+            homePhoneTextField.setText("");
+            mobilePhoneTextField.setText("");
+            emailAddressTextField1.setText("");
+            firstNameTextField1.setText("");
+            lastNameTextField1.setText("");
+            relationshipTextField.setText("");
+            homeNumberTextField.setText("");
+            mobileNumberTextField.setText("");
+            insuranceProviderTextField.setText("");
+            accountNumberTextField.setText("");
+
             patientcomboBox2.addItem(newPatientFirstName);
         }
 
@@ -219,22 +247,17 @@ public class AdminPage implements ActionListener {
                Map.Entry<String,Person> entry = it.next();
                if(entry.getKey().equals(patientcomboBox2.getSelectedItem())){
 
-                   //clear text area before populating
-                   firstNameTextArea.setText("");
-                   lastNameTextArea.setText("");
-                   emailAddressTextArea.setText("");
-                   phoneNumberTextArea.setText("");
-                   addressTextArea.setText("");
-                   cityTextArea.setText("");
-                   stateTextArea.setText("");
-
-                   firstNameTextArea.append(entry.getValue().getFirstName());
-                   lastNameTextArea.append(entry.getValue().getLastName());
-                   emailAddressTextArea.append(entry.getValue().getEmailAddress());
-                   phoneNumberTextArea.append(entry.getValue().getHomePhone());
-                   addressTextArea.append(entry.getValue().getAddress());
-                   cityTextArea.append(entry.getValue().getCity());
-                   stateTextArea.append(entry.getValue().getState());
+                   firstNameTextField2.setText(entry.getValue().getFirstName());
+                   lastNameTextField2.setText(entry.getValue().getLastName());
+                   emailTextField.setText(entry.getValue().getEmailAddress());
+                   phoneNumberTextField.setText(entry.getValue().getHomePhone());
+                   addressTextField2.setText(entry.getValue().getAddress());
+                   cityTextField1.setText(entry.getValue().getCity());
+                   stateTextField.setText(entry.getValue().getState());
+                   emergencyContactTextField.setText(entry.getValue().getECfirstName() + " " + entry.getValue().getEClastName());
+                   homePhoneTextField1.setText(entry.getValue().getEChomePhone());
+                   mobilePhoneTextField1.setText(entry.getValue().getECmobilePhone());
+                   emailTextField1.setText(entry.getValue().getEmailAddress());
 
                }
            }
