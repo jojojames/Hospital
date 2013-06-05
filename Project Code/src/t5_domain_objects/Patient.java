@@ -5,9 +5,10 @@ import t5_relations.Patient_Nurse;
 import t5_relations.Patient_Surgeon;
 import t5_relations.Person_Patient;
 
+import java.util.HashMap;
 import java.util.Vector;
 
-public class Patient extends Person{
+public class Patient extends PersonElement{
     public Vector<Patient_Nurse> patientNurse = new Vector<Patient_Nurse>();
     public Vector<Visit> visit = new Vector<Visit>();
     public Vector<Appointment> appointment = new Vector<Appointment>();
@@ -18,10 +19,14 @@ public class Patient extends Person{
     public Vector<Prescription> prescription = new Vector<Prescription>();
     public Doctor doctor;
     public Vector<Person_Patient> personPatient = new Vector<Person_Patient>();
+    public Person person;
 
+    public static HashMap<String, Patient> hashMap = new HashMap<String, Patient>();
     /**
      *
      */
     public Patient(Person p) {
+        this.person = p;
+        hashMap.put(p.getFirstName(), this);
     }
 }

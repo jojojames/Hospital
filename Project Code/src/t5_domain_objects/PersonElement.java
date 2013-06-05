@@ -4,7 +4,7 @@ import t5_domain_logic.Hospital;
 
 import java.util.Vector;
 
-public class PersonElement implements PersonInterface {
+public abstract class PersonElement implements PersonInterface {
     private Vector<PersonInterface> personElements = new Vector<PersonInterface>();
 
     public void add(PersonInterface p){
