@@ -149,6 +149,7 @@ public class AdminPage implements ActionListener {
         this.contentPane = _contentPane;
 
 
+        /*
         //populate patient combobox
         for(Object o: Patient.hashMap.keySet())
             patientcomboBox2.addItem(o);
@@ -160,6 +161,8 @@ public class AdminPage implements ActionListener {
         //Room number combobox
         for(Object o: Room.hashMap.keySet())
             comboBox4.addItem(o);
+
+        */
 
 
         //button listener
@@ -184,26 +187,25 @@ public class AdminPage implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String cmd = e.getActionCommand();
 
-        String newPatientFirstName = firstNameTextField.getText();
-        String newPatientLastName = lastNameTextField.getText();
-        String newPatientMiddleName = mITextField.getText();
-        String newPatientDOB = DOBtextField.getText();
-        String newPatientAge = ageTextField.getText();
-        String newPatientSSN = socialSecurityTextField.getText();
-        String newPatientAddress = addressTextField.getText();
-        String newPatientCity = cityTextField.getText();
-        String newPatientZip = zipTextField.getText();
-        String newPatientHomePhone = homePhoneTextField.getText();
-        String newPatientMobilePhone = mobilePhoneTextField.getText();
-        String newPatientEmail = emailAddressTextField1.getText();
-        String newPatientECFirstName = firstNameTextField1.getText();
-        String newPatientECLastName = lastNameTextField1.getText();
-        String newPatientECRelationship = relationshipTextField.getText();
-        String newPatientECHomePhone = homeNumberTextField.getText();
-        String newPatientECMobilePhone = mobileNumberTextField.getText();
-        String newPatientInsuranceProvider = insuranceProviderTextField.getText();
-        String newPatientInsuranceAccountNum = accountNumberTextField.getText();
-        String userID = "100";
+        String nFirstName = firstNameTextField.getText();
+        String nLastName = lastNameTextField.getText();
+        String nMiddleName = mITextField.getText();
+        String nDOB = DOBtextField.getText();
+        String nAge = ageTextField.getText();
+        String nSSN = socialSecurityTextField.getText();
+        String nAddress = addressTextField.getText();
+        String nCity = cityTextField.getText();
+        String nZip = zipTextField.getText();
+        String nHomePhone = homePhoneTextField.getText();
+        String nMobilePhone = mobilePhoneTextField.getText();
+        String nEmail = emailAddressTextField1.getText();
+        String nECFirstName = firstNameTextField1.getText();
+        String nECLastName = lastNameTextField1.getText();
+        String nECRelationship = relationshipTextField.getText();
+        String nECHomePhone = homeNumberTextField.getText();
+        String nECMobilePhone = mobileNumberTextField.getText();
+        String nInsuranceProvider = insuranceProviderTextField.getText();
+        String nInsuranceAccountNum = accountNumberTextField.getText();
 
         if(cmd.equals("Logout")){
             CardLayout c1 = (CardLayout) contentPane.getLayout();
@@ -212,12 +214,11 @@ public class AdminPage implements ActionListener {
 
         if(cmd.equals("Create Patient")){
             //add new patient
-            hospital.add(new Patient(new Person(userID,newPatientFirstName,newPatientLastName,newPatientDOB,newPatientSSN,
-                    newPatientAddress,newPatientCity,newPatientHomePhone,newPatientMobilePhone,newPatientEmail,
-                    newPatientECFirstName,newPatientECLastName,newPatientECHomePhone,newPatientECMobilePhone,
-                    newPatientInsuranceProvider,newPatientInsuranceAccountNum,"UserName",sexcomboBox2.getSelectedItem().toString(),
-                    statecomboBox2.getSelectedItem().toString(),newPatientAge,"123",newPatientMiddleName,newPatientECRelationship,
-                    newPatientZip)));
+            Person g = new Patient(nFirstName, nLastName, nDOB, nSSN, nAddress, nCity, nHomePhone,
+                    nMobilePhone, nEmail, nECFirstName, nECLastName, nECHomePhone,
+                    nECMobilePhone, nInsuranceProvider, nInsuranceAccountNum,
+                    "PLACEHOLDER_USERNAME", "PLACEHOLDER_SEX", "PLACEHOLDER_STATE", nAge, "PLACHOLDER_PASSWORD", nMiddleName, nECRelationship, nZip);
+            hospital.getAllUsers().put("PLACEHOLDER_USERNAME", g);
 
             firstNameTextField.setText("");
             lastNameTextField.setText("");
@@ -239,10 +240,14 @@ public class AdminPage implements ActionListener {
             insuranceProviderTextField.setText("");
             accountNumberTextField.setText("");
 
-            patientcomboBox2.addItem(newPatientFirstName);
+            patientcomboBox2.addItem(nFirstName);
         }
 
-        if(cmd.equals("Find")){
+        if(cmd.equals("Find")) {
+
+            // TODO: USE KEY LOOKUP INSTEAD OF ITERATION WHEN POSSIBLE
+
+            /*
            for(Iterator<Map.Entry<String,Person>> it = Person.hashMap.entrySet().iterator();it.hasNext();){
                Map.Entry<String,Person> entry = it.next();
                if(entry.getKey().equals(patientcomboBox2.getSelectedItem())){
@@ -261,6 +266,7 @@ public class AdminPage implements ActionListener {
 
                }
            }
+           */
 
         }
 

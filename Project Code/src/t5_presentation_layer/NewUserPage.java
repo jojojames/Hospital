@@ -2,6 +2,7 @@ package t5_presentation_layer;
 
 import t5_domain_logic.Hospital;
 import t5_domain_objects.Person;
+import t5_domain_objects.Patient;
 
 import javax.swing.*;
 import java.awt.*;
@@ -109,18 +110,20 @@ public class NewUserPage {
 
                 if(differentUser) {
                     // The user doesn't match any in the system, so create the user and add it.
-                    Person newPerson = new Person(hospital.getUniqueUserID(), firstName, lastName,
+                    Person newPerson = new Patient(userName, password, firstName, lastName,
                             dateOfBirth, socialSecurity, addressField, city, homePhone, mobilePhone,
                             emailAddress, ECfirstName, EClastName, EChomePhone, ECmobilePhone,
-                            insuranceProvider, insuranceAccount, userName, sex, state, age, password,"","","");
-                    allUsers.put(newPerson.getUserId(), newPerson);
+                            insuranceProvider, insuranceAccount, sex, state, age, "","","");
+                    allUsers.put(newPerson.getUserName(), newPerson);
                 }
 
                 /*
                 HashMap<String, Person>testAllUsers = hospital.getAllUsers();
                 for(Person person : testAllUsers.values()) {
-                    System.out.println(person.getAddress()); //test
-                }*/
+                    Patient sPerson = (Patient) person;
+                    System.out.println(sPerson.getUserName()); //test
+                }
+                */
             }
         });
     }

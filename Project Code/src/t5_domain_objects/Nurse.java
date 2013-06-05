@@ -1,18 +1,33 @@
 package t5_domain_objects;
 
 import t5_relations.Patient_Nurse;
-import t5_relations.Person_Nurse;
 import t5_relations.Surgery_Nurse;
 
 import java.util.Vector;
 
-public class Nurse {
+public class Nurse extends RPerson {
+
+    /*
+    INHERITED FROM RPerson
+    -----------------------
+    public String firstName;
+    public String lastName;
+    public String middleName;
+    public String dateOfBirth;
+    public String sex;
+    public String socialSecurity;
+    public String emailAddress;
+    public String password;
+    public String userName;
+    public String homePhone;
+    public String mobilePhone;
+     */
+
     private String userId;
     private Surgeon surgeon;
     private Department department;
     private Vector<Patient_Nurse> patientNurse = new Vector<Patient_Nurse>();
     private Vector<Surgery_Nurse> surgeryNurse = new Vector<Surgery_Nurse>();
-    private Vector<Person_Nurse> personNurse = new Vector<Person_Nurse>();
     private Doctor doctor;
     private Skills skills;
     private Ward ward;
@@ -20,8 +35,18 @@ public class Nurse {
     /**
      *
      */
-    public Nurse(String userId) {
-        this.userId = userId;
+    public Nurse(String userName, String password, String firstName, String lastName, String middleName,
+                 String dateOfBirth, String sex, String socialSecurity,  String emailAddress, String mobilePhone) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.middleName = middleName;
+        this.dateOfBirth = dateOfBirth;
+        this.sex = sex;
+        this.socialSecurity = socialSecurity;
+        this.emailAddress = emailAddress;
+        this.password = password;
+        this.userName = userName;
+        this.mobilePhone = mobilePhone;
     }
 
     public Ward getWard() {
@@ -70,14 +95,6 @@ public class Nurse {
 
     public void setSurgeryNurse(Vector<Surgery_Nurse> surgeryNurse) {
         this.surgeryNurse = surgeryNurse;
-    }
-
-    public Vector<Person_Nurse> getPersonNurse() {
-        return personNurse;
-    }
-
-    public void setPersonNurse(Vector<Person_Nurse> personNurse) {
-        this.personNurse = personNurse;
     }
 
     public Doctor getDoctor() {

@@ -1,14 +1,13 @@
 package t5_presentation_layer;
 
 import t5_domain_logic.Hospital;
+import t5_domain_objects.Patient;
 import t5_domain_objects.Person;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Iterator;
-import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
@@ -65,30 +64,10 @@ public class MainForm {
         JScrollPane scrollNewUserPage = new JScrollPane(newUserPage.getNewUserPagePanel()); // NewUserPage requires scrolling.
         contentPane.add(scrollNewUserPage, "New User Page");
 
-        // Page User sees when clicking on the Surgery button in the User Page.
-        SurgeryPage surgeryPage = new SurgeryPage(contentPane, hospital);
-        JScrollPane scrollSurgery = new JScrollPane(surgeryPage.getSurgeryPagePanel());
-        contentPane.add(scrollSurgery, "Surgery Page");
-
         // Page User sees when clicking on the View Surgery button in the Surgery Page.
         ScheduleSurgery scheduleSurgery = new ScheduleSurgery(contentPane, hospital);
         JScrollPane scrollScheduleSurgery = new JScrollPane(scheduleSurgery.getScheduleSurgeryPanel());
         contentPane.add(scrollScheduleSurgery, "Schedule Surgery Page");
-
-        // Page User sees when clicking on the Schedule Appointment button in the User Page.
-        ScheduleAppointment scheduleAppointment = new ScheduleAppointment(contentPane, hospital);
-        JScrollPane scrollScheduleAppointment = new JScrollPane(scheduleAppointment.getScheduleAppointmentPanel());
-        contentPane.add(scrollScheduleAppointment, "Schedule Appointment Page");
-
-        // Page User sees when clicking on the View Appointments button in the User Page.
-        ViewAppointments viewAppointments = new ViewAppointments(contentPane, hospital);
-        JScrollPane scrollViewAppointments = new JScrollPane((viewAppointments.getViewAppointmentsPanel()));
-        contentPane.add(scrollViewAppointments, "View Appointments Page");
-
-        // Page User sees when clicking on the View Billing Reports button in the User Page.
-        ViewBillingReport viewBillingReport = new ViewBillingReport(contentPane, hospital);
-        JScrollPane scrollViewBillingReport = new JScrollPane(viewBillingReport.getViewBillingReportPanel());
-        contentPane.add(scrollViewBillingReport, "View Billing Report Page");
 
         frame = new JFrame("MainForm");
         frame.setContentPane(contentPane);
@@ -101,20 +80,20 @@ public class MainForm {
         init_frame();
 
         // Make a user to test functionality. Userid = 100, Password = 100.
-        Person testPerson = new Person("100", "James", "Test", "9/8/93", "88211-924-123", "Address", "City", "198-123-123",
+        Person testPerson = new Patient("James", "password", "James", "Test", "9/8/93", "88211-924-123", "Address", "City", "198-123-123",
                 "326-822-8823", "jamesemail.com", "eEC", "EEC", "123-853-8228", "3923-124-138", "InsuranceProvider",
-                "InsuranceAccount", "Contact", "m", "CA", "20", "100","","","");
+                "InsuranceAccount", "m", "CA", "20", "","","");
 
-        Person adminPerson = new Person("admin", "James", "Test", "9/8/93", "88211-924-123", "Address", "City", "198-123-123",
+        Person adminPerson = new Patient("admin", "admin", "admin", "Test", "9/8/93", "88211-924-123", "Address", "City", "198-123-123",
                 "326-822-8823", "jamesemail.com", "eEC", "EEC", "123-853-8228", "3923-124-138", "InsuranceProvider",
-                "InsuranceAccount", "Contact", "m", "CA", "20", "admin","","","");
-        hospital.getAllUsers().put(testPerson.getUserId(), testPerson);
-        hospital.getAllUsers().put(adminPerson.getUserId(), adminPerson);
+                "InsuranceAccount", "m", "CA", "20", "","","");
+        hospital.getAllUsers().put(testPerson.getUserName(), testPerson);
+        hospital.getAllUsers().put(adminPerson.getUserName(), adminPerson);
 
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String enteredUserId = userIdTextField.getText();
+                String enteredUserName = userIdTextField.getText();
                 char[] pass = passwordPasswordField.getPassword();
                 String enteredPassword = new String (pass);
 
@@ -122,13 +101,13 @@ public class MainForm {
                 // TODO: Rewrite it so that if the user logging in is an admin,
                 // TODO: change to the admin page instead.
 
-                if(hospital.getAllUsers().containsKey(enteredUserId)) {
-                    String realPassword = hospital.getAllUsers().get(enteredUserId).getPassword();
+                if(hospital.getAllUsers().containsKey(enteredUserName)) {
+                    String realPassword = hospital.getAllUsers().get(enteredUserName).getPassword();
                     if(realPassword.equals(enteredPassword)) {
                         // they entered the correct password
 
                         //Logic to test Admin page and User Page
-                        if(hospital.getAllUsers().get(enteredUserId).getUserId() == "admin"){
+                        if(hospital.getAllUsers().get(enteredUserName).getUserName() == "admin"){
 
                             clearTextFields();
                         // They entered their information correctly, so switch the panel to something else.

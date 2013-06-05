@@ -2,13 +2,29 @@ package t5_domain_objects;
 
 import t5_relations.Doctor_Assistant;
 import t5_relations.Doctor_ExaminationRoom;
-import t5_relations.Person_Doctor;
+import t5_relations.Patient_Doctor;
 
 import java.util.Date;
 import java.util.Vector;
 
-public class Doctor {
-    private String userId;
+public class Doctor extends RPerson {
+
+    /*
+    INHERITED FROM RPerson
+    -----------------------
+    public String firstName;
+    public String lastName;
+    public String middleName;
+    public String dateOfBirth;
+    public String sex;
+    public String socialSecurity;
+    public String emailAddress;
+    public String password;
+    public String userName;
+    public String homePhone;
+    public String mobilePhone;
+     */
+
     private int skillID;
     private Vector<Appointment> appointment = new Vector<Appointment>();
     private Vector<Doctor_ExaminationRoom> doctorExaminationRoom = new Vector<Doctor_ExaminationRoom>();
@@ -16,10 +32,10 @@ public class Doctor {
     private Vector<Patient> patient = new Vector<Patient>();
     private int yearsOfExperience;
     private Vector<Doctor_Assistant> doctorAssistant = new Vector<Doctor_Assistant>();
-    private Date hiredDate;
+    private String hiredDate;
     private Vector<Diagnosis> diagnosis = new Vector<Diagnosis>();
     private int departmentID;
-    private Vector<Person_Doctor> personDoctor = new Vector<Person_Doctor>();
+    private Vector<Patient_Doctor> personDoctor = new Vector<Patient_Doctor>();
     private Vector<Nurse> nurse = new Vector<Nurse>();
     private Department department;
 
@@ -30,13 +46,28 @@ public class Doctor {
      * @param hiredDate
      * @param departmentID
      */
-    public Doctor(String userId, int skillId, int yearsOfExperience, Date hiredDate, int departmentID) {
-        this.userId = userId;
+    public Doctor(String userName, String password, String firstName, String lastName, String middleName,
+                  String dateOfBirth, String sex, String socialSecurity,  String emailAddress, String mobilePhone,
+                  int skillId, int yearsOfExperience, String hiredDate, int departmentID) {
+
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.middleName = middleName;
+        this.dateOfBirth = dateOfBirth;
+        this.sex = sex;
+        this.socialSecurity = socialSecurity;
+        this.emailAddress = emailAddress;
+        this.password = password;
+        this.userName = userName;
+        this.mobilePhone = mobilePhone;
+
         this.skillID = skillId;
         this.yearsOfExperience = yearsOfExperience;
         this.hiredDate = hiredDate;
         this.departmentID = departmentID;
     }
+
+
 
     public int getSkillID() {
         return skillID;
@@ -44,14 +75,6 @@ public class Doctor {
 
     public void setSkillID(int skillID) {
         this.skillID = skillID;
-    }
-
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
     }
 
     public Vector<Appointment> getAppointment() {
@@ -102,11 +125,11 @@ public class Doctor {
         this.doctorAssistant = doctorAssistant;
     }
 
-    public Date getHiredDate() {
+    public String getHiredDate() {
         return hiredDate;
     }
 
-    public void setHiredDate(Date hiredDate) {
+    public void setHiredDate(String hiredDate) {
         this.hiredDate = hiredDate;
     }
 
@@ -126,11 +149,11 @@ public class Doctor {
         this.departmentID = departmentID;
     }
 
-    public Vector<Person_Doctor> getPersonDoctor() {
+    public Vector<Patient_Doctor> getPersonDoctor() {
         return personDoctor;
     }
 
-    public void setPersonDoctor(Vector<Person_Doctor> personDoctor) {
+    public void setPersonDoctor(Vector<Patient_Doctor> personDoctor) {
         this.personDoctor = personDoctor;
     }
 
