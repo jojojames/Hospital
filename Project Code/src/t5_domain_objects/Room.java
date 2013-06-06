@@ -8,7 +8,6 @@ public class Room {
     public int roomNum;
     private int newRoom;
 
-    public static HashMap<Integer, Room> hashMap = new HashMap<Integer, Room>();
     /**
      *
      * @param reasonForNewRoom
@@ -23,6 +22,5 @@ public class Room {
 
     public Room(int roomNum){
         this.roomNum = roomNum;
-        hashMap.put(roomNum,this);
     }
 }

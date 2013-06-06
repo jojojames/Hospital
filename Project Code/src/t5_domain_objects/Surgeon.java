@@ -22,6 +22,7 @@ public class Surgeon extends RPerson {
     public String userName;
     public String homePhone;
     public String mobilePhone;
+    public int type;
      */
 
     private Vector<Patient_Surgeon> patientSurgeon = new Vector<Patient_Surgeon>();
@@ -30,19 +31,16 @@ public class Surgeon extends RPerson {
     private Date hiredDate;
     private Vector<Surgeon_Surgery> surgeonSurgery = new Vector<Surgeon_Surgery>();
     private int departmentID;
-    private int skillID;
     private Vector<Nurse> nurse = new Vector<Nurse>();
-    private Vector<Assistant> assistant = new Vector<Assistant>();
 
     /**
      *
      * @param yearsOfExperiance
      * @param departmentID
-     * @param skillID
      */
     public Surgeon(String userName, String password, String firstName, String lastName, String middleName,
-                   String dateOfBirth, String sex, String socialSecurity,  String emailAddress, String mobilePhone,
-                    int yearsOfExperiance, int departmentID, int skillID) {
+                   String dateOfBirth, String sex, String socialSecurity, String emailAddress, String mobilePhone,
+                    int yearsOfExperiance, int departmentID, int type) {
 
         this.firstName = firstName;
         this.lastName = lastName;
@@ -54,10 +52,10 @@ public class Surgeon extends RPerson {
         this.password = password;
         this.userName = userName;
         this.mobilePhone = mobilePhone;
+        this.type = type;
 
         this.yearsOfExperiance = yearsOfExperiance;
         this.departmentID = departmentID;
-        this.skillID = skillID;
     }
 
     public Vector<Patient_Surgeon> getPatientSurgeon() {
@@ -108,14 +106,6 @@ public class Surgeon extends RPerson {
         this.departmentID = departmentID;
     }
 
-    public int getSkillID() {
-        return skillID;
-    }
-
-    public void setSkillID(int skillID) {
-        this.skillID = skillID;
-    }
-
     public Vector<Nurse> getNurse() {
         return nurse;
     }
@@ -123,14 +113,5 @@ public class Surgeon extends RPerson {
     public void setNurse(Vector<Nurse> nurse) {
         this.nurse = nurse;
     }
-
-    public Vector<Assistant> getAssistant() {
-        return assistant;
-    }
-
-    public void setAssistant(Vector<Assistant> assistant) {
-        this.assistant = assistant;
-    }
-
 
 }

@@ -147,6 +147,9 @@ public class AdminPage implements ActionListener {
     public AdminPage(JPanel _contentPane) {
         this.contentPane = _contentPane;
 
+        /*
+
+        // TODO: CAN PULL INFO FROM STAFF HASHMAP NOW
         //populate patient combobox
         for(Object o: hospital.getAllUsers().keySet())
             patientcomboBox2.addItem(o);
@@ -162,6 +165,9 @@ public class AdminPage implements ActionListener {
         //Doctor combobox
         for(Object o: Doctor.hashMap.keySet())
             comboBox5.addItem(o);
+
+        */
+
 
 
 
@@ -218,7 +224,7 @@ public class AdminPage implements ActionListener {
             Person g = new Patient("PLACEHOLDER_USERNAME", "PLACHOLDER_PASSWORD", nFirstName, nLastName, nDOB,
                     nSSN, nAddress, nCity, nHomePhone, nMobilePhone, nEmail, nECFirstName, nECLastName, nECHomePhone,
                     nECMobilePhone, nInsuranceProvider, nInsuranceAccountNum, sexcomboBox2.getSelectedItem().toString(),
-                    statecomboBox2.getSelectedItem().toString(), nAge, nMiddleName, nECRelationship, nZip);
+                    statecomboBox2.getSelectedItem().toString(), nAge, nMiddleName, nECRelationship, nZip, 5);
             hospital.getAllUsers().put(nFirstName, g);
 
             firstNameTextField.setText("");

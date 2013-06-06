@@ -21,22 +21,21 @@ public class Nurse extends RPerson {
     public String userName;
     public String homePhone;
     public String mobilePhone;
+    public int type;
      */
 
-    private String userId;
     private Surgeon surgeon;
     private Department department;
     private Vector<Patient_Nurse> patientNurse = new Vector<Patient_Nurse>();
     private Vector<Surgery_Nurse> surgeryNurse = new Vector<Surgery_Nurse>();
     private Doctor doctor;
-    private Skills skills;
     private Ward ward;
 
     /**
      *
      */
     public Nurse(String userName, String password, String firstName, String lastName, String middleName,
-                 String dateOfBirth, String sex, String socialSecurity,  String emailAddress, String mobilePhone) {
+                 String dateOfBirth, String sex, String socialSecurity,  String emailAddress, String mobilePhone, int type) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.middleName = middleName;
@@ -47,6 +46,7 @@ public class Nurse extends RPerson {
         this.password = password;
         this.userName = userName;
         this.mobilePhone = mobilePhone;
+        this.type = type;
     }
 
     public Ward getWard() {
@@ -55,14 +55,6 @@ public class Nurse extends RPerson {
 
     public void setWard(Ward ward) {
         this.ward = ward;
-    }
-
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
     }
 
     public Surgeon getSurgeon() {
@@ -105,13 +97,6 @@ public class Nurse extends RPerson {
         this.doctor = doctor;
     }
 
-    public Skills getSkills() {
-        return skills;
-    }
-
-    public void setSkills(Skills skills) {
-        this.skills = skills;
-    }
 
 
 }

@@ -18,12 +18,10 @@ import java.util.Date;
  * To change this template use File | Settings | File Templates.
  */
 public class Hospital {
-    private Vector<Bed> allBeds = new Vector<Bed>();
     private Vector<ExaminationRoom> allExamRooms = new Vector<ExaminationRoom>();
     private Vector<Office> allOffices = new Vector<Office>();
     private Vector<OperatingRoom> allOperatingRooms = new Vector<OperatingRoom>();
     private Vector<Department> allDepartments = new Vector<Department>();
-    private Vector<Skills> allSkills = new Vector<Skills>();
     private Vector<Insurance> allInsurance = new Vector<Insurance>();
     private Vector<InsurancePolicy> allInsurancePolicy = new Vector<InsurancePolicy>();
 
@@ -37,7 +35,6 @@ public class Hospital {
     public static HashMap<String, Person> allUsers = new HashMap<String, Person>();
     public static HashMap<String, Person> allStaff = new HashMap<String, Person>();
 
-
     private int NUM_INSURANCE_POLICY = 3;
     private int NUM_INSURANCE = 3;
     private int NUM_SKILLS = 10;
@@ -49,15 +46,15 @@ public class Hospital {
     private int NUM_ROOMS = 30;
 
     /*
-    Staff Type will be as followed:
+    Person Type will be as followed:
     Surgeon - 1
     Doctor  - 2
     Head    - 3
     Nurse   - 4
+    Patient - 5
     */
 
     public Hospital() {
-        build_beds();
         build_exam_rooms();
         build_offices();
         build_operating_rooms();
@@ -66,7 +63,6 @@ public class Hospital {
         hire_doctors();
         hire_heads();
         build_departments();
-        hire_skills();
         build_insurance();
         build_insurance_policy();
         build_rooms();
@@ -78,34 +74,28 @@ public class Hospital {
     private void generate_users() {
         Person a = new Patient("a", "password", "a", "A", "1/1/92", "123-123-123", "Address", "City", "310-123-123",
                 "323-123-123", "email.com", "aEC", "AEC", "123-123-123", "323-123-122", "InsuranceProvider",
-                "InsuranceAccount", "m", "CA", "20", "middle","spouse","95112");
+                "InsuranceAccount", "m", "CA", "20", "middle","spouse","95112", 5);
         allUsers.put(a.getUserName(), a);
 
         Person b = new Patient("b", "password", "b", "B", "1/1/91", "223-124-123", "Address", "City", "311-123-123",
                 "323-125-123", "email.com", "bEC", "BEC", "123-153-123", "323-124-122", "InsuranceProvider",
-                "InsuranceAccount", "m", "CA", "21", "middle","spouse","95112");
+                "InsuranceAccount", "m", "CA", "21", "middle","spouse","95112", 5);
         allUsers.put(b.getUserName(), b);
 
         Person c = new Patient("c", "password", "c", "C", "1/1/93", "253-124-123", "Address", "City", "111-123-123",
                 "326-122-123", "email.com", "cEC", "CEC", "123-753-523", "323-124-132", "InsuranceProvider",
-                "InsuranceAccount", "m", "CA", "26", "middle","spouse","95112");
+                "InsuranceAccount", "m", "CA", "26", "middle","spouse","95112", 5);
         allUsers.put(c.getUserName(), c);
 
         Person d = new Patient("d", "password", "d", "D", "9/1/93", "953-924-123", "Address", "City", "191-123-123",
                 "326-822-193", "email.com", "dEC", "DEC", "123-853-528", "393-124-130", "InsuranceProvider",
-                "InsuranceAccount", "f", "CA", "29", "middle","spouse","95112");
+                "InsuranceAccount", "f", "CA", "29", "middle","spouse","95112", 5);
         allUsers.put(d.getUserName(), d);
 
         Person e = new Patient("e", "password", "e", "E", "9/8/93", "883-924-123", "Address", "City", "198-123-123",
                 "326-822-883", "email.com", "eEC", "EEC", "123-853-828", "393-124-138", "InsuranceProvider",
-                "InsuranceAccount", "f", "CA", "27", "middle","spouse","95112");
+                "InsuranceAccount", "f", "CA", "27", "middle","spouse","95112", 5);
 
-    }
-
-    public String getUniqueUserID() {
-        // Create a user id based on the count of all users. User ID is guaranteed to be unique this way.
-        return String.valueOf(allUsers.size() + allSurgeons.size() +
-                allDoctors.size() + allHeads.size() + allNurses.size());
     }
 
     private void hire_surgeons() {
@@ -145,19 +135,19 @@ public class Hospital {
         */
 
         Person aDoc = new Doctor("aDoc", "aDocPass", "Mutahar", "Ahmed", "docmiddle",
-                "dateof", "m", "social", "doc@email", "mobile1232", 2, 1, "3", 3);
+                "dateof", "m", "social", "doc@email", "mobile1232", 2, 1, "3", 3, 2);
         Person bDoc = new Doctor("bDoc", "bDocPbss", "Patrick", "Anderson", "docmiddle",
-                "dbteof", "m", "socibl", "doc@embil", "mobile1232", 2, 1, "3", 3);
+                "dbteof", "m", "socibl", "doc@embil", "mobile1232", 2, 1, "3", 3, 2);
         Person cDoc = new Doctor("cDoc", "cDocPcss", "Andrews", "Alan", "docmiddle",
-                "dcteof", "m", "socicl", "doc@emcil", "mobile1232", 2, 1, "3", 3);
+                "dcteof", "m", "socicl", "doc@emcil", "mobile1232", 2, 1, "3", 3, 2);
         Person dDoc = new Doctor("dDoc", "dDocPdss", "Stephen", "Angeli", "docmiddle",
-                "ddteof", "m", "socidl", "doc@emdil", "mobile1232", 2, 1, "3", 3);
+                "ddteof", "m", "socidl", "doc@emdil", "mobile1232", 2, 1, "3", 3, 2);
         Person eDoc = new Doctor("eDoc", "eDocPess", "Lewis", "Attas", "docmiddle",
-                "deteof", "m", "sociel", "doc@emeil", "mobile1232", 2, 1, "3", 3);
+                "deteof", "m", "sociel", "doc@emeil", "mobile1232", 2, 1, "3", 3, 2);
         Person fDoc = new Doctor("fDoc", "fDocPfss", "Kevin", "Basralian", "docmiddle",
-                "dfteof", "m", "socifl", "doc@emfil", "mobile1232", 2, 1, "3", 3);
+                "dfteof", "m", "socifl", "doc@emfil", "mobile1232", 2, 1, "3", 3, 2);
         Person zDoc = new Doctor("zDoc", "zDocPzss", "Mark", "Berman", "docmiddle",
-                "dzteof", "m", "socizl", "doc@emzil", "mobile1232", 2, 1, "3", 3);
+                "dzteof", "m", "socizl", "doc@emzil", "mobile1232", 2, 1, "3", 3, 2);
         allStaff.put(aDoc.getUserName(), aDoc);
         allStaff.put(bDoc.getUserName(), bDoc);
         allStaff.put(cDoc.getUserName(), cDoc);
@@ -175,17 +165,17 @@ public class Hospital {
                 */
 
         Person aHead = new Head("aHeadusername", "aHeadpassword", "aHeadname", "aHeadLast", "aHeadMid",
-                "dateofbirth", "m", "social", "email@email", "mobile", 3, 3, "1");
+                "dateofbirth", "m", "social", "email@email", "mobile", 3, 3, "1", 3);
         Person bHebd = new Head("bHebdusernbme", "bHebdpbssword", "bHebdnbme", "bHebdLbst", "bHebdMid",
-                "dbteofbirth", "m", "socibl", "embil@embil", "mobile", 3, 3, "1");
+                "dbteofbirth", "m", "socibl", "embil@embil", "mobile", 3, 3, "1", 3);
         Person cHecd = new Head("cHecduserncme", "cHecdpcssword", "cHecdncme", "cHecdLcst", "cHecdMid",
-                "dcteofbirth", "m", "socicl", "emcil@emcil", "mobile", 3, 3, "1");
+                "dcteofbirth", "m", "socicl", "emcil@emcil", "mobile", 3, 3, "1", 3);
         Person dHedd = new Head("dHedduserndme", "dHeddpdssword", "dHeddndme", "dHeddLdst", "dHeddMid",
-                "ddteofbirth", "m", "socidl", "emdil@emdil", "mobile", 3, 3, "1");
+                "ddteofbirth", "m", "socidl", "emdil@emdil", "mobile", 3, 3, "1", 3);
         Person eHeed = new Head("eHeeduserneme", "eHeedpessword", "eHeedneme", "eHeedLest", "eHeedMid",
-                "deteofbirth", "m", "sociel", "emeil@emeil", "mobile", 3, 3, "1");
+                "deteofbirth", "m", "sociel", "emeil@emeil", "mobile", 3, 3, "1", 3);
         Person fHefd = new Head("fHefdusernfme", "fHefdpfssword", "fHefdnfme", "fHefdLfst", "fHefdMid",
-                "dfteofbirth", "m", "socifl", "emfil@emfil", "mobile", 3, 3, "1");
+                "dfteofbirth", "m", "socifl", "emfil@emfil", "mobile", 3, 3, "1", 3);
 
         allStaff.put(aHead.getUserName(), aHead);
         allStaff.put(bHebd.getUserName(), bHebd);
@@ -202,17 +192,17 @@ public class Hospital {
          */
 
         Person aNurse = new Nurse("nurseUserName", "nusrePass", "nusrename", "nurselast", "nursemiddle",
-                "dateofb", "f", "asdfadfsocial", "email", "1212");
+                "dateofb", "f", "asdfadfsocial", "email", "1212", 4);
         Person bNurse = new Nurse("nurseUserNbme", "nusrePbss", "nusrenbme", "nurselbst", "nursemiddle",
-                "dbteofb", "f", "bsdfbdfsocibl", "embil", "1212");
+                "dbteofb", "f", "bsdfbdfsocibl", "embil", "1212", 4);
         Person cNurse = new Nurse("nurseUserNcme", "nusrePcss", "nusrencme", "nurselcst", "nursemiddle",
-                "dcteofb", "f", "csdfcdfsocicl", "emcil", "1212");
+                "dcteofb", "f", "csdfcdfsocicl", "emcil", "1212", 4);
         Person dNurse = new Nurse("nurseUserNdme", "nusrePdss", "nusrendme", "nurseldst", "nursemiddle",
-                "ddteofb", "f", "dsdfddfsocidl", "emdil", "1212");
+                "ddteofb", "f", "dsdfddfsocidl", "emdil", "1212", 4);
         Person eNurse = new Nurse("nurseUserNeme", "nusrePess", "nusreneme", "nurselest", "nursemiddle",
-                "deteofb", "f", "esdfedfsociel", "emeil", "1212");
+                "deteofb", "f", "esdfedfsociel", "emeil", "1212", 4);
         Person fNurse = new Nurse("nurseUserNfme", "nusrePfss", "nusrenfme", "nurselfst", "nursemiddle",
-                "dfteofb", "f", "fsdffdfsocifl", "emfil", "1212");
+                "dfteofb", "f", "fsdffdfsocifl", "emfil", "1212", 4);
 
         allStaff.put(aNurse.getUserName(), aNurse);
         allStaff.put(bNurse.getUserName(), bNurse);
@@ -235,13 +225,6 @@ public class Hospital {
         for(int i=0; i<NUM_INSURANCE; i++) {
             Insurance newInsurance = new Insurance(contactName[i], i, providerName[i]); //Contact, Contact#, Provider
             allInsurance.add(newInsurance);
-        }
-    }
-
-    private void hire_skills() {
-        for(int i=0; i<NUM_SKILLS; i++) {
-            Skills newSkills = new Skills(i, i); //skill, skillID
-            allSkills.add(newSkills);
         }
     }
 
@@ -281,13 +264,6 @@ public class Hospital {
         }
     }
 
-    private void build_beds() {
-        for(int i=0; i<NUM_BEDS; i++) {
-            Bed newBed = new Bed(i+1); // ids numbered from 1 to numBeds
-            allBeds.add(newBed);
-        }
-    }
-
     private void build_exam_rooms() {
         for(int i=0; i<NUM_EXAM_ROOMS; i++) {
             ExaminationRoom newRoom = new ExaminationRoom(i, i); // use i for tools and table: placeholder
@@ -302,14 +278,6 @@ public class Hospital {
 
     public void setAllUsers(HashMap<String, Person> allUsers) {
         this.allUsers = allUsers;
-    }
-
-    public Vector<Bed> getAllBeds() {
-        return allBeds;
-    }
-
-    public void setAllBeds(Vector<Bed> allBeds) {
-        this.allBeds = allBeds;
     }
 
     public Vector<ExaminationRoom> getAllExamRooms() {
@@ -342,14 +310,6 @@ public class Hospital {
 
     public void setAllDepartments(Vector<Department> allDepartments) {
         this.allDepartments = allDepartments;
-    }
-
-    public Vector<Skills> getAllSkills() {
-        return allSkills;
-    }
-
-    public void setAllSkills(Vector<Skills> allSkills) {
-        this.allSkills = allSkills;
     }
 
     public Vector<InsurancePolicy> getAllInsurancePolicy() {

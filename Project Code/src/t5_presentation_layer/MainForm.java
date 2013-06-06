@@ -82,11 +82,11 @@ public class MainForm {
         // Make a user to test functionality. Userid = 100, Password = 100.
         Person testPerson = new Patient("James", "password", "James", "Test", "9/8/93", "88211-924-123", "Address", "City", "198-123-123",
                 "326-822-8823", "jamesemail.com", "eEC", "EEC", "123-853-8228", "3923-124-138", "InsuranceProvider",
-                "InsuranceAccount", "m", "CA", "20", "","","");
+                "InsuranceAccount", "m", "CA", "20", "","","", 5);
 
         Person adminPerson = new Patient("admin", "admin", "admin", "Test", "9/8/93", "88211-924-123", "Address", "City", "198-123-123",
                 "326-822-8823", "jamesemail.com", "eEC", "EEC", "123-853-8228", "3923-124-138", "InsuranceProvider",
-                "InsuranceAccount", "m", "CA", "20", "","","");
+                "InsuranceAccount", "m", "CA", "20", "","","", 1);
         hospital.getAllUsers().put(testPerson.getUserName(), testPerson);
         hospital.getAllUsers().put(adminPerson.getUserName(), adminPerson);
 

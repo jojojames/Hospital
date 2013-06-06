@@ -8,7 +8,6 @@ public class Prescription {
     private Date date;
     public Patient patient;
     private float amount;
-    public Vector<Allergies> allergies = new Vector<Allergies>();
     private int prescripID;
     private String notes;
     private String medicineName;

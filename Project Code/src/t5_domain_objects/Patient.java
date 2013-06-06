@@ -21,6 +21,7 @@ public class Patient extends RPerson {
     public String userName;
     public String homePhone;
     public String mobilePhone;
+    public int type;
      */
 
     private String ECfirstName;
@@ -36,7 +37,6 @@ public class Patient extends RPerson {
     private String address;
     private String city;
 
-    public Vector<Patient_Assistant> personAssistant = new Vector<Patient_Assistant>();
     public Vector<Patient_Doctor> personDoctor = new Vector<Patient_Doctor>();
     public Vector<Patient_Head> personHead = new Vector<Patient_Head>();
     public Vector<Patient_Nurse> patientNurse = new Vector<Patient_Nurse>();
@@ -48,7 +48,6 @@ public class Patient extends RPerson {
     public Vector<BillingStatement> billingStatement = new Vector<BillingStatement>();
     public Vector<Prescription> prescription = new Vector<Prescription>();
     public InsurancePolicy insurancePolicy;
-    public static HashMap<String, Patient> hashMap = new HashMap<String, Patient>();
 
     public Patient(String userName, String password, String firstName, String lastName,
                    String dateOfBirth, String socialSecurity, String address,
@@ -57,7 +56,7 @@ public class Patient extends RPerson {
                    String EChomePhone, String ECmobilePhone,
                    String insuranceProvider, String insuranceAccount,
                    String sex, String state, String age, String middleName,
-                   String ECRelationship, String zip) {
+                   String ECRelationship, String zip, int type) {
 
         this.firstName = firstName;
         this.lastName = lastName;
@@ -82,7 +81,7 @@ public class Patient extends RPerson {
         this.address = address;
         this.city = city;
         this.age = age;
-        hashMap.put(lastName + ", " + firstName ,this);
+        this.type = type;
     }
 
     public String getCity() {

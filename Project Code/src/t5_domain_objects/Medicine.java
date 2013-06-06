@@ -5,7 +5,6 @@ public class Medicine {
     private int Medicine;
     private float Price;
     private String MedicineDesc;
-    public Allergies allergies;
 
     /**
      *

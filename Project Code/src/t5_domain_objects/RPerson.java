@@ -19,6 +19,7 @@ public class RPerson implements Person {
     public String userName;
     public String homePhone;
     public String mobilePhone;
+    public int type;
 
     public String getFirstName() {
         return this.firstName;
@@ -106,5 +107,14 @@ public class RPerson implements Person {
     public void setMobilePhone(String mobilePhone) {
         this.mobilePhone = mobilePhone;
     }
+
+    public int getType() {
+        return this.type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
+
 
 }

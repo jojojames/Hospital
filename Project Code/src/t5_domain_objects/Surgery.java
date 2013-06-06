@@ -1,7 +1,6 @@
 package t5_domain_objects;
 
 import t5_relations.Surgeon_Surgery;
-import t5_relations.Surgery_Assistant;
 import t5_relations.Surgery_Nurse;
 
 import java.util.Date;
@@ -11,7 +10,6 @@ public class Surgery {
     private String surgeryType;
     public Vector<Surgeon_Surgery> surgeonSurgery = new Vector<Surgeon_Surgery>();
     private String guarantor;
-    public Vector<Surgery_Assistant> assistantSurgery = new Vector<Surgery_Assistant>();
     private String attendingSurgeon;
     public Date date;
     private int diagnosisCode;

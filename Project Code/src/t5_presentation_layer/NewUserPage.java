@@ -113,7 +113,7 @@ public class NewUserPage {
                     Person newPerson = new Patient(userName, password, firstName, lastName,
                             dateOfBirth, socialSecurity, addressField, city, homePhone, mobilePhone,
                             emailAddress, ECfirstName, EClastName, EChomePhone, ECmobilePhone,
-                            insuranceProvider, insuranceAccount, sex, state, age, "","","");
+                            insuranceProvider, insuranceAccount, sex, state, age, "","","", 5);
                     allUsers.put(newPerson.getUserName(), newPerson);
                 }
 

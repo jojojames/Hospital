@@ -20,14 +20,13 @@ public class Head extends RPerson {
     public String userName;
     public String homePhone;
     public String mobilePhone;
+    public int type;
      */
 
     private int yearsOfExperience;
-    private Vector<Skills> skills = new Vector<Skills>();
     private String hiredDate;
     private Department department;
     private Vector<Patient_Head> personHead = new Vector<Patient_Head>();
-    private int skillID;
 
     /**
      *
@@ -37,7 +36,7 @@ public class Head extends RPerson {
      */
     public Head(String userName, String password, String firstName, String lastName, String middleName,
                 String dateOfBirth, String sex, String socialSecurity,  String emailAddress, String mobilePhone,
-                int yearsOfExperience, int skillID, String hiredDate) {
+                int yearsOfExperience, int skillID, String hiredDate, int type) {
 
         this.firstName = firstName;
         this.lastName = lastName;
@@ -49,9 +48,9 @@ public class Head extends RPerson {
         this.password = password;
         this.userName = userName;
         this.mobilePhone = mobilePhone;
+        this.type = type;
 
         this.yearsOfExperience = yearsOfExperience;
-        this.skillID = skillID;
         this.hiredDate = hiredDate;
     }
 
@@ -61,14 +60,6 @@ public class Head extends RPerson {
 
     public void setYearsOfExperience(int yearsOfExperience) {
         this.yearsOfExperience = yearsOfExperience;
-    }
-
-    public Vector<Skills> getSkills() {
-        return skills;
-    }
-
-    public void setSkills(Vector<Skills> skills) {
-        this.skills = skills;
     }
 
     public String getHiredDate() {
@@ -95,11 +86,4 @@ public class Head extends RPerson {
         this.personHead = personHead;
     }
 
-    public int getSkillID() {
-        return skillID;
-    }
-
-    public void setSkillID(int skillID) {
-        this.skillID = skillID;
-    }
 }

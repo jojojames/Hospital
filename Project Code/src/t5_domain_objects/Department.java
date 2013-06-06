@@ -11,7 +11,6 @@ public class Department {
     public Vector<Nurse> nurse = new Vector<Nurse>();
     public Head head;
 
-    public static HashMap<String, Department> hashMap = new HashMap<String, Department>();
     /**
      *
      * @param departmentName
@@ -22,6 +21,5 @@ public class Department {
         //this.departmentID = departmentID;
         this.departmentName = departmentName;
         //this.headID = headID;
-        hashMap.put(departmentName,this);
     }
 }

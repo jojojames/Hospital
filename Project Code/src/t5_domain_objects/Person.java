@@ -42,4 +42,7 @@ public interface Person {
     public String getMobilePhone();
     public void setMobilePhone(String mobilePhone);
 
+    public int getType();
+    public void setType(int type);
+
 }

@@ -1,10 +1,8 @@
 package t5_domain_objects;
 
-import t5_relations.Doctor_Assistant;
 import t5_relations.Doctor_ExaminationRoom;
 import t5_relations.Patient_Doctor;
 
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Vector;
 
@@ -24,15 +22,14 @@ public class Doctor extends RPerson {
     public String userName;
     public String homePhone;
     public String mobilePhone;
+    public int type;
      */
 
-    private int skillID;
     private Vector<Appointment> appointment = new Vector<Appointment>();
     private Vector<Doctor_ExaminationRoom> doctorExaminationRoom = new Vector<Doctor_ExaminationRoom>();
     private Office office;
     private Vector<Patient> patient = new Vector<Patient>();
     private int yearsOfExperience;
-    private Vector<Doctor_Assistant> doctorAssistant = new Vector<Doctor_Assistant>();
     private String hiredDate;
     private Vector<Diagnosis> diagnosis = new Vector<Diagnosis>();
     private int departmentID;
@@ -51,7 +48,7 @@ public class Doctor extends RPerson {
      */
     public Doctor(String userName, String password, String firstName, String lastName, String middleName,
                   String dateOfBirth, String sex, String socialSecurity,  String emailAddress, String mobilePhone,
-                  int skillId, int yearsOfExperience, String hiredDate, int departmentID) {
+                  int skillId, int yearsOfExperience, String hiredDate, int departmentID, int type) {
 
         this.firstName = firstName;
         this.lastName = lastName;
@@ -63,23 +60,13 @@ public class Doctor extends RPerson {
         this.password = password;
         this.userName = userName;
         this.mobilePhone = mobilePhone;
+        this.type = type;
 
-        this.skillID = skillId;
         this.yearsOfExperience = yearsOfExperience;
         this.hiredDate = hiredDate;
         this.departmentID = departmentID;
 
         hashMap.put(lastName + ", " + firstName, this);
-    }
-
-
-
-    public int getSkillID() {
-        return skillID;
-    }
-
-    public void setSkillID(int skillID) {
-        this.skillID = skillID;
     }
 
     public Vector<Appointment> getAppointment() {
@@ -120,14 +107,6 @@ public class Doctor extends RPerson {
 
     public void setYearsOfExperience(int yearsOfExperience) {
         this.yearsOfExperience = yearsOfExperience;
-    }
-
-    public Vector<Doctor_Assistant> getDoctorAssistant() {
-        return doctorAssistant;
-    }
-
-    public void setDoctorAssistant(Vector<Doctor_Assistant> doctorAssistant) {
-        this.doctorAssistant = doctorAssistant;
     }
 
     public String getHiredDate() {
