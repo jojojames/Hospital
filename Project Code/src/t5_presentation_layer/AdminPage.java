@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
@@ -45,7 +46,6 @@ public class AdminPage implements ActionListener {
     private JTextField cityTextField;
     private JTextField addressTextField;
     private JButton createPatientButton;
-    private JTextField enterPatientIDTextField;
     private JComboBox comboBox3;
     private JComboBox comboBox4;
     private JComboBox comboBox5;
@@ -57,7 +57,6 @@ public class AdminPage implements ActionListener {
     private JTextField emailTextField1;
     private JButton admitButton;
     private JTextPane textPane1;
-    private JTextField emailAddressTextField;
     private JTabbedPane tabbedPane2;
     private JFormattedTextField RMpatientIDFormattedTextField;
 
@@ -142,16 +141,14 @@ public class AdminPage implements ActionListener {
 
     JPanel contentPane;
     Patient p;
-    private Hospital hospital = new Hospital();
+    Hospital hospital = new Hospital();
 
 
     public AdminPage(JPanel _contentPane) {
         this.contentPane = _contentPane;
 
-
-        /*
         //populate patient combobox
-        for(Object o: Patient.hashMap.keySet())
+        for(Object o: hospital.getAllUsers().keySet())
             patientcomboBox2.addItem(o);
 
         //location/department combobox
@@ -162,7 +159,10 @@ public class AdminPage implements ActionListener {
         for(Object o: Room.hashMap.keySet())
             comboBox4.addItem(o);
 
-        */
+        //Doctor combobox
+        for(Object o: Doctor.hashMap.keySet())
+            comboBox5.addItem(o);
+
 
 
         //button listener
@@ -206,6 +206,7 @@ public class AdminPage implements ActionListener {
         String nECMobilePhone = mobileNumberTextField.getText();
         String nInsuranceProvider = insuranceProviderTextField.getText();
         String nInsuranceAccountNum = accountNumberTextField.getText();
+        String nBody = textPane1.getText();
 
         if(cmd.equals("Logout")){
             CardLayout c1 = (CardLayout) contentPane.getLayout();
@@ -214,11 +215,11 @@ public class AdminPage implements ActionListener {
 
         if(cmd.equals("Create Patient")){
             //add new patient
-            Person g = new Patient(nFirstName, nLastName, nDOB, nSSN, nAddress, nCity, nHomePhone,
-                    nMobilePhone, nEmail, nECFirstName, nECLastName, nECHomePhone,
-                    nECMobilePhone, nInsuranceProvider, nInsuranceAccountNum,
-                    "PLACEHOLDER_USERNAME", "PLACEHOLDER_SEX", "PLACEHOLDER_STATE", nAge, "PLACHOLDER_PASSWORD", nMiddleName, nECRelationship, nZip);
-            hospital.getAllUsers().put("PLACEHOLDER_USERNAME", g);
+            Person g = new Patient("PLACEHOLDER_USERNAME", "PLACHOLDER_PASSWORD", nFirstName, nLastName, nDOB,
+                    nSSN, nAddress, nCity, nHomePhone, nMobilePhone, nEmail, nECFirstName, nECLastName, nECHomePhone,
+                    nECMobilePhone, nInsuranceProvider, nInsuranceAccountNum, sexcomboBox2.getSelectedItem().toString(),
+                    statecomboBox2.getSelectedItem().toString(), nAge, nMiddleName, nECRelationship, nZip);
+            hospital.getAllUsers().put(nFirstName, g);
 
             firstNameTextField.setText("");
             lastNameTextField.setText("");
@@ -241,34 +242,33 @@ public class AdminPage implements ActionListener {
             accountNumberTextField.setText("");
 
             patientcomboBox2.addItem(nFirstName);
+
+
         }
 
         if(cmd.equals("Find")) {
-
             // TODO: USE KEY LOOKUP INSTEAD OF ITERATION WHEN POSSIBLE
 
-            /*
-           for(Iterator<Map.Entry<String,Person>> it = Person.hashMap.entrySet().iterator();it.hasNext();){
-               Map.Entry<String,Person> entry = it.next();
-               if(entry.getKey().equals(patientcomboBox2.getSelectedItem())){
-
-                   firstNameTextField2.setText(entry.getValue().getFirstName());
-                   lastNameTextField2.setText(entry.getValue().getLastName());
-                   emailTextField.setText(entry.getValue().getEmailAddress());
-                   phoneNumberTextField.setText(entry.getValue().getHomePhone());
-                   addressTextField2.setText(entry.getValue().getAddress());
-                   cityTextField1.setText(entry.getValue().getCity());
-                   stateTextField.setText(entry.getValue().getState());
-                   emergencyContactTextField.setText(entry.getValue().getECfirstName() + " " + entry.getValue().getEClastName());
-                   homePhoneTextField1.setText(entry.getValue().getEChomePhone());
-                   mobilePhoneTextField1.setText(entry.getValue().getECmobilePhone());
-                   emailTextField1.setText(entry.getValue().getEmailAddress());
-
-               }
-           }
-           */
-
+            for(Person person: Hospital.allUsers.values()){
+                Patient patient = (Patient) person;
+                if(patient.getFirstName() == patientcomboBox2.getSelectedItem()){
+                    firstNameTextField2.setText(patient.getFirstName());
+                    lastNameTextField2.setText(patient.getLastName());
+                    emailTextField.setText(patient.getEmailAddress());
+                    phoneNumberTextField.setText(patient.getHomePhone());
+                    addressTextField2.setText(patient.getAddress());
+                    cityTextField1.setText(patient.getCity());
+                    stateTextField.setText(patient.getState());
+                    emergencyContactTextField.setText(patient.getECfirstName() + " " + patient.getEClastName());
+                    homePhoneTextField1.setText(patient.getEChomePhone());
+                    mobilePhoneTextField1.setText(patient.getECmobilePhone());
+                    emailTextField1.setText(patient.getEmailAddress());
+                }
+            }
         }
 
+        if(cmd.equals("Search Patient")){
+
+        }
     }
 }

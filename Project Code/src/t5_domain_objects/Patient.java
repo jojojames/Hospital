@@ -2,6 +2,7 @@ package t5_domain_objects;
 
 import t5_relations.*;
 
+import java.util.HashMap;
 import java.util.Vector;
 
 public class Patient extends RPerson {
@@ -47,6 +48,7 @@ public class Patient extends RPerson {
     public Vector<BillingStatement> billingStatement = new Vector<BillingStatement>();
     public Vector<Prescription> prescription = new Vector<Prescription>();
     public InsurancePolicy insurancePolicy;
+    public static HashMap<String, Patient> hashMap = new HashMap<String, Patient>();
 
     public Patient(String userName, String password, String firstName, String lastName,
                    String dateOfBirth, String socialSecurity, String address,
@@ -79,101 +81,59 @@ public class Patient extends RPerson {
         this.zip = zip;
         this.address = address;
         this.city = city;
-    }
-
-    public String getECfirstName() {
-        return ECfirstName;
-    }
-
-    public void setECfirstName(String ECfirstName) {
-        this.ECfirstName = ECfirstName;
+        this.age = age;
+        hashMap.put(lastName + ", " + firstName ,this);
     }
 
     public String getCity() {
         return city;
     }
 
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public String getEClastName() {
-        return EClastName;
-    }
-
-    public void setEClastName(String EClastName) {
-        this.EClastName = EClastName;
-    }
-
-    public String getEChomePhone() {
-        return EChomePhone;
-    }
-
-    public void setEChomePhone(String EChomePhone) {
-        this.EChomePhone = EChomePhone;
-    }
-
-    public String getECmobilePhone() {
-        return ECmobilePhone;
-    }
-
-    public void setECmobilePhone(String ECmobilePhone) {
-        this.ECmobilePhone = ECmobilePhone;
-    }
-
-    public String getECRelationship() {
-        return ECRelationship;
-    }
-
-    public void setECRelationship(String ECRelationship) {
-        this.ECRelationship = ECRelationship;
-    }
-
-    public String getInsuranceProvider() {
-        return insuranceProvider;
-    }
-
-    public void setInsuranceProvider(String insuranceProvider) {
-        this.insuranceProvider = insuranceProvider;
-    }
-
-    public String getInsuranceAccount() {
-        return insuranceAccount;
-    }
-
-    public void setInsuranceAccount(String insuranceAccount) {
-        this.insuranceAccount = insuranceAccount;
-    }
-
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
     public String getAge() {
         return age;
-    }
-
-    public void setAge(String age) {
-        this.age = age;
-    }
-
-    public String getZip() {
-        return zip;
-    }
-
-    public void setZip(String zip) {
-        this.zip = zip;
     }
 
     public String getAddress() {
         return address;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public String getECfirstName() {
+        return ECfirstName;
+    }
+
+    public String getEChomePhone() {
+        return EChomePhone;
+    }
+
+    public String getEClastName() {
+        return EClastName;
+    }
+
+    public String getECmobilePhone() {
+        return ECmobilePhone;
+    }
+
+    public String getECRelationship() {
+        return ECRelationship;
+    }
+
+    public String getInsuranceAccount() {
+        return insuranceAccount;
+    }
+
+    public String getInsuranceProvider() {
+        return insuranceProvider;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public String getZip() {
+        return zip;
+    }
+
+    public void setECfirstName(String ECfirstName) {
+        this.ECfirstName = ECfirstName;
     }
 }
