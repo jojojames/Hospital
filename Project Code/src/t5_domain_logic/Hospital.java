@@ -99,6 +99,9 @@ public class Hospital {
         Person e = new Patient("e", "password", "e", "E", "9/8/93", "883-924-123", "Address", "City", "198-123-123",
                 "326-822-883", "email.com", "eEC", "EEC", "123-853-828", "393-124-138", "InsuranceProvider",
                 "InsuranceAccount", "f", "CA", "27", "middle","spouse","95112");
+
+        Patient e_copy = (Patient) e;
+        e_copy.get
         allUsers.put(e.getUserName(), e);
     }
 
