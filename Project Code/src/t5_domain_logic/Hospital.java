@@ -100,9 +100,6 @@ public class Hospital {
                 "326-822-883", "email.com", "eEC", "EEC", "123-853-828", "393-124-138", "InsuranceProvider",
                 "InsuranceAccount", "f", "CA", "27", "middle","spouse","95112");
 
-        Patient e_copy = (Patient) e;
-        e_copy.get
-        allUsers.put(e.getUserName(), e);
     }
 
     public String getUniqueUserID() {
