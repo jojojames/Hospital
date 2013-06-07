@@ -138,6 +138,7 @@ public class AdminPage implements ActionListener {
     private JTextField addressTextField2;
     private JTextField cityTextField1;
     private JTextField stateTextField;
+    private JTextField patientCheck_;
 
     JPanel contentPane;
     Patient p;
