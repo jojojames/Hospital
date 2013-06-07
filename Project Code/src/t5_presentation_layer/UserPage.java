@@ -199,6 +199,12 @@ public class UserPage {
     }
 
     public void updateViewWithNewUserInfoInEmailToDoctorTab() {
+
+        // TODO: REMOVE THE 'Enter Recipient Email Address', 'Enter CC Address', 'Enter BCC Address'
+        emailDoctor_bccAddress.setText("REMOVE THIS");
+        emailDoctor_ccAddress.setText("REMOVE THIS");
+        emailDoctor_recipientEmail.setText("REMOVE THIS");
+
         Patient currentUser = (Patient) hospital.getAllUsers().get(userNameOfCurrentUser);
         updateDoctorComboBoxHelper(currentUser, emailDoctor_doctorComboBox);
 
@@ -277,12 +283,12 @@ public class UserPage {
     private void updateDoctorComboBoxHelper(Patient currentUser, JComboBox<String> comboBox) {
         // This method takes any combobox that relates to a doctor and fills it up with a user's related doctors.
         Vector<Patient_Doctor> person_Doctor = currentUser.getPersonDoctor();
-        scheduleAppointment_doctorComboBox.removeAllItems();
+        comboBox.removeAllItems();
         for (Patient_Doctor getDoc : person_Doctor) {
             comboBox.addItem(getDoc.getDoctor().getUserName());
         }
 
-        if (scheduleAppointment_doctorComboBox.getItemCount() == 0) {
+        if (comboBox.getItemCount() == 0) {
             comboBox.addItem("No Doctors Available");
         }
     }
