@@ -27,11 +27,10 @@ public class UserPage {
     private JButton surgeriesButton;
     private JButton viewAppointmentsButton;
     private JButton viewBillingReportButton;
-    private JButton editButton;
+    //private JButton editButton;
     private JButton logOutButton;
     private JPanel userPagePanel;
-    private JTabbedPane tabbedPane1;
-    private JButton scheduleAppointmentButton;
+    private JTabbedPane userPage_tabbedPane;
 
     // Patient Information
     private JTextField patientInformation_firstName;
@@ -53,6 +52,14 @@ public class UserPage {
     private JTextField patientInformation_insuranceProvider;
     private JTextField patientInformation_insuranceAccount;
     private JComboBox patientInformation_stateComboBox;
+    private JButton patientInformation_editButton;
+    private JButton patientInformation_submitButton;
+
+    // Patient History
+    private JButton patientHistory_pharmacyButton;
+    private JButton patientHistory_scheduleAppointmentButton;
+    private JScrollPane patientHistory_appointmentHistoryTable;
+    private JScrollPane patientHistory_prescriptionHistoryTable;
 
     // Email Doctor
     private JComboBox emailDoctor_doctorComboBox;
@@ -64,7 +71,6 @@ public class UserPage {
 
     private JTable table1;
     private JTable table2;
-    private JButton goToPharmacyButton;
 
     private JTree tree1;
 
@@ -97,11 +103,10 @@ public class UserPage {
     private JTextField billingReport_patientName;
     private JTable table4;
     private JTable table5;
-    private JTextField viewSurgeries_patientID;
-    private JTable table6;
-    private JTable table7;
-    private JButton viewSurgeries_scheduleSurgeryButto;
-
+    private JTextField userViewSurgeries_patientID;
+    private JTable userViewSurgeries_surgerySchedule;
+    private JTable userViewSurgeries_surgeryHistory;
+    private JButton userViewSurgeries_scheduleSurgeryButton;
 
     JPanel contentPane;
     Hospital hospital;
@@ -119,7 +124,7 @@ public class UserPage {
             }
         });
 
-        editButton.addActionListener(new ActionListener() {
+        patientInformation_editButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 updateUserInfoInPatientInformationTab();
                 updateViewWithNewUserInfoInPatientInformationTab();
@@ -133,9 +138,27 @@ public class UserPage {
 
         });
 
+        // WHAT DOES THIS DO?
         viewSurgeries_scheduleSurgeryButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 setUpAnAppointment();
+            }
+        });
+
+        // Button sends user 2 tabs ahead to the Schedule Appointment tab
+        patientHistory_scheduleAppointmentButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                userPage_tabbedPane.setSelectedIndex(3);
+            }
+        });
+
+        // Logs User out of User Page and throws back to Login Page for admin to log in
+        userViewSurgeries_scheduleSurgeryButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                CardLayout cl = (CardLayout) contentPane.getLayout();
+                cl.show(contentPane, "Login Page");
             }
         });
     }
@@ -309,6 +332,7 @@ public class UserPage {
         this.logOutButton = logOutButton;
     }
 
+    /* After move of edit button into patient information, not sure if these setter/getter pair is necessary, delete if needed
     public JButton getEditButton() {
         return editButton;
     }
@@ -316,6 +340,7 @@ public class UserPage {
     public void setEditButton(JButton editButton) {
         this.editButton = editButton;
     }
+    */
 
     public String getUserNameOfCurrentUser() {
         return userNameOfCurrentUser;

@@ -62,7 +62,7 @@
           <text value="Logout"/>
         </properties>
       </component>
-      <tabbedpane id="93009" binding="tabbedPane1" default-binding="true">
+      <tabbedpane id="93009" binding="adminPage_tabbedPane">
         <constraints>
           <grid row="2" column="2" row-span="1" col-span="7" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="200" height="200"/>
@@ -109,7 +109,7 @@
                 </properties>
                 <border type="none"/>
                 <children>
-                  <component id="d4a7" class="javax.swing.JTextField" binding="patientCheck_patientID">
+                  <component id="d4a7" class="javax.swing.JTextField" binding="patientCheck_patientUserName">
                     <constraints>
                       <grid row="0" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="-1"/>
@@ -117,7 +117,7 @@
                       <forms defaultalign-horz="false"/>
                     </constraints>
                     <properties>
-                      <text value="Enter Patient ID"/>
+                      <text value="Enter Patient User Name"/>
                     </properties>
                   </component>
                   <component id="b7bf8" class="javax.swing.JTextField" binding="patientCheck_firstName">
@@ -258,7 +258,7 @@
                   <text value="Sex:"/>
                 </properties>
               </component>
-              <component id="f506e" class="javax.swing.JComboBox" binding="sexcomboBox2">
+              <component id="f506e" class="javax.swing.JComboBox" binding="newPatient_sexComboBox">
                 <constraints>
                   <grid row="10" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                   <forms/>
@@ -279,7 +279,7 @@
                   <text value="Date of Birth:"/>
                 </properties>
               </component>
-              <component id="33f32" class="javax.swing.JTextField" binding="DOBtextField">
+              <component id="33f32" class="javax.swing.JTextField" binding="newPatient_DOB">
                 <constraints>
                   <grid row="12" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -299,7 +299,7 @@
                   <text value="Age:"/>
                 </properties>
               </component>
-              <component id="b8d6f" class="javax.swing.JTextField" binding="ageTextField" default-binding="true">
+              <component id="b8d6f" class="javax.swing.JTextField" binding="newPatient_age">
                 <constraints>
                   <grid row="14" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -319,7 +319,7 @@
                   <text value="Social Security:"/>
                 </properties>
               </component>
-              <component id="bd3a6" class="javax.swing.JTextField" binding="socialSecurityTextField" default-binding="true">
+              <component id="bd3a6" class="javax.swing.JTextField" binding="newPatient_socialSecurity">
                 <constraints>
                   <grid row="16" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -445,7 +445,7 @@
                   <text value="Mobile Phone"/>
                 </properties>
               </component>
-              <component id="b3485" class="javax.swing.JTextField" binding="homeNumberTextField" default-binding="true">
+              <component id="b3485" class="javax.swing.JTextField" binding="newPatient_EChomeNumber">
                 <constraints>
                   <grid row="48" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -456,18 +456,7 @@
                   <text value="Home Number"/>
                 </properties>
               </component>
-              <component id="d22ab" class="javax.swing.JTextField" binding="relationshipTextField" default-binding="true">
-                <constraints>
-                  <grid row="46" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                    <preferred-size width="150" height="-1"/>
-                  </grid>
-                  <forms defaultalign-horz="false"/>
-                </constraints>
-                <properties>
-                  <text value="Relationship"/>
-                </properties>
-              </component>
-              <component id="700b" class="javax.swing.JTextField" binding="emailAddressTextField1" default-binding="true">
+              <component id="700b" class="javax.swing.JTextField" binding="newPatient_emailAddress">
                 <constraints>
                   <grid row="34" column="4" row-span="1" col-span="4" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -478,7 +467,7 @@
                   <text value="Email Address"/>
                 </properties>
               </component>
-              <component id="ab531" class="javax.swing.JTextField" binding="mobilePhoneTextField" default-binding="true">
+              <component id="ab531" class="javax.swing.JTextField" binding="newPatient_mobilePhone">
                 <constraints>
                   <grid row="32" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -489,7 +478,7 @@
                   <text value="Mobile Phone"/>
                 </properties>
               </component>
-              <component id="f460d" class="javax.swing.JTextField" binding="homePhoneTextField" default-binding="true">
+              <component id="f460d" class="javax.swing.JTextField" binding="newPatient_homePhone">
                 <constraints>
                   <grid row="30" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -500,7 +489,7 @@
                   <text value="Home Phone"/>
                 </properties>
               </component>
-              <component id="2d4d7" class="javax.swing.JTextField" binding="zipTextField" default-binding="true">
+              <component id="2d4d7" class="javax.swing.JTextField" binding="newPatient_zip">
                 <constraints>
                   <grid row="28" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -511,7 +500,7 @@
                   <text value="Zip"/>
                 </properties>
               </component>
-              <component id="10166" class="javax.swing.JTextField" binding="cityTextField" default-binding="true">
+              <component id="10166" class="javax.swing.JTextField" binding="newPatient_city">
                 <constraints>
                   <grid row="26" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -522,7 +511,7 @@
                   <text value="City"/>
                 </properties>
               </component>
-              <component id="95114" class="javax.swing.JTextField" binding="addressTextField" default-binding="true">
+              <component id="95114" class="javax.swing.JTextField" binding="newPatient_address">
                 <constraints>
                   <grid row="24" column="4" row-span="1" col-span="4" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -540,7 +529,7 @@
                 </constraints>
                 <properties/>
               </component>
-              <component id="689de" class="javax.swing.JTextField" binding="lastNameTextField1" default-binding="true">
+              <component id="689de" class="javax.swing.JTextField" binding="newPatient_EClastName">
                 <constraints>
                   <grid row="44" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -551,7 +540,7 @@
                   <text value="Last Name"/>
                 </properties>
               </component>
-              <component id="fca3f" class="javax.swing.JTextField" binding="firstNameTextField1" default-binding="true">
+              <component id="fca3f" class="javax.swing.JTextField" binding="newPatient_ECfirstName">
                 <constraints>
                   <grid row="42" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -591,7 +580,7 @@
                   <text value="M.I."/>
                 </properties>
               </component>
-              <component id="3fc73" class="javax.swing.JTextField" binding="lastNameTextField" default-binding="true">
+              <component id="3fc73" class="javax.swing.JTextField" binding="newPatient_lastName">
                 <constraints>
                   <grid row="2" column="6" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -602,7 +591,7 @@
                   <text value="Last Name"/>
                 </properties>
               </component>
-              <component id="3dc1" class="javax.swing.JTextField" binding="firstNameTextField" default-binding="true">
+              <component id="3dc1" class="javax.swing.JTextField" binding="newPatient_firstName">
                 <constraints>
                   <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -632,7 +621,7 @@
                   <text value="Physician Information"/>
                 </properties>
               </component>
-              <component id="da348" class="javax.swing.JComboBox" binding="comboBox1" default-binding="true">
+              <component id="da348" class="javax.swing.JComboBox" binding="newPatient_physicianComboBox">
                 <constraints>
                   <grid row="12" column="14" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                   <forms/>
@@ -640,6 +629,16 @@
                 <properties>
                   <model>
                     <item value="Select Physician"/>
+                    <item value="Physician 1"/>
+                    <item value="Physician 2"/>
+                    <item value="Physician 3"/>
+                    <item value="Physician 4"/>
+                    <item value="Physician 5"/>
+                    <item value="Physician 6"/>
+                    <item value="Physician 7"/>
+                    <item value="Physician 8"/>
+                    <item value="Physician 9"/>
+                    <item value="Physician 10"/>
                   </model>
                 </properties>
               </component>
@@ -653,7 +652,7 @@
                   <text value="Insurance Information"/>
                 </properties>
               </component>
-              <component id="12e42" class="javax.swing.JTextField" binding="insuranceProviderTextField" default-binding="true">
+              <component id="12e42" class="javax.swing.JTextField" binding="newPatient_insuranceProvider">
                 <constraints>
                   <grid row="24" column="14" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -664,7 +663,7 @@
                   <text value="Insurance Provider"/>
                 </properties>
               </component>
-              <component id="5431c" class="javax.swing.JTextField" binding="accountNumberTextField" default-binding="true">
+              <component id="5431c" class="javax.swing.JTextField" binding="newPatient_accountNumber">
                 <constraints>
                   <grid row="26" column="14" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -675,7 +674,7 @@
                   <text value="Account Number"/>
                 </properties>
               </component>
-              <component id="cfd57" class="javax.swing.JTextField" binding="mobileNumberTextField" default-binding="true">
+              <component id="cfd57" class="javax.swing.JTextField" binding="newPatient_ECmobileNumber">
                 <constraints>
                   <grid row="50" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -686,7 +685,7 @@
                   <text value="Mobile Number"/>
                 </properties>
               </component>
-              <component id="db8e6" class="javax.swing.JButton" binding="createPatientButton" default-binding="true">
+              <component id="db8e6" class="javax.swing.JButton" binding="newPatient_createPatientButton">
                 <constraints>
                   <grid row="46" column="14" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                   <forms/>
@@ -695,7 +694,7 @@
                   <text value="Create Patient"/>
                 </properties>
               </component>
-              <component id="c499a" class="javax.swing.JComboBox" binding="statecomboBox2">
+              <component id="c499a" class="javax.swing.JComboBox" binding="newPatient_stateComboBox">
                 <constraints>
                   <grid row="26" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                   <forms/>
@@ -768,6 +767,21 @@
                   </model>
                 </properties>
               </component>
+              <component id="74f6b" class="javax.swing.JComboBox" binding="newPatient_ECrelationComboBox">
+                <constraints>
+                  <grid row="46" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                  <forms/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="Select Relation"/>
+                    <item value="Spouse"/>
+                    <item value="Parent"/>
+                    <item value="Sibling"/>
+                    <item value="Friend"/>
+                  </model>
+                </properties>
+              </component>
             </children>
           </grid>
           <grid id="2dc24" layout-manager="FormLayout">
@@ -815,7 +829,7 @@
             </properties>
             <border type="none"/>
             <children>
-              <component id="a8a1c" class="javax.swing.JTextField" binding="reasonForAdmissionTextField" default-binding="true">
+              <component id="a8a1c" class="javax.swing.JTextField" binding="admitPatient_admissionReason">
                 <constraints>
                   <grid row="8" column="4" row-span="1" col-span="5" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -826,7 +840,7 @@
                   <text value="Reason for Admission"/>
                 </properties>
               </component>
-              <component id="4f46" class="javax.swing.JTextField" binding="addressTextField1" default-binding="true">
+              <component id="4f46" class="javax.swing.JTextField" binding="admitPatient_ECaddress">
                 <constraints>
                   <grid row="14" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -837,7 +851,7 @@
                   <text value="Address"/>
                 </properties>
               </component>
-              <component id="78546" class="javax.swing.JTextField" binding="emergencyContactTextField" default-binding="true">
+              <component id="78546" class="javax.swing.JTextField" binding="admitPatient_ECname">
                 <constraints>
                   <grid row="12" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -845,10 +859,10 @@
                   <forms defaultalign-horz="false"/>
                 </constraints>
                 <properties>
-                  <text value="Emergency Contact"/>
+                  <text value="Emergency Contact Name"/>
                 </properties>
               </component>
-              <component id="cffed" class="javax.swing.JTextField" binding="homePhoneTextField1" default-binding="true">
+              <component id="cffed" class="javax.swing.JTextField" binding="admitPatient_EChomeNumber">
                 <constraints>
                   <grid row="16" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -859,7 +873,7 @@
                   <text value="Home Phone #"/>
                 </properties>
               </component>
-              <component id="fcd8f" class="javax.swing.JTextField" binding="mobilePhoneTextField1" default-binding="true">
+              <component id="fcd8f" class="javax.swing.JTextField" binding="admitPatient_ECmobileNumber">
                 <constraints>
                   <grid row="18" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -870,7 +884,7 @@
                   <text value="Mobile Phone #"/>
                 </properties>
               </component>
-              <component id="ec7dc" class="javax.swing.JTextField" binding="emailTextField1" default-binding="true">
+              <component id="ec7dc" class="javax.swing.JTextField" binding="admitPatient_ECemailAddress">
                 <constraints>
                   <grid row="20" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -889,13 +903,13 @@
                 <properties/>
                 <border type="none"/>
                 <children>
-                  <component id="5027d" class="javax.swing.JTextPane" binding="textPane1" default-binding="true">
+                  <component id="5027d" class="javax.swing.JTextPane" binding="admitPatient_comments">
                     <constraints/>
                     <properties/>
                   </component>
                 </children>
               </scrollpane>
-              <component id="d0eb8" class="javax.swing.JButton" binding="admitButton" default-binding="true">
+              <component id="d0eb8" class="javax.swing.JButton" binding="admitPatient_admitButton">
                 <constraints>
                   <grid row="22" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
                   <forms defaultalign-horz="false"/>
@@ -904,7 +918,7 @@
                   <text value="Admit"/>
                 </properties>
               </component>
-              <component id="8c58f" class="javax.swing.JComboBox" binding="comboBox5" default-binding="true">
+              <component id="8c58f" class="javax.swing.JComboBox" binding="admitPatient_doctorComboBox">
                 <constraints>
                   <grid row="9" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                   <forms/>
@@ -915,7 +929,7 @@
                   </model>
                 </properties>
               </component>
-              <component id="61fa1" class="javax.swing.JComboBox" binding="comboBox4" default-binding="true">
+              <component id="61fa1" class="javax.swing.JComboBox" binding="admitPatient_roomNumberComboBox">
                 <constraints>
                   <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                   <forms/>
@@ -926,7 +940,7 @@
                   </model>
                 </properties>
               </component>
-              <component id="9fd5b" class="javax.swing.JComboBox" binding="comboBox3" default-binding="true">
+              <component id="9fd5b" class="javax.swing.JComboBox" binding="admitPatient_locationComboBox">
                 <constraints>
                   <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                   <forms/>
@@ -937,7 +951,7 @@
                   </model>
                 </properties>
               </component>
-              <component id="b0e24" class="javax.swing.JButton" binding="findPatientButton1">
+              <component id="b0e24" class="javax.swing.JButton" binding="admitPatient_findButton">
                 <constraints>
                   <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                   <forms/>
@@ -946,7 +960,7 @@
                   <text value="Find"/>
                 </properties>
               </component>
-              <component id="3e01b" class="javax.swing.JComboBox" binding="patientcomboBox2">
+              <component id="3e01b" class="javax.swing.JComboBox" binding="admitPatient_patientComboBox">
                 <constraints>
                   <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                   <forms/>
@@ -957,7 +971,7 @@
                   </model>
                 </properties>
               </component>
-              <component id="b470c" class="javax.swing.JTextField" binding="firstNameTextField2" default-binding="true">
+              <component id="b470c" class="javax.swing.JTextField" binding="admitPatient_firstName">
                 <constraints>
                   <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -968,7 +982,7 @@
                   <text value="First Name"/>
                 </properties>
               </component>
-              <component id="87c92" class="javax.swing.JTextField" binding="lastNameTextField2" default-binding="true">
+              <component id="87c92" class="javax.swing.JTextField" binding="admitPatient_lastName">
                 <constraints>
                   <grid row="2" column="6" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -979,7 +993,7 @@
                   <text value="Last Name"/>
                 </properties>
               </component>
-              <component id="9ae87" class="javax.swing.JTextField" binding="emailTextField" default-binding="true">
+              <component id="9ae87" class="javax.swing.JTextField" binding="admitPatient_emailAddress">
                 <constraints>
                   <grid row="4" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -990,7 +1004,7 @@
                   <text value="Email"/>
                 </properties>
               </component>
-              <component id="c3fc6" class="javax.swing.JTextField" binding="phoneNumberTextField" default-binding="true">
+              <component id="c3fc6" class="javax.swing.JTextField" binding="admitPatient_homeNumber">
                 <constraints>
                   <grid row="4" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -998,10 +1012,10 @@
                   <forms defaultalign-horz="false"/>
                 </constraints>
                 <properties>
-                  <text value="Phone Number"/>
+                  <text value="Home Phone"/>
                 </properties>
               </component>
-              <component id="b3040" class="javax.swing.JTextField" binding="addressTextField2" default-binding="true">
+              <component id="b3040" class="javax.swing.JTextField" binding="admitPatient_address">
                 <constraints>
                   <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -1012,7 +1026,7 @@
                   <text value="Address"/>
                 </properties>
               </component>
-              <component id="595e4" class="javax.swing.JTextField" binding="cityTextField1" default-binding="true">
+              <component id="595e4" class="javax.swing.JTextField" binding="admitPatient_city">
                 <constraints>
                   <grid row="6" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -1023,7 +1037,7 @@
                   <text value="City"/>
                 </properties>
               </component>
-              <component id="324f5" class="javax.swing.JTextField" binding="stateTextField" default-binding="true">
+              <component id="324f5" class="javax.swing.JTextField" binding="admitPatient_state">
                 <constraints>
                   <grid row="6" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -1047,7 +1061,7 @@
             </properties>
             <border type="none"/>
             <children>
-              <tabbedpane id="a9d44" binding="tabbedPane2" default-binding="true">
+              <tabbedpane id="a9d44" binding="adminPatientServices_tabbedPane">
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
                     <preferred-size width="200" height="200"/>
@@ -1917,7 +1931,7 @@
                     </properties>
                     <border type="none"/>
                     <children>
-                      <component id="3a618" class="javax.swing.JTable" binding="surgSchedtable">
+                      <component id="3a618" class="javax.swing.JTable" binding="viewSurgery_surgeryScheduleTable">
                         <constraints>
                           <grid row="8" column="2" row-span="1" col-span="7" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="50"/>
@@ -1935,7 +1949,7 @@
                         </constraints>
                         <properties/>
                       </component>
-                      <component id="aca5c" class="javax.swing.JTable" binding="surgHisttable">
+                      <component id="aca5c" class="javax.swing.JTable" binding="viewSurgery_surgeryHistoryTable">
                         <constraints>
                           <grid row="14" column="2" row-span="1" col-span="7" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="50"/>
@@ -1987,7 +2001,7 @@
                           <text value="Surgery History"/>
                         </properties>
                       </component>
-                      <component id="bc5fe" class="javax.swing.JButton" binding="scheduleASurgeryButton" default-binding="true">
+                      <component id="bc5fe" class="javax.swing.JButton" binding="viewSurgery_scheduleSurgeryButton">
                         <constraints>
                           <grid row="6" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                           <forms/>

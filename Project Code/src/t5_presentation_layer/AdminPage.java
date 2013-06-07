@@ -4,9 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
 
 import t5_domain_logic.Hospital;
 import t5_domain_objects.*;
@@ -24,44 +21,44 @@ public class AdminPage implements ActionListener {
     private JTextField searchTextField;
     private JButton searchButton;
     private JButton logoutButton;
-    private JTabbedPane tabbedPane1;
-    private JTextField lastNameTextField;
-    private JTextField firstNameTextField;
+    private JTabbedPane adminPage_tabbedPane;
+    private JTextField newPatient_lastName;
+    private JTextField newPatient_firstName;
     private JTextField mITextField;
-    private JComboBox comboBox1;
-    private JTextField insuranceProviderTextField;
-    private JTextField accountNumberTextField;
-    private JComboBox sexcomboBox2;
-    private JTextField ageTextField;
-    private JTextField socialSecurityTextField;
-    private JTextField mobileNumberTextField;
-    private JTextField homeNumberTextField;
+    private JComboBox newPatient_physicianComboBox;
+    private JTextField newPatient_insuranceProvider;
+    private JTextField newPatient_accountNumber;
+    private JComboBox newPatient_sexComboBox;
+    private JTextField newPatient_age;
+    private JTextField newPatient_socialSecurity;
+    private JTextField newPatient_ECmobileNumber;
+    private JTextField newPatient_EChomeNumber;
     private JTextField relationshipTextField;
-    private JTextField firstNameTextField1;
-    private JTextField lastNameTextField1;
-    private JTextField emailAddressTextField1;
-    private JTextField mobilePhoneTextField;
-    private JTextField homePhoneTextField;
-    private JTextField zipTextField;
-    private JTextField cityTextField;
-    private JTextField addressTextField;
-    private JButton createPatientButton;
+    private JTextField newPatient_ECfirstName;
+    private JTextField newPatient_EClastName;
+    private JTextField newPatient_emailAddress;
+    private JTextField newPatient_mobilePhone;
+    private JTextField newPatient_homePhone;
+    private JTextField newPatient_zip;
+    private JTextField newPatient_city;
+    private JTextField newPatient_address;
+    private JButton newPatient_createPatientButton;
     private JComboBox comboBox3;
     private JComboBox comboBox4;
     private JComboBox comboBox5;
-    private JTextField reasonForAdmissionTextField;
+    private JTextField admitPatient_admissionReason;
     private JTextField emergencyContactTextField;
-    private JTextField addressTextField1;
+    private JTextField admitPatient_ECaddress;
     private JTextField homePhoneTextField1;
     private JTextField mobilePhoneTextField1;
     private JTextField emailTextField1;
-    private JButton admitButton;
-    private JTextPane textPane1;
-    private JTabbedPane tabbedPane2;
+    private JButton admitPatient_admitButton;
+    private JTextPane admitPatient_comments;
+    private JTabbedPane adminPatientServices_tabbedPane;
     private JFormattedTextField roomChange_patientID;
 
     private JPanel adminPagePanel;
-    private JTextField DOBtextField;
+    private JTextField newPatient_DOB;
     private JTextField roomChange_firstName;
     private JTextField roomChange_lastName;
     private JComboBox roomChange_newRoomComboBox;
@@ -93,9 +90,9 @@ public class AdminPage implements ActionListener {
     private JTextField scheduleSurgery_procedure;
     private JButton submitRoomChangeButton;
     private JTextField viewSurgeries_patientID;
-    private JButton scheduleASurgeryButton;
-    private JTable surgHisttable;
-    private JTable surgSchedtable;
+    private JButton viewSurgery_scheduleSurgeryButton;
+    private JTable viewSurgery_surgeryHistoryTable;
+    private JTable viewSurgery_surgeryScheduleTable;
     private JComboBox emailPatient_patientComboBox;
     private JButton addPatientButton;
     private JTextField emailPatient_recipientEmail;
@@ -127,8 +124,8 @@ public class AdminPage implements ActionListener {
     private JComboBox comboBox21;
     private JButton sendOrderRequestButton;
     private JTable table1;
-    private JComboBox statecomboBox2;
-    private JButton findPatientButton1;
+    private JComboBox newPatient_stateComboBox;
+    private JButton admitPatient_findButton;
     private JComboBox patientcomboBox2;
     private JTextField firstNameTextField2;
     private JTextField lastNameTextField2;
@@ -137,10 +134,11 @@ public class AdminPage implements ActionListener {
     private JTextField addressTextField2;
     private JTextField cityTextField1;
     private JTextField stateTextField;
-    private JTextField patientCheck_patientID;
+    private JTextField patientCheck_patientUserName;
     private JTextField patientCheck_firstName;
     private JTextField patientCheck_lastName;
     private JTextField scheduleSurgery_guarantor;
+    private JComboBox newPatient_ECrelationComboBox;
 
     JPanel contentPane;
     Patient p;
@@ -173,11 +171,17 @@ public class AdminPage implements ActionListener {
 
 
 
+        viewSurgery_scheduleSurgeryButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                adminPatientServices_tabbedPane.setSelectedIndex(1);
+            }
+        });
 
         //button listener
         logoutButton.addActionListener(this);
-        createPatientButton.addActionListener(this);
-        findPatientButton1.addActionListener(this);
+        newPatient_createPatientButton.addActionListener(this);
+        admitPatient_findButton.addActionListener(this);
     }
 
     public JPanel getAdminPagePanel() {
@@ -196,26 +200,26 @@ public class AdminPage implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String cmd = e.getActionCommand();
 
-        String nFirstName = firstNameTextField.getText();
-        String nLastName = lastNameTextField.getText();
+        String nFirstName = newPatient_firstName.getText();
+        String nLastName = newPatient_lastName.getText();
         String nMiddleName = mITextField.getText();
-        String nDOB = DOBtextField.getText();
-        String nAge = ageTextField.getText();
-        String nSSN = socialSecurityTextField.getText();
-        String nAddress = addressTextField.getText();
-        String nCity = cityTextField.getText();
-        String nZip = zipTextField.getText();
-        String nHomePhone = homePhoneTextField.getText();
-        String nMobilePhone = mobilePhoneTextField.getText();
-        String nEmail = emailAddressTextField1.getText();
-        String nECFirstName = firstNameTextField1.getText();
-        String nECLastName = lastNameTextField1.getText();
+        String nDOB = newPatient_DOB.getText();
+        String nAge = newPatient_age.getText();
+        String nSSN = newPatient_socialSecurity.getText();
+        String nAddress = newPatient_address.getText();
+        String nCity = newPatient_city.getText();
+        String nZip = newPatient_zip.getText();
+        String nHomePhone = newPatient_homePhone.getText();
+        String nMobilePhone = newPatient_mobilePhone.getText();
+        String nEmail = newPatient_emailAddress.getText();
+        String nECFirstName = newPatient_ECfirstName.getText();
+        String nECLastName = newPatient_EClastName.getText();
         String nECRelationship = relationshipTextField.getText();
-        String nECHomePhone = homeNumberTextField.getText();
-        String nECMobilePhone = mobileNumberTextField.getText();
-        String nInsuranceProvider = insuranceProviderTextField.getText();
-        String nInsuranceAccountNum = accountNumberTextField.getText();
-        String nBody = textPane1.getText();
+        String nECHomePhone = newPatient_EChomeNumber.getText();
+        String nECMobilePhone = newPatient_ECmobileNumber.getText();
+        String nInsuranceProvider = newPatient_insuranceProvider.getText();
+        String nInsuranceAccountNum = newPatient_accountNumber.getText();
+        String nBody = admitPatient_comments.getText();
 
         if(cmd.equals("Logout")){
             CardLayout c1 = (CardLayout) contentPane.getLayout();
@@ -226,29 +230,29 @@ public class AdminPage implements ActionListener {
             //add new patient
             Person g = new Patient("PLACEHOLDER_USERNAME", "PLACHOLDER_PASSWORD", nFirstName, nLastName, nDOB,
                     nSSN, nAddress, nCity, nHomePhone, nMobilePhone, nEmail, nECFirstName, nECLastName, nECHomePhone,
-                    nECMobilePhone, nInsuranceProvider, nInsuranceAccountNum, sexcomboBox2.getSelectedItem().toString(),
-                    statecomboBox2.getSelectedItem().toString(), nAge, nMiddleName, nECRelationship, nZip, 5);
+                    nECMobilePhone, nInsuranceProvider, nInsuranceAccountNum, newPatient_sexComboBox.getSelectedItem().toString(),
+                    newPatient_stateComboBox.getSelectedItem().toString(), nAge, nMiddleName, nECRelationship, nZip, 5);
             hospital.getAllUsers().put(nFirstName, g);
 
-            firstNameTextField.setText("");
-            lastNameTextField.setText("");
+            newPatient_firstName.setText("");
+            newPatient_lastName.setText("");
             mITextField.setText("");
-            DOBtextField.setText("");
-            ageTextField.setText("");
-            socialSecurityTextField.setText("");
-            addressTextField.setText("");
-            cityTextField.setText("");
-            zipTextField.setText("");
-            homePhoneTextField.setText("");
-            mobilePhoneTextField.setText("");
-            emailAddressTextField1.setText("");
-            firstNameTextField1.setText("");
-            lastNameTextField1.setText("");
+            newPatient_DOB.setText("");
+            newPatient_age.setText("");
+            newPatient_socialSecurity.setText("");
+            newPatient_address.setText("");
+            newPatient_city.setText("");
+            newPatient_zip.setText("");
+            newPatient_homePhone.setText("");
+            newPatient_mobilePhone.setText("");
+            newPatient_emailAddress.setText("");
+            newPatient_ECfirstName.setText("");
+            newPatient_EClastName.setText("");
             relationshipTextField.setText("");
-            homeNumberTextField.setText("");
-            mobileNumberTextField.setText("");
-            insuranceProviderTextField.setText("");
-            accountNumberTextField.setText("");
+            newPatient_EChomeNumber.setText("");
+            newPatient_ECmobileNumber.setText("");
+            newPatient_insuranceProvider.setText("");
+            newPatient_accountNumber.setText("");
 
             patientcomboBox2.addItem(nFirstName);
 

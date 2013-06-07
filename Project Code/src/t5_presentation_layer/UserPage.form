@@ -20,17 +20,7 @@
           <text value="Log Out"/>
         </properties>
       </component>
-      <component id="a4110" class="javax.swing.JButton" binding="editButton" default-binding="true">
-        <constraints>
-          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="211" height="26"/>
-          </grid>
-        </constraints>
-        <properties>
-          <text value="Edit"/>
-        </properties>
-      </component>
-      <tabbedpane id="9a8a1" binding="tabbedPane1" default-binding="true">
+      <tabbedpane id="9a8a1" binding="userPage_tabbedPane">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="200" height="200"/>
@@ -100,6 +90,10 @@
                 <rowspec value="center:max(d;4px):noGrow"/>
                 <rowspec value="top:5dlu:noGrow"/>
                 <rowspec value="center:10px:noGrow"/>
+                <rowspec value="top:3dlu:noGrow"/>
+                <rowspec value="center:30px:noGrow"/>
+                <rowspec value="top:4dlu:noGrow"/>
+                <rowspec value="center:30px:noGrow"/>
                 <colspec value="fill:10px:noGrow"/>
                 <colspec value="left:4dlu:noGrow"/>
                 <colspec value="fill:d:noGrow"/>
@@ -609,6 +603,26 @@
                     </constraints>
                     <properties/>
                   </component>
+                  <component id="a4110" class="javax.swing.JButton" binding="patientInformation_editButton">
+                    <constraints>
+                      <grid row="48" column="14" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="211" height="26"/>
+                      </grid>
+                      <forms/>
+                    </constraints>
+                    <properties>
+                      <text value="Edit"/>
+                    </properties>
+                  </component>
+                  <component id="7b4ce" class="javax.swing.JButton" binding="patientInformation_submitButton">
+                    <constraints>
+                      <grid row="50" column="14" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <forms/>
+                    </constraints>
+                    <properties>
+                      <text value="Save Changes"/>
+                    </properties>
+                  </component>
                 </children>
               </grid>
             </children>
@@ -640,7 +654,7 @@
             </properties>
             <border type="none"/>
             <children>
-              <component id="a6bdc" class="javax.swing.JButton" binding="scheduleAppointmentButton" default-binding="true">
+              <component id="a6bdc" class="javax.swing.JButton" binding="patientHistory_scheduleAppointmentButton">
                 <constraints>
                   <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
                   <forms defaultalign-horz="false"/>
@@ -649,7 +663,7 @@
                   <text value="Schedule Appointment"/>
                 </properties>
               </component>
-              <scrollpane id="369c0">
+              <scrollpane id="369c0" binding="patientHistory_appointmentHistoryTable">
                 <constraints>
                   <grid row="4" column="2" row-span="1" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                   <forms defaultalign-horz="false" defaultalign-vert="false"/>
@@ -663,7 +677,7 @@
                   </component>
                 </children>
               </scrollpane>
-              <component id="350e7" class="javax.swing.JButton" binding="goToPharmacyButton" default-binding="true">
+              <component id="350e7" class="javax.swing.JButton" binding="patientHistory_pharmacyButton">
                 <constraints>
                   <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
                   <forms defaultalign-horz="false"/>
@@ -672,7 +686,7 @@
                   <text value="Go to Pharmacy"/>
                 </properties>
               </component>
-              <scrollpane id="1cc9d">
+              <scrollpane id="1cc9d" binding="patientHistory_prescriptionHistoryTable">
                 <constraints>
                   <grid row="8" column="2" row-span="1" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                   <forms defaultalign-horz="false" defaultalign-vert="false"/>
@@ -944,6 +958,16 @@
                 <properties>
                   <model>
                     <item value="Select a Doctor"/>
+                    <item value="Doctor 1"/>
+                    <item value="Doctor 2"/>
+                    <item value="Doctor 3"/>
+                    <item value="Doctor 4"/>
+                    <item value="Doctor 5"/>
+                    <item value="Doctor 6"/>
+                    <item value="Doctor 7"/>
+                    <item value="Doctor 8"/>
+                    <item value="Doctor 9"/>
+                    <item value="Doctor 10"/>
                   </model>
                 </properties>
               </component>
@@ -963,7 +987,29 @@
                 </constraints>
                 <properties>
                   <model>
-                    <item value="Select Time"/>
+                    <item value="Selecte Time"/>
+                    <item value="6:00"/>
+                    <item value="6:30"/>
+                    <item value="7:00"/>
+                    <item value="7:30"/>
+                    <item value="8:00"/>
+                    <item value="8:30"/>
+                    <item value="9:00"/>
+                    <item value="9:30"/>
+                    <item value="10:00"/>
+                    <item value="10:30"/>
+                    <item value="11:00"/>
+                    <item value="11:30"/>
+                    <item value="12:00"/>
+                    <item value="12:30"/>
+                    <item value="1:00"/>
+                    <item value="1:30"/>
+                    <item value="2:00"/>
+                    <item value="2:30"/>
+                    <item value="3:00"/>
+                    <item value="3:30"/>
+                    <item value="4:00"/>
+                    <item value="4:30"/>
                   </model>
                 </properties>
               </component>
@@ -1029,7 +1075,7 @@
             </properties>
             <border type="none"/>
             <children>
-              <component id="cfea9" class="javax.swing.JTextField" binding="viewSurgeries_patientID">
+              <component id="cfea9" class="javax.swing.JTextField" binding="userViewSurgeries_patientID">
                 <constraints>
                   <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -1047,7 +1093,7 @@
                 </constraints>
                 <properties/>
               </component>
-              <component id="b0c75" class="javax.swing.JButton" binding="viewSurgeries_scheduleSurgeryButto">
+              <component id="b0c75" class="javax.swing.JButton" binding="userViewSurgeries_scheduleSurgeryButton">
                 <constraints>
                   <grid row="7" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
                   <forms defaultalign-horz="false"/>
@@ -1066,7 +1112,7 @@
                   <text value="Surgery Schedule"/>
                 </properties>
               </component>
-              <component id="a7823" class="javax.swing.JTable" binding="table6" default-binding="true">
+              <component id="a7823" class="javax.swing.JTable" binding="userViewSurgeries_surgerySchedule">
                 <constraints>
                   <grid row="12" column="2" row-span="1" col-span="3" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="50"/>
@@ -1082,10 +1128,10 @@
                 </constraints>
                 <properties>
                   <font style="1"/>
-                  <text value="Surgery Schedule"/>
+                  <text value="Surgery History"/>
                 </properties>
               </component>
-              <component id="3de07" class="javax.swing.JTable" binding="table7" default-binding="true">
+              <component id="3de07" class="javax.swing.JTable" binding="userViewSurgeries_surgeryHistory">
                 <constraints>
                   <grid row="16" column="2" row-span="1" col-span="3" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="50"/>
