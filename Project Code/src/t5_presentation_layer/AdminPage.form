@@ -109,7 +109,7 @@
                 </properties>
                 <border type="none"/>
                 <children>
-                  <component id="d4a7" class="javax.swing.JTextField" binding="patientCheck_">
+                  <component id="d4a7" class="javax.swing.JTextField" binding="patientCheck_patientID">
                     <constraints>
                       <grid row="0" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="-1"/>
@@ -120,7 +120,7 @@
                       <text value="Enter Patient ID"/>
                     </properties>
                   </component>
-                  <component id="b7bf8" class="javax.swing.JTextField" default-binding="true">
+                  <component id="b7bf8" class="javax.swing.JTextField" binding="patientCheck_firstName">
                     <constraints>
                       <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="-1"/>
@@ -131,7 +131,7 @@
                       <text value="First Name"/>
                     </properties>
                   </component>
-                  <component id="b3896" class="javax.swing.JTextField" default-binding="true">
+                  <component id="b3896" class="javax.swing.JTextField" binding="patientCheck_lastName">
                     <constraints>
                       <grid row="2" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="-1"/>
@@ -1104,7 +1104,7 @@
                           <text value="Patient ID:"/>
                         </properties>
                       </component>
-                      <component id="d918" class="javax.swing.JFormattedTextField" binding="RMpatientIDFormattedTextField">
+                      <component id="d918" class="javax.swing.JFormattedTextField" binding="roomChange_patientID">
                         <constraints>
                           <grid row="2" column="4" row-span="1" col-span="7" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -1125,7 +1125,7 @@
                           <text value="Patient Name:"/>
                         </properties>
                       </component>
-                      <component id="8923c" class="javax.swing.JTextField" binding="RMfirstNameTextField">
+                      <component id="8923c" class="javax.swing.JTextField" binding="roomChange_firstName">
                         <constraints>
                           <grid row="4" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -1136,7 +1136,7 @@
                           <text value="First Name"/>
                         </properties>
                       </component>
-                      <component id="3e68c" class="javax.swing.JTextField" binding="RMlastNameTextField">
+                      <component id="3e68c" class="javax.swing.JTextField" binding="roomChange_lastName">
                         <constraints>
                           <grid row="4" column="8" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -1157,7 +1157,7 @@
                           <text value="Current Room #"/>
                         </properties>
                       </component>
-                      <component id="96d88" class="javax.swing.JTextField" binding="rmTextField" default-binding="true">
+                      <component id="96d88" class="javax.swing.JTextField" binding="roomChange_roomNumber">
                         <constraints>
                           <grid row="6" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -1178,7 +1178,7 @@
                           <text value="Reason for Move:"/>
                         </properties>
                       </component>
-                      <component id="56178" class="javax.swing.JTextArea" binding="reasonForMoveTextArea" default-binding="true">
+                      <component id="56178" class="javax.swing.JTextArea" binding="roomChange_reason">
                         <constraints>
                           <grid row="8" column="4" row-span="1" col-span="7" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="50"/>
@@ -1208,7 +1208,7 @@
                           <text value="Submit Room Change"/>
                         </properties>
                       </component>
-                      <component id="af373" class="javax.swing.JComboBox" binding="newRoomcomboBox">
+                      <component id="af373" class="javax.swing.JComboBox" binding="roomChange_newRoomComboBox">
                         <constraints>
                           <grid row="6" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                           <forms/>
@@ -1345,7 +1345,7 @@
                     </properties>
                     <border type="none"/>
                     <children>
-                      <component id="1b70b" class="javax.swing.JTextField" binding="enterPatientsNameTextField" default-binding="true">
+                      <component id="1b70b" class="javax.swing.JTextField" binding="scheduleSurgery_patientName">
                         <constraints>
                           <grid row="6" column="4" row-span="1" col-span="9" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -1376,7 +1376,7 @@
                           <text value="Patient Address:"/>
                         </properties>
                       </component>
-                      <component id="e4bc1" class="javax.swing.JTextField" binding="enterPatientsAddressTextField" default-binding="true">
+                      <component id="e4bc1" class="javax.swing.JTextField" binding="scheduleSurgery_patientAddress">
                         <constraints>
                           <grid row="8" column="4" row-span="1" col-span="9" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -1407,7 +1407,7 @@
                           <text value="Home Phone:"/>
                         </properties>
                       </component>
-                      <component id="1b1de" class="javax.swing.JTextField" binding="enterPatientsDateOfTextField" default-binding="true">
+                      <component id="1b1de" class="javax.swing.JTextField" binding="scheduleSurgery_dateOfBirth">
                         <constraints>
                           <grid row="10" column="4" row-span="1" col-span="9" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -1418,7 +1418,7 @@
                           <text value="Enter Patients Date of Birth"/>
                         </properties>
                       </component>
-                      <component id="ed8d5" class="javax.swing.JTextField" binding="enterPatientsHomePhoneTextField" default-binding="true">
+                      <component id="ed8d5" class="javax.swing.JTextField" binding="scheduleSurgery_homePhone">
                         <constraints>
                           <grid row="12" column="4" row-span="1" col-span="9" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -1439,7 +1439,7 @@
                           <text value="Mobile Phone:"/>
                         </properties>
                       </component>
-                      <component id="cf850" class="javax.swing.JTextField" binding="enterPatientsMobilePhoneTextField" default-binding="true">
+                      <component id="cf850" class="javax.swing.JTextField" binding="scheduleSurgery_mobilePhone">
                         <constraints>
                           <grid row="14" column="4" row-span="1" col-span="9" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -1477,7 +1477,7 @@
                           <text value="Guarantor:"/>
                         </properties>
                       </component>
-                      <component id="87fdc" class="javax.swing.JTextField" binding="enterPatientsGuarantorTextField" default-binding="true">
+                      <component id="87fdc" class="javax.swing.JTextField" binding="scheduleSurgery_guarantor">
                         <constraints>
                           <grid row="16" column="4" row-span="1" col-span="9" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -1518,7 +1518,7 @@
                           <text value="Surgery Date:"/>
                         </properties>
                       </component>
-                      <component id="bf4c3" class="javax.swing.JTextField" binding="procCodeTextField" default-binding="true">
+                      <component id="bf4c3" class="javax.swing.JTextField" binding="scheduleSurgery_procedureCode">
                         <constraints>
                           <grid row="20" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -1539,7 +1539,7 @@
                           <text value="Diag. Code:"/>
                         </properties>
                       </component>
-                      <component id="b899c" class="javax.swing.JTextField" binding="diagCodeTextField" default-binding="true">
+                      <component id="b899c" class="javax.swing.JTextField" binding="scheduleSurgery_diagnosisCode">
                         <constraints>
                           <grid row="20" column="8" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -1550,7 +1550,7 @@
                           <text value="Diag. Code"/>
                         </properties>
                       </component>
-                      <component id="b0253" class="javax.swing.JTextField" binding="sugeryDateTextField" default-binding="true">
+                      <component id="b0253" class="javax.swing.JTextField" binding="scheduleSurgery_surgeryDate">
                         <constraints>
                           <grid row="22" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -1867,7 +1867,7 @@
                           <text value="Cancel"/>
                         </properties>
                       </component>
-                      <component id="3152b" class="javax.swing.JTextField" binding="enterProcedureTextField" default-binding="true">
+                      <component id="3152b" class="javax.swing.JTextField" binding="scheduleSurgery_procedure">
                         <constraints>
                           <grid row="18" column="4" row-span="1" col-span="9" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
