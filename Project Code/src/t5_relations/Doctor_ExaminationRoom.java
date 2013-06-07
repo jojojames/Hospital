@@ -11,5 +11,6 @@ public class Doctor_ExaminationRoom {
      *
      */
     public Doctor_ExaminationRoom() {
+
     }
 }
