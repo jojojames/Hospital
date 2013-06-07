@@ -54,7 +54,6 @@ public class AdminPage {
     private JComboBox admitPatient_locationComboBox;
     private JTextField admitPatient_admissionReason;
     private JTextField admitPatient_lastName;
-    private JTextField admitPatient_ECaddress;
     private JTextField admitPatient_firstName;
     private JTextField admitPatient_emailAddress;
     private JTextField admitPatient_homeNumber;
@@ -148,8 +147,8 @@ public class AdminPage {
 
         //Room number combobox
         for(Room room: hospital.getAllRoom()){
-            admitPatient_roomNumberComboBox.addItem(room.getRoomNum());
-            roomChange_newRoomComboBox.addItem(room.getRoomNum());
+            admitPatient_roomNumberComboBox.addItem("Rm. #" + room.getRoomNum());
+            roomChange_newRoomComboBox.addItem("Rm. #" + room.getRoomNum());
         }
 
         //Doctor combobox
@@ -157,7 +156,7 @@ public class AdminPage {
             if(o.getType() == 2)
             {
                 Doctor doctor = (Doctor)o;
-                admitPatient_doctorComboBox.addItem(doctor.getFirstName());
+                admitPatient_doctorComboBox.addItem("Dr. " + doctor.getLastName());
             }
         }
 
@@ -254,7 +253,7 @@ public class AdminPage {
             public void actionPerformed(ActionEvent e) {
                 for(Person person: hospital.allUsers.values()){
                     Patient patient = (Patient) person;
-                    if(patient.getFirstName() == admitPatient_patientComboBox.getSelectedItem()){
+                    if(patient.getFirstName()  == admitPatient_patientComboBox.getSelectedItem()){
                         admitPatient_firstName.setText(patient.getFirstName());
                         admitPatient_lastName.setText(patient.getLastName());
                         admitPatient_emailAddress.setText(patient.getEmailAddress());

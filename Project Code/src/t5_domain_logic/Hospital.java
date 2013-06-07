@@ -90,6 +90,17 @@ public class Hospital {
         Person e = new Patient("e", "password", "e", "E", "9/8/93", "883-924-123", "Address", "City", "198-123-123",
                 "326-822-883", "email.com", "eEC", "EEC", "123-853-828", "393-124-138", "InsuranceProvider",
                 "InsuranceAccount", "f", "CA", "27", "middle","spouse","95112", 5);
+        allUsers.put(e.getUserName(), e);
+
+        Person James = new Patient("James", "1", "James", "Nguyen", "9/8/93", "88211-924-123", "Address", "City", "198-123-123",
+                "326-822-8823", "jamesemail.com", "eEC", "EEC", "123-853-8228", "3923-124-138", "InsuranceProvider",
+                "InsuranceAccount", "m", "CA", "20", "","","94542", 5);
+        allUsers.put(James.getUserName(), James);
+
+        Person Joel = new Patient("Joel", "Password", "Joel", "Santiago", "12/31/86", "123-45-678", "123 Main St", "Pleasanton", "198-123-123",
+                "326-822-8823", "joelsemail.com", "eEC", "EEC", "123-853-8228", "3923-124-138", "InsuranceProvider",
+                "InsuranceAccount", "m", "CA", "26", "","","94588", 5);
+        allUsers.put(Joel.getUserName(), Joel);
 
     }
 
