@@ -1,5 +1,8 @@
 package t5_presentation_layer;
 
+import t5_domain_logic.Hospital;
+import t5_domain_objects.Patient;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -13,7 +16,7 @@ import java.awt.event.ActionListener;
  * To change this template use File | Settings | File Templates.
  */
 public class UserPage {
-    private JButton pageButton;
+    private JButton editButton;
     private JButton logOutButton;
     private JPanel userPagePanel;
     private JTabbedPane tabbedPane1;
@@ -84,8 +87,13 @@ public class UserPage {
     private JButton viewBillingReportButton;
 
     JPanel contentPane;
+    Hospital hospital;
 
-    public UserPage(JPanel _contentPane) {
+
+    private String userNameOfCurrentUser; // user name of user who is currently logged in
+
+    public UserPage(JPanel _contentPane, Hospital _hospital) {
+        this.hospital = _hospital;
         this.contentPane = _contentPane;
         logOutButton.addActionListener(new ActionListener() {
             @Override
@@ -94,6 +102,58 @@ public class UserPage {
                 cl.show(contentPane, "Login Page");
             }
         });
+
+        editButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                updateUserInfoInPatientInformationTab();
+                updateViewWithNewUserInfoInPatientInformationTab();
+            }
+        });
+    }
+
+
+    public void updateUserInfoInPatientInformationTab() {
+        Patient currentUser = (Patient) hospital.getAllUsers().get(userNameOfCurrentUser);
+        currentUser.setFirstName(patientInformation_firstName.getText());
+        currentUser.setDateOfBirth(patientInformation_dateOfBirth.getText());
+        currentUser.setAge(patientInformation_age.getText());
+        currentUser.setSex(patientInformation_gender.getText());
+        currentUser.setAddress(patientInformation_address.getText());
+        currentUser.setCity(patientInformation_city.getText());
+        currentUser.setZip(patientInformation_zipCode.getText());
+        currentUser.setLastName(patientInformation_lastName.getText());
+        currentUser.setHomePhone(patientInformation_homePhone.getText());
+        currentUser.setMobilePhone(patientInformation_mobilePhone.getText());
+        currentUser.setEmailAddress(patientInformation_emailAddress.getText());
+        currentUser.setECfirstName(patientInformation_ECfirstName.getText());
+        currentUser.setEClastName(patientInformation_EClastName.getText());
+        currentUser.setEChomePhone(patientInformation_EChomePhone.getText());
+        currentUser.setECmobilePhone(patientInformation_ECmobilePhone.getText());
+        currentUser.setInsuranceProvider(patientInformation_insuranceProvider.getText());
+        currentUser.setInsuranceAccount(patientInformation_insuranceAccount.getText());
+        currentUser.setState((String) patientInformation_stateComboBox.getSelectedItem());
+    }
+
+    public void updateViewWithNewUserInfoInPatientInformationTab() {
+        Patient currentUser = (Patient) hospital.getAllUsers().get(userNameOfCurrentUser);
+        patientInformation_firstName.setText(currentUser.getFirstName());
+        patientInformation_dateOfBirth.setText(currentUser.getDateOfBirth());
+        patientInformation_age.setText(currentUser.getAge());
+        patientInformation_gender.setText(currentUser.getSex());
+        patientInformation_socialSecurity.setText(currentUser.getSocialSecurity()); // social won't change
+        patientInformation_address.setText(currentUser.getAddress());
+        patientInformation_city.setText(currentUser.getCity());
+        patientInformation_zipCode.setText(currentUser.getZip());
+        patientInformation_lastName.setText(currentUser.getLastName());
+        patientInformation_homePhone.setText(currentUser.getHomePhone());
+        patientInformation_mobilePhone.setText(currentUser.getMobilePhone());
+        patientInformation_emailAddress.setText(currentUser.getEmailAddress());
+        patientInformation_ECfirstName.setText(currentUser.getECfirstName());
+        patientInformation_EClastName.setText(currentUser.getEClastName());
+        patientInformation_EChomePhone.setText(currentUser.getEChomePhone());
+        patientInformation_ECmobilePhone.setText(currentUser.getECmobilePhone());
+        patientInformation_insuranceProvider.setText(currentUser.getInsuranceProvider());
+        patientInformation_insuranceAccount.setText(currentUser.getInsuranceAccount());
     }
 
     public JPanel getUserPagePanel() {
@@ -112,12 +172,20 @@ public class UserPage {
         this.logOutButton = logOutButton;
     }
 
-    public JButton getPageButton() {
-        return pageButton;
+    public JButton getEditButton() {
+        return editButton;
     }
 
-    public void setPageButton(JButton pageButton) {
-        this.pageButton = pageButton;
+    public void setEditButton(JButton editButton) {
+        this.editButton = editButton;
+    }
+
+    public String getUserNameOfCurrentUser() {
+        return userNameOfCurrentUser;
+    }
+
+    public void setUserNameOfCurrentUser(String userNameOfCurrentUser) {
+        this.userNameOfCurrentUser = userNameOfCurrentUser;
     }
 
 

@@ -84,55 +84,99 @@ public class Patient extends RPerson {
         this.type = type;
     }
 
-    public String getCity() {
-        return city;
-    }
-
-    public String getAge() {
-        return age;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
     public String getECfirstName() {
         return ECfirstName;
     }
 
-    public String getEChomePhone() {
-        return EChomePhone;
+    public void setECfirstName(String ECfirstName) {
+        this.ECfirstName = ECfirstName;
     }
 
     public String getEClastName() {
         return EClastName;
     }
 
+    public void setEClastName(String EClastName) {
+        this.EClastName = EClastName;
+    }
+
+    public String getEChomePhone() {
+        return EChomePhone;
+    }
+
+    public void setEChomePhone(String EChomePhone) {
+        this.EChomePhone = EChomePhone;
+    }
+
     public String getECmobilePhone() {
         return ECmobilePhone;
+    }
+
+    public void setECmobilePhone(String ECmobilePhone) {
+        this.ECmobilePhone = ECmobilePhone;
     }
 
     public String getECRelationship() {
         return ECRelationship;
     }
 
-    public String getInsuranceAccount() {
-        return insuranceAccount;
+    public void setECRelationship(String ECRelationship) {
+        this.ECRelationship = ECRelationship;
     }
 
     public String getInsuranceProvider() {
         return insuranceProvider;
     }
 
+    public void setInsuranceProvider(String insuranceProvider) {
+        this.insuranceProvider = insuranceProvider;
+    }
+
+    public String getInsuranceAccount() {
+        return insuranceAccount;
+    }
+
+    public void setInsuranceAccount(String insuranceAccount) {
+        this.insuranceAccount = insuranceAccount;
+    }
+
     public String getState() {
         return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
     }
 
     public String getZip() {
         return zip;
     }
 
-    public void setECfirstName(String ECfirstName) {
-        this.ECfirstName = ECfirstName;
+    public void setZip(String zip) {
+        this.zip = zip;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 }

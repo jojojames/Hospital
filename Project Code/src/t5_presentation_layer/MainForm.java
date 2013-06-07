@@ -31,6 +31,10 @@ public class MainForm {
     // Send specific data structures to other pages in order to use.
     private Hospital hospital = new Hospital();
 
+
+    // PAGES
+    UserPage userPage;
+
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
@@ -52,7 +56,7 @@ public class MainForm {
         contentPane.add(MainPanel, "Login Page");
 
         // Page User sees after logging in.
-        UserPage userPage = new UserPage(contentPane);
+        userPage = new UserPage(contentPane, hospital);
         JScrollPane scrollUserPage = new JScrollPane(userPage.getUserPagePanel());
         contentPane.add(scrollUserPage, "User Page");
 
@@ -81,13 +85,13 @@ public class MainForm {
         init_frame();
 
         // Make a user to test functionality. Userid = 100, Password = 100.
-        Person testPerson = new Patient("James", "password", "James", "Test", "9/8/93", "88211-924-123", "Address", "City", "198-123-123",
+        Person testPerson = new Patient("James", "1", "James", "Test", "9/8/93", "88211-924-123", "Address", "City", "198-123-123",
                 "326-822-8823", "jamesemail.com", "eEC", "EEC", "123-853-8228", "3923-124-138", "InsuranceProvider",
-                "InsuranceAccount", "m", "CA", "20", "","","", 5);
+                "InsuranceAccount", "m", "CA", "20", "","","94542", 5);
 
         Person adminPerson = new Patient("admin", "admin", "admin", "Test", "9/8/93", "88211-924-123", "Address", "City", "198-123-123",
                 "326-822-8823", "jamesemail.com", "eEC", "EEC", "123-853-8228", "3923-124-138", "InsuranceProvider",
-                "InsuranceAccount", "m", "CA", "20", "","","", 1);
+                "InsuranceAccount", "m", "CA", "20", "","","94542", 1);
         hospital.getAllUsers().put(testPerson.getUserName(), testPerson);
         hospital.getAllUsers().put(adminPerson.getUserName(), adminPerson);
 
@@ -118,6 +122,8 @@ public class MainForm {
                             cl.show(contentPane, "Admin Page");
                         } else {
                             clearTextFields();
+                            userPage.setUserNameOfCurrentUser(enteredUserName); // send the user's information to the next view
+                            userPage.updateViewWithNewUserInfoInPatientInformationTab();
                             CardLayout c1 = (CardLayout) contentPane.getLayout();
                             c1.show(contentPane, "User Page");
                         }
