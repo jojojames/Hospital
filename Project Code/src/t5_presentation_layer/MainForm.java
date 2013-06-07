@@ -89,10 +89,16 @@ public class MainForm {
                 "326-822-8823", "jamesemail.com", "eEC", "EEC", "123-853-8228", "3923-124-138", "InsuranceProvider",
                 "InsuranceAccount", "m", "CA", "20", "","","94542", 5);
 
+        Person testPerson2 = new Patient("Joel", "Password", "Joel", "Santiago", "12/31/86", "123-45-678", "123 Main St", "Pleasanton", "198-123-123",
+                "326-822-8823", "joelsemail.com", "eEC", "EEC", "123-853-8228", "3923-124-138", "InsuranceProvider",
+                "InsuranceAccount", "m", "CA", "26", "","","94588", 5);
+
         Person adminPerson = new Patient("admin", "admin", "admin", "Test", "9/8/93", "88211-924-123", "Address", "City", "198-123-123",
                 "326-822-8823", "jamesemail.com", "eEC", "EEC", "123-853-8228", "3923-124-138", "InsuranceProvider",
                 "InsuranceAccount", "m", "CA", "20", "","","94542", 1);
+
         hospital.getAllUsers().put(testPerson.getUserName(), testPerson);
+        hospital.getAllUsers().put(testPerson2.getUserName(),testPerson2);
         hospital.getAllUsers().put(adminPerson.getUserName(), adminPerson);
 
         loginButton.addActionListener(new ActionListener() {
