@@ -14,25 +14,9 @@ import java.awt.event.ActionListener;
  */
 public class UserPage {
     private JButton pageButton;
-    private JButton userButton;
+    private JButton logOutButton;
     private JPanel userPagePanel;
     private JTabbedPane tabbedPane1;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
-    private JTextField textField4;
-    private JTextField textField5;
-    private JComboBox comboBox1;
-    private JTextField textField6;
-    private JTextField textField7;
-    private JTextField textField8;
-    private JTextField textField9;
-    private JTextField textField10;
-    private JTextField textField11;
-    private JTextField textField12;
-    private JTextField textField13;
-    private JTextField textField14;
-    private JTextField textField15;
     private JButton scheduleAppointmentButton;
     private JTable table1;
     private JTable table2;
@@ -75,12 +59,27 @@ public class UserPage {
     private JTable table7;
     private JButton sendEmailButton;
     private JButton scheduleAppointmentButton2;
+    private JTextField patientInformation_firstName;
+    private JTextField patientInformation_dateOfBirth;
+    private JTextField patientInformation_age;
+    private JTextField patientInformation_gender;
+    private JTextField patientInformation_socialSecurity;
+    private JTextField patientInformation_address;
+    private JTextField patientInformation_city;
+    private JTextField patientInformation_zipCode;
+    private JTextField patientInformation_lastName;
+    private JTextField patientInformation_homePhone;
+    private JTextField patientInformation_mobilePhone;
+    private JTextField patientInformation_emailAddress;
+    private JTextField patientInformation_ECfirstName;
+    private JTextField patientInformation_EClastName;
+    private JTextField patientInformation_EChomePhone;
+    private JTextField patientInformation_ECmobilePhone;
+    private JTextField patientInformation_insuranceProvider;
+    private JTextField patientInformation_insuranceAccount;
+    private JComboBox patientInformation_stateComboBox;
 
-    //private JButton pageButton;
-    //private JButton userButton;
-    //private JPanel userPagePanel;
     private JButton surgeriesButton;
-    //private JButton scheduleAppointmentButton;
     private JButton viewAppointmentsButton;
     private JButton viewBillingReportButton;
 
@@ -88,44 +87,13 @@ public class UserPage {
 
     public UserPage(JPanel _contentPane) {
         this.contentPane = _contentPane;
-        userButton.addActionListener(new ActionListener() {
+        logOutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 CardLayout cl = (CardLayout) contentPane.getLayout();
                 cl.show(contentPane, "Login Page");
             }
         });
-        /*
-        surgeriesButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                CardLayout cl = (CardLayout) contentPane.getLayout();
-                cl.show(contentPane, "Surgery Page");
-            }
-        });
-        scheduleAppointmentButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                CardLayout cl = (CardLayout) contentPane.getLayout();
-                cl.show(contentPane, "Schedule Appointment Page");
-            }
-        });
-
-        viewAppointmentsButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                CardLayout cl = (CardLayout) contentPane.getLayout();
-                cl.show(contentPane, "View Appointments Page");
-            }
-        });
-
-        viewBillingReportButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                CardLayout cl = (CardLayout) contentPane.getLayout();
-                cl.show(contentPane, "View Billing Report Page");
-            }
-        });  */
     }
 
     public JPanel getUserPagePanel() {
@@ -136,12 +104,12 @@ public class UserPage {
         this.userPagePanel = userPagePanel;
     }
 
-    public JButton getUserButton() {
-        return userButton;
+    public JButton getLogOutButton() {
+        return logOutButton;
     }
 
-    public void setUserButton(JButton userButton) {
-        this.userButton = userButton;
+    public void setLogOutButton(JButton logOutButton) {
+        this.logOutButton = logOutButton;
     }
 
     public JButton getPageButton() {

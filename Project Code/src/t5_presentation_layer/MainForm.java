@@ -53,7 +53,8 @@ public class MainForm {
 
         // Page User sees after logging in.
         UserPage userPage = new UserPage(contentPane);
-        contentPane.add(userPage.getUserPagePanel(), "User Page");
+        JScrollPane scrollUserPage = new JScrollPane(userPage.getUserPagePanel());
+        contentPane.add(scrollUserPage, "User Page");
 
         // Page User sees if they are Staff after logging in.
         AdminPage adminPage = new AdminPage(contentPane);
