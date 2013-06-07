@@ -1,4 +1,3 @@
-# Ignored files #
-#############
-.idea
-.workspace
+.DS_Store
+out/
+.idea/
