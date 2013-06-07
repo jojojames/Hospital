@@ -24,6 +24,7 @@ public class Hospital {
     private Vector<Department> allDepartments = new Vector<Department>();
     private Vector<Insurance> allInsurance = new Vector<Insurance>();
     private Vector<InsurancePolicy> allInsurancePolicy = new Vector<InsurancePolicy>();
+    private Vector<Room> allRoom = new Vector<Room>();
 
 
     public HashMap<String, Person> allUsers = new HashMap<String, Person>();
@@ -228,6 +229,8 @@ public class Hospital {
         301,302,303,304,305,306,307,308,309,310};
         for(int i=0; i<NUM_ROOMS;i++){
             Room room = new Room(roomNum[i]);
+            allRoom.add(room);
+
         }
     }
 
@@ -328,5 +331,9 @@ public class Hospital {
 
     public void setAllStaff(HashMap<String, Person> allStaff) {
         this.allStaff = allStaff;
+    }
+
+    public Vector<Room> getAllRoom(){
+        return allRoom;
     }
 }
