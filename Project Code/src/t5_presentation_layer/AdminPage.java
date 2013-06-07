@@ -33,7 +33,7 @@ public class AdminPage implements ActionListener {
     private JTextField newPatient_socialSecurity;
     private JTextField newPatient_ECmobileNumber;
     private JTextField newPatient_EChomeNumber;
-    private JTextField relationshipTextField;
+    private JTextField admitPatient_state;
     private JTextField newPatient_ECfirstName;
     private JTextField newPatient_EClastName;
     private JTextField newPatient_emailAddress;
@@ -43,15 +43,15 @@ public class AdminPage implements ActionListener {
     private JTextField newPatient_city;
     private JTextField newPatient_address;
     private JButton newPatient_createPatientButton;
-    private JComboBox comboBox3;
-    private JComboBox comboBox4;
-    private JComboBox comboBox5;
+    private JComboBox admitPatient_doctorComboBox;
+    private JComboBox admitPatient_roomNumberComboBox;
+    private JComboBox admitPatient_locationComboBox;
     private JTextField admitPatient_admissionReason;
-    private JTextField emergencyContactTextField;
+    private JTextField admitPatient_lastName;
     private JTextField admitPatient_ECaddress;
-    private JTextField homePhoneTextField1;
-    private JTextField mobilePhoneTextField1;
-    private JTextField emailTextField1;
+    private JTextField admitPatient_firstName;
+    private JTextField admitPatient_emailAddress;
+    private JTextField admitPatient_homeNumber;
     private JButton admitPatient_admitButton;
     private JTextPane admitPatient_comments;
     private JTabbedPane adminPatientServices_tabbedPane;
@@ -102,38 +102,15 @@ public class AdminPage implements ActionListener {
     private JButton sendMessageButton;
     private JTree tree1;
     private JTextArea emailPatient_emailMessage;
-    private JComboBox comboBox7;
-    private JComboBox comboBox8;
-    private JComboBox comboBox10;
-    private JComboBox comboBox11;
-    private JComboBox comboBox9;
-    private JComboBox comboBox12;
-    private JComboBox comboBox13;
-    private JComboBox comboBox14;
-    private JComboBox comboBox15;
-    private JComboBox comboBox16;
-    private JButton addToOrderButton;
-    private JButton addToOrderButton1;
-    private JButton addToOrderButton2;
-    private JButton addToOrderButton3;
-    private JButton addToOrderButton4;
-    private JComboBox comboBox17;
-    private JComboBox comboBox18;
-    private JComboBox comboBox19;
-    private JComboBox comboBox20;
-    private JComboBox comboBox21;
-    private JButton sendOrderRequestButton;
-    private JTable table1;
     private JComboBox newPatient_stateComboBox;
     private JButton admitPatient_findButton;
-    private JComboBox patientcomboBox2;
-    private JTextField firstNameTextField2;
-    private JTextField lastNameTextField2;
-    private JTextField emailTextField;
-    private JTextField phoneNumberTextField;
-    private JTextField addressTextField2;
-    private JTextField cityTextField1;
-    private JTextField stateTextField;
+    private JComboBox admitPatient_patientComboBox;
+    private JTextField admitPatient_ECname;
+    private JTextField admitPatient_address;
+    private JTextField admitPatient_city;
+    private JTextField admitPatient_EChomeNumber;
+    private JTextField admitPatient_ECmobileNumber;
+    private JTextField admitPatient_ECemailAddress;
     private JTextField patientCheck_patientUserName;
     private JTextField patientCheck_firstName;
     private JTextField patientCheck_lastName;
@@ -148,26 +125,25 @@ public class AdminPage implements ActionListener {
     public AdminPage(JPanel _contentPane) {
         this.contentPane = _contentPane;
 
-        /*
 
+        /*
         // TODO: CAN PULL INFO FROM STAFF HASHMAP NOW
         //populate patient combobox
-        for(Object o: hospital.getAllUsers().keySet())
-            patientcomboBox2.addItem(o);
+        for(Object o: hospital.allStaff.keySet())
+            admitPatient_patientComboBox.addItem(o);
 
         //location/department combobox
-        for(Object o: Department.hashMap.keySet())
-            comboBox3.addItem(o);
-
+        for(Object o: hospital.getAllDepartments())
+            admitPatient_locationComboBox.addItem(o);
         //Room number combobox
         for(Object o: Room.hashMap.keySet())
             comboBox4.addItem(o);
 
         //Doctor combobox
-        for(Object o: Doctor.hashMap.keySet())
-            comboBox5.addItem(o);
+        for(Object o: hospital.getAllUsers().keySet())
+            admitPatient_doctorComboBox.addItem(o);
 
-        */
+         */
 
 
 
@@ -214,7 +190,6 @@ public class AdminPage implements ActionListener {
         String nEmail = newPatient_emailAddress.getText();
         String nECFirstName = newPatient_ECfirstName.getText();
         String nECLastName = newPatient_EClastName.getText();
-        String nECRelationship = relationshipTextField.getText();
         String nECHomePhone = newPatient_EChomeNumber.getText();
         String nECMobilePhone = newPatient_ECmobileNumber.getText();
         String nInsuranceProvider = newPatient_insuranceProvider.getText();
@@ -231,7 +206,8 @@ public class AdminPage implements ActionListener {
             Person g = new Patient("PLACEHOLDER_USERNAME", "PLACHOLDER_PASSWORD", nFirstName, nLastName, nDOB,
                     nSSN, nAddress, nCity, nHomePhone, nMobilePhone, nEmail, nECFirstName, nECLastName, nECHomePhone,
                     nECMobilePhone, nInsuranceProvider, nInsuranceAccountNum, newPatient_sexComboBox.getSelectedItem().toString(),
-                    newPatient_stateComboBox.getSelectedItem().toString(), nAge, nMiddleName, nECRelationship, nZip, 5);
+                    newPatient_stateComboBox.getSelectedItem().toString(), nAge, nMiddleName,
+                    newPatient_ECrelationComboBox.getSelectedItem().toString(), nZip, 5);
             hospital.getAllUsers().put(nFirstName, g);
 
             newPatient_firstName.setText("");
@@ -248,18 +224,17 @@ public class AdminPage implements ActionListener {
             newPatient_emailAddress.setText("");
             newPatient_ECfirstName.setText("");
             newPatient_EClastName.setText("");
-            relationshipTextField.setText("");
             newPatient_EChomeNumber.setText("");
             newPatient_ECmobileNumber.setText("");
             newPatient_insuranceProvider.setText("");
             newPatient_accountNumber.setText("");
 
-            patientcomboBox2.addItem(nFirstName);
+            admitPatient_patientComboBox.addItem(nFirstName);
 
 
         }
 
-        /*
+
 
         // TODO: FIX THIS, YOU'RE USING A CLASS NOT THE OBJECT.
         // USE THIS INSTEAD.     Hospital hospital = new Hospital();
@@ -268,24 +243,24 @@ public class AdminPage implements ActionListener {
         if(cmd.equals("Find")) {
             // TODO: USE KEY LOOKUP INSTEAD OF ITERATION WHEN POSSIBLE
 
-            for(Person person: Hospital.allUsers.values()){
+            for(Person person: hospital.allUsers.values()){
                 Patient patient = (Patient) person;
-                if(patient.getFirstName() == patientcomboBox2.getSelectedItem()){
-                    firstNameTextField2.setText(patient.getFirstName());
-                    lastNameTextField2.setText(patient.getLastName());
-                    emailTextField.setText(patient.getEmailAddress());
-                    phoneNumberTextField.setText(patient.getHomePhone());
-                    addressTextField2.setText(patient.getAddress());
-                    cityTextField1.setText(patient.getCity());
-                    stateTextField.setText(patient.getState());
-                    emergencyContactTextField.setText(patient.getECfirstName() + " " + patient.getEClastName());
-                    homePhoneTextField1.setText(patient.getEChomePhone());
-                    mobilePhoneTextField1.setText(patient.getECmobilePhone());
-                    emailTextField1.setText(patient.getEmailAddress());
+                if(patient.getFirstName() == admitPatient_patientComboBox.getSelectedItem()){
+                    admitPatient_firstName.setText(patient.getFirstName());
+                    admitPatient_lastName.setText(patient.getLastName());
+                    admitPatient_emailAddress.setText(patient.getEmailAddress());
+                    admitPatient_homeNumber.setText(patient.getHomePhone());
+                    admitPatient_address.setText(patient.getAddress());
+                    admitPatient_city.setText(patient.getCity());
+                    admitPatient_state.setText(patient.getState());
+                    admitPatient_ECname.setText(patient.getECfirstName() + " " + patient.getEClastName());
+                    admitPatient_EChomeNumber.setText(patient.getEChomePhone());
+                    admitPatient_ECmobileNumber.setText(patient.getECmobilePhone());
+                    admitPatient_ECemailAddress.setText(patient.getEmailAddress());
                 }
             }
         }
-        */
+
 
         if(cmd.equals("Search Patient")) {
 
