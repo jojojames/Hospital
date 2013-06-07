@@ -23,6 +23,7 @@ public class Doctor extends RPerson {
     public String homePhone;
     public String mobilePhone;
     public int type;
+    private Vector<String> emailMessages;
      */
 
     private Vector<Appointment> appointment = new Vector<Appointment>();
@@ -37,8 +38,6 @@ public class Doctor extends RPerson {
     private Vector<Nurse> nurse = new Vector<Nurse>();
     private Department department;
 
-    public static HashMap<String, Doctor> hashMap = new HashMap<String, Doctor>();
-
     /**
      *
      * @param skillId
@@ -50,27 +49,26 @@ public class Doctor extends RPerson {
                   String dateOfBirth, String sex, String socialSecurity,  String emailAddress, String mobilePhone,
                   int skillId, int yearsOfExperience, String hiredDate, int departmentID, int type) {
 
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.middleName = middleName;
-        this.dateOfBirth = dateOfBirth;
-        this.sex = sex;
-        this.socialSecurity = socialSecurity;
-        this.emailAddress = emailAddress;
-        this.password = password;
-        this.userName = userName;
-        this.mobilePhone = mobilePhone;
-        this.type = type;
+        this.setFirstName(firstName);
+        this.setLastName(lastName);
+        this.setMiddleName(middleName);
+        this.setDateOfBirth(dateOfBirth);
+        this.setSex(sex);
+        this.setSocialSecurity(socialSecurity);
+        this.setEmailAddress(emailAddress);
+        this.setPassword(password);
+        this.setUserName(userName);
+        this.setMobilePhone(mobilePhone);
+        this.setType(type);
 
         this.yearsOfExperience = yearsOfExperience;
         this.hiredDate = hiredDate;
         this.departmentID = departmentID;
 
-        hashMap.put(lastName + ", " + firstName, this);
     }
 
     public Vector<Appointment> getAppointment() {
-        return appointment;
+        return this.appointment;
     }
 
     public void setAppointment(Vector<Appointment> appointment) {
@@ -86,7 +84,7 @@ public class Doctor extends RPerson {
     }
 
     public Office getOffice() {
-        return office;
+        return this.office;
     }
 
     public void setOffice(Office office) {
@@ -94,7 +92,7 @@ public class Doctor extends RPerson {
     }
 
     public Vector<Patient> getPatient() {
-        return patient;
+        return this.patient;
     }
 
     public void setPatient(Vector<Patient> patient) {
@@ -102,7 +100,7 @@ public class Doctor extends RPerson {
     }
 
     public int getYearsOfExperience() {
-        return yearsOfExperience;
+        return this.yearsOfExperience;
     }
 
     public void setYearsOfExperience(int yearsOfExperience) {
@@ -110,7 +108,7 @@ public class Doctor extends RPerson {
     }
 
     public String getHiredDate() {
-        return hiredDate;
+        return this.hiredDate;
     }
 
     public void setHiredDate(String hiredDate) {
@@ -118,7 +116,7 @@ public class Doctor extends RPerson {
     }
 
     public Vector<Diagnosis> getDiagnosis() {
-        return diagnosis;
+        return this.diagnosis;
     }
 
     public void setDiagnosis(Vector<Diagnosis> diagnosis) {
@@ -126,7 +124,7 @@ public class Doctor extends RPerson {
     }
 
     public int getDepartmentID() {
-        return departmentID;
+        return this.departmentID;
     }
 
     public void setDepartmentID(int departmentID) {
@@ -134,26 +132,26 @@ public class Doctor extends RPerson {
     }
 
     public Vector<Patient_Doctor> getPersonDoctor() {
-        return personDoctor;
+        return this.personDoctor;
     }
 
     public void setPersonDoctor(Vector<Patient_Doctor> personDoctor) {
-        this.personDoctor = personDoctor;
+        this.personDoctor = this.personDoctor;
     }
 
     public Vector<Nurse> getNurse() {
-        return nurse;
+        return this.nurse;
     }
 
     public void setNurse(Vector<Nurse> nurse) {
-        this.nurse = nurse;
+        this.nurse = this.nurse;
     }
 
     public Department getDepartment() {
-        return department;
+        return this.department;
     }
 
     public void setDepartment(Department department) {
-        this.department = department;
+        this.department = this.department;
     }
 }

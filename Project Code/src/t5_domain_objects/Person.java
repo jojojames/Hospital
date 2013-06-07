@@ -1,5 +1,7 @@
 package t5_domain_objects;
 
+import java.util.Vector;
+
 /**
  * Created with IntelliJ IDEA.
  * User: james
@@ -44,5 +46,8 @@ public interface Person {
 
     public int getType();
     public void setType(int type);
+
+    public Vector<String> getEmailMessages();
+    public void setEmailMessages(Vector<String> emailMessages);
 
 }

@@ -21,6 +21,7 @@ public class Head extends RPerson {
     public String homePhone;
     public String mobilePhone;
     public int type;
+    private Vector<String> emailMessages;
      */
 
     private int yearsOfExperience;
@@ -38,17 +39,17 @@ public class Head extends RPerson {
                 String dateOfBirth, String sex, String socialSecurity,  String emailAddress, String mobilePhone,
                 int yearsOfExperience, int skillID, String hiredDate, int type) {
 
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.middleName = middleName;
-        this.dateOfBirth = dateOfBirth;
-        this.sex = sex;
-        this.socialSecurity = socialSecurity;
-        this.emailAddress = emailAddress;
-        this.password = password;
-        this.userName = userName;
-        this.mobilePhone = mobilePhone;
-        this.type = type;
+        this.setFirstName(firstName);
+        this.setLastName(lastName);
+        this.setMiddleName(middleName);
+        this.setDateOfBirth(dateOfBirth);
+        this.setSex(sex);
+        this.setSocialSecurity(socialSecurity);
+        this.setEmailAddress(emailAddress);
+        this.setPassword(password);
+        this.setUserName(userName);
+        this.setMobilePhone(mobilePhone);
+        this.setType(type);
 
         this.yearsOfExperience = yearsOfExperience;
         this.hiredDate = hiredDate;

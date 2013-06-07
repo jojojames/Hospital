@@ -26,14 +26,8 @@ public class Hospital {
     private Vector<InsurancePolicy> allInsurancePolicy = new Vector<InsurancePolicy>();
 
 
-    // TODO: REMOVE ANY CODE THAT USES THESE VECTORS AND REPLACE THEM WITH THE ALLUSER HASHMAP
-    private Vector<Surgeon> allSurgeons = new Vector<Surgeon>();
-    private Vector<Doctor> allDoctors = new Vector<Doctor>();
-    private Vector<Head> allHeads = new Vector<Head>();
-    private Vector<Nurse> allNurses = new Vector<Nurse>();
-
-    public static HashMap<String, Person> allUsers = new HashMap<String, Person>();
-    public static HashMap<String, Person> allStaff = new HashMap<String, Person>();
+    public HashMap<String, Person> allUsers = new HashMap<String, Person>();
+    public HashMap<String, Person> allStaff = new HashMap<String, Person>();
 
     private int NUM_INSURANCE_POLICY = 3;
     private int NUM_INSURANCE = 3;
@@ -328,35 +322,11 @@ public class Hospital {
         this.allInsurance = allInsurance;
     }
 
-    public Vector<Surgeon> getAllSurgeons() {
-        return allSurgeons;
+    public HashMap<String, Person> getAllStaff() {
+        return this.allStaff;
     }
 
-    public void setAllSurgeons(Vector<Surgeon> allSurgeons) {
-        this.allSurgeons = allSurgeons;
-    }
-
-    public Vector<Doctor> getAllDoctors() {
-        return allDoctors;
-    }
-
-    public void setAllDoctors(Vector<Doctor> allDoctors) {
-        this.allDoctors = allDoctors;
-    }
-
-    public Vector<Head> getAllHeads() {
-        return allHeads;
-    }
-
-    public void setAllHeads(Vector<Head> allHeads) {
-        this.allHeads = allHeads;
-    }
-
-    public Vector<Nurse> getAllNurses() {
-        return allNurses;
-    }
-
-    public void setAllNurses(Vector<Nurse> allNurses) {
-        this.allNurses = allNurses;
+    public void setAllStaff(HashMap<String, Person> allStaff) {
+        this.allStaff = allStaff;
     }
 }

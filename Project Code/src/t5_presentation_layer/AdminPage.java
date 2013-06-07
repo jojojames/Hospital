@@ -253,6 +253,12 @@ public class AdminPage implements ActionListener {
 
         }
 
+        /*
+
+        // TODO: FIX THIS, YOU'RE USING A CLASS NOT THE OBJECT.
+        // USE THIS INSTEAD.     Hospital hospital = new Hospital();
+        // hospital <------------------------- variable you want, NOT Hospital
+
         if(cmd.equals("Find")) {
             // TODO: USE KEY LOOKUP INSTEAD OF ITERATION WHEN POSSIBLE
 
@@ -273,9 +279,11 @@ public class AdminPage implements ActionListener {
                 }
             }
         }
+        */
 
-        if(cmd.equals("Search Patient")){
+        if(cmd.equals("Search Patient")) {
 
         }
+
     }
 }

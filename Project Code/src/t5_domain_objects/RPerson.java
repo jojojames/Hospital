@@ -1,5 +1,7 @@
 package t5_domain_objects;
 
+import java.util.Vector;
+
 /**
  * Created with IntelliJ IDEA.
  * User: james
@@ -8,18 +10,20 @@ package t5_domain_objects;
  * To change this template use File | Settings | File Templates.
  */
 public class RPerson implements Person {
-    public String firstName;
-    public String lastName;
-    public String middleName;
-    public String dateOfBirth;
-    public String sex;
-    public String socialSecurity;
-    public String emailAddress;
-    public String password;
-    public String userName;
-    public String homePhone;
-    public String mobilePhone;
-    public int type;
+    private String firstName;
+    private String lastName;
+    private String middleName;
+    private String dateOfBirth;
+    private String sex;
+    private String socialSecurity;
+    private String emailAddress;
+    private String password;
+    private String userName;
+    private String homePhone;
+    private String mobilePhone;
+    private int type;
+    private Vector<String> emailMessages = new Vector<String>();
+
 
     public String getFirstName() {
         return this.firstName;
@@ -116,5 +120,12 @@ public class RPerson implements Person {
         this.type = type;
     }
 
+    public Vector<String> getEmailMessages() {
+        return this.emailMessages;
+    }
+
+    public void setEmailMessages(Vector<String> emailMessages) {
+        this.emailMessages = emailMessages;
+    }
 
 }

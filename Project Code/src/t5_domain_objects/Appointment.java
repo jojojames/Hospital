@@ -5,20 +5,19 @@ import java.util.Date;
 public class Appointment {
     private String date;
     private String notesDescription;
-    private String physician;
     private Patient patient;
     private Doctor doctor;
-    private Date appointmentDate;
-    private int appointmentID;
+    private String appointmentDate;
+    private String basicReason;
+    private String fullReason;
+    private String time;
 
-    /**
-     *
-     * @param physician
-     * @param appointmentID
-     */
-    public Appointment(String physician, int appointmentID) {
-        this.physician = physician;
-        this.appointmentID = appointmentID;
+    public Appointment(Doctor doc, Patient patient, String time, String basicReason, String fullReason) {
+        this.doctor = doc;
+        this.patient = patient;
+        this.time = time;
+        this.basicReason = basicReason;
+        this.fullReason = fullReason;
     }
 
     public String getDate() {
@@ -37,14 +36,6 @@ public class Appointment {
         this.notesDescription = notesDescription;
     }
 
-    public String getPhysician() {
-        return physician;
-    }
-
-    public void setPhysician(String physician) {
-        this.physician = physician;
-    }
-
     public Patient getPatient() {
         return patient;
     }
@@ -61,19 +52,37 @@ public class Appointment {
         this.doctor = doctor;
     }
 
-    public Date getAppointmentDate() {
+    public String getAppointmentDate() {
         return appointmentDate;
     }
 
-    public void setAppointmentDate(Date appointmentDate) {
+    public void setAppointmentDate(String appointmentDate) {
         this.appointmentDate = appointmentDate;
     }
 
-    public int getAppointmentID() {
-        return appointmentID;
+    public String getBasicReason() {
+        return basicReason;
     }
 
-    public void setAppointmentID(int appointmentID) {
-        this.appointmentID = appointmentID;
+    public void setBasicReason(String basicReason) {
+        this.basicReason = basicReason;
     }
+
+    public String getFullReason() {
+        return fullReason;
+    }
+
+    public void setFullReason(String fullReason) {
+        this.fullReason = fullReason;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+
 }

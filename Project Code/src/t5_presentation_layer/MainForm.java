@@ -124,6 +124,8 @@ public class MainForm {
                             clearTextFields();
                             userPage.setUserNameOfCurrentUser(enteredUserName); // send the user's information to the next view
                             userPage.updateViewWithNewUserInfoInPatientInformationTab();
+                            userPage.updateViewWithNewUserInfoInEmailToDoctorTab();
+                            userPage.updateUserInfoInAppointmentTab();
                             CardLayout c1 = (CardLayout) contentPane.getLayout();
                             c1.show(contentPane, "User Page");
                         }

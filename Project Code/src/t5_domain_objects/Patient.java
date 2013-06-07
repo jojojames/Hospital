@@ -22,6 +22,7 @@ public class Patient extends RPerson {
     public String homePhone;
     public String mobilePhone;
     public int type;
+    private Vector<String> emailMessages;
      */
 
     private String ECfirstName;
@@ -58,17 +59,18 @@ public class Patient extends RPerson {
                    String sex, String state, String age, String middleName,
                    String ECRelationship, String zip, int type) {
 
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.middleName = middleName;
-        this.dateOfBirth = dateOfBirth;
-        this.sex = sex;
-        this.socialSecurity = socialSecurity;
-        this.emailAddress = emailAddress;
-        this.password = password;
-        this.userName = userName;
-        this.homePhone = homePhone;
-        this.mobilePhone = mobilePhone;
+        this.setFirstName(firstName);
+        this.setLastName(lastName);
+        this.setMiddleName(middleName);
+        this.setDateOfBirth(dateOfBirth);
+        this.setSex(sex);
+        this.setSocialSecurity(socialSecurity);
+        this.setEmailAddress(emailAddress);
+        this.setPassword(password);
+        this.setUserName(userName);
+        this.setHomePhone(homePhone);
+        this.setMobilePhone(mobilePhone);
+        this.setType(type);
         this.ECfirstName = ECfirstName;
         this.EClastName = EClastName;
         this.EChomePhone = EChomePhone;
@@ -81,7 +83,6 @@ public class Patient extends RPerson {
         this.address = address;
         this.city = city;
         this.age = age;
-        this.type = type;
     }
 
     public String getECfirstName() {
@@ -178,5 +179,85 @@ public class Patient extends RPerson {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public Vector<Patient_Doctor> getPersonDoctor() {
+        return personDoctor;
+    }
+
+    public void setPersonDoctor(Vector<Patient_Doctor> personDoctor) {
+        this.personDoctor = personDoctor;
+    }
+
+    public Vector<Patient_Head> getPersonHead() {
+        return personHead;
+    }
+
+    public void setPersonHead(Vector<Patient_Head> personHead) {
+        this.personHead = personHead;
+    }
+
+    public Vector<Patient_Nurse> getPatientNurse() {
+        return patientNurse;
+    }
+
+    public void setPatientNurse(Vector<Patient_Nurse> patientNurse) {
+        this.patientNurse = patientNurse;
+    }
+
+    public Vector<Visit> getVisit() {
+        return visit;
+    }
+
+    public void setVisit(Vector<Visit> visit) {
+        this.visit = visit;
+    }
+
+    public Vector<Appointment> getAppointment() {
+        return appointment;
+    }
+
+    public void setAppointment(Vector<Appointment> appointment) {
+        this.appointment = appointment;
+    }
+
+    public Vector<Patient_Surgeon> getPatientSurgeon() {
+        return patientSurgeon;
+    }
+
+    public void setPatientSurgeon(Vector<Patient_Surgeon> patientSurgeon) {
+        this.patientSurgeon = patientSurgeon;
+    }
+
+    public Vector<Diagnosis> getDiagnosis() {
+        return diagnosis;
+    }
+
+    public void setDiagnosis(Vector<Diagnosis> diagnosis) {
+        this.diagnosis = diagnosis;
+    }
+
+    public Vector<BillingStatement> getBillingStatement() {
+        return billingStatement;
+    }
+
+    public void setBillingStatement(Vector<BillingStatement> billingStatement) {
+        this.billingStatement = billingStatement;
+    }
+
+    public Vector<Prescription> getPrescription() {
+        return prescription;
+    }
+
+    public void setPrescription(Vector<Prescription> prescription) {
+        this.prescription = prescription;
+    }
+
+    public InsurancePolicy getInsurancePolicy() {
+        return insurancePolicy;
+    }
+
+    public void setInsurancePolicy(InsurancePolicy insurancePolicy) {
+        this.insurancePolicy = insurancePolicy;
     }
 }
