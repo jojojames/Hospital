@@ -1,11 +1,10 @@
 package t5_domain_logic;
 
-import com.sun.deploy.config.VerboseDefaultConfig;
 import t5_domain_objects.*;
 
 import java.util.HashMap;
+import java.util.Stack;
 import java.util.Vector;
-import java.util.Date;
 
 
 // test
@@ -24,9 +23,7 @@ public class Hospital {
     private Vector<Department> allDepartments = new Vector<Department>();
     private Vector<Insurance> allInsurance = new Vector<Insurance>();
     private Vector<InsurancePolicy> allInsurancePolicy = new Vector<InsurancePolicy>();
-    private Vector<Room> allRoom = new Vector<Room>();
-
-    private Vector<Appointment> allAppointments = new Vector<Appointment>();
+    private Stack<Room> allRooms = new Stack<Room>();
 
     public HashMap<String, Person> allUsers = new HashMap<String, Person>();
     public HashMap<String, Person> allStaff = new HashMap<String, Person>();
@@ -239,10 +236,10 @@ public class Hospital {
         int[] roomNum = {101,102,103,104,105,106,107,108,109,110,
         201,202,203,204,205,206,207,208,209,210,
         301,302,303,304,305,306,307,308,309,310};
+
         for(int i=0; i<NUM_ROOMS;i++){
             Room room = new Room(roomNum[i]);
-            allRoom.add(room);
-
+            allRooms.push(room);
         }
     }
 
@@ -345,15 +342,11 @@ public class Hospital {
         this.allStaff = allStaff;
     }
 
-    public Vector<Room> getAllRoom(){
-        return allRoom;
+    public Stack<Room> getAllRooms(){
+        return this.allRooms;
     }
 
-    public Vector<Appointment> getAllAppointments() {
-        return allAppointments;
-    }
-
-    public void setAllAppointments(Vector<Appointment> allAppointments) {
-        this.allAppointments = allAppointments;
+    public void setAllRooms(Stack<Room> allRooms) {
+        this.allRooms = allRooms;
     }
 }

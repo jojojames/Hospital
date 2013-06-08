@@ -191,7 +191,7 @@ public class AdminPage {
             admitPatient_locationComboBox.addItem(d.getDepartmentName());
 
         //Room number combobox
-        for(Room room: hospital.getAllRoom()){
+        for(Room room: hospital.getAllRooms()){
             admitPatient_roomNumberComboBox.addItem(room.getRoomNum());
             roomChange_newRoomComboBox.addItem(room.getRoomNum());
         }
@@ -314,7 +314,7 @@ public class AdminPage {
                     if(person1.getType() == 2){
                         Doctor doctor = (Doctor)person1;
                         if(doctor.getFirstName().equals(admitPatient_doctorComboBox.getSelectedItem())){
-                            for(Room room: hospital.getAllRoom()){
+                            for(Room room: hospital.getAllRooms()){
                                 if(admitPatient_roomNumberComboBox.getSelectedItem().equals(room.getRoomNum())){
                                     for(Department department: hospital.getAllDepartments()){
                                         if(department.getDepartmentName().equals(admitPatient_locationComboBox.getSelectedItem())){

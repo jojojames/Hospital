@@ -264,9 +264,10 @@ public class UserPage {
         // This lines adds a a relation between a doctor and a patient with the middling happening with the Appointment.
         Doctor docWithAppointment = (Doctor) hospital.getAllStaff().get(docName);
         Patient currentUser = (Patient) hospital.getAllUsers().get(userNameOfCurrentUser);
-        Appointment newAppointment = new Appointment(docWithAppointment, currentUser, time, basicReason, fullReason);
-        docWithAppointment.getAppointment().add(newAppointment);
-        currentUser.getAppointment().add(newAppointment);
+        // TODO: FIX APPOINTMENT
+        //Appointment newAppointment = new Appointment(docWithAppointment, currentUser, time, basicReason, fullReason);
+        //docWithAppointment.getAppointment().add(newAppointment);
+        //currentUser.getAppointment().add(newAppointment);
 
         // TODO: ADD A SUCCESS ALERT THAT THE USER SUCCESSFULLY ADDED AN APPOINTMENT.
         System.out.println("You have set an appointment.");
