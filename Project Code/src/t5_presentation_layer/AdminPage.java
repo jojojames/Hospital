@@ -100,12 +100,8 @@ public class AdminPage {
     private JTable viewSurgery_surgeryScheduleTable;
     private JComboBox emailPatient_patientComboBox;
     private JButton addPatientButton;
-    private JTextField emailPatient_recipientEmail;
-    private JTextField emailPatient_ccAddress;
-    private JTextField emailPatient_bccAddress;
     private JTextField emailPatient_emailSubject;
     private JButton sendMessageButton;
-    private JTree tree1;
     private JTextArea emailPatient_emailMessage;
     private JComboBox newPatient_stateComboBox;
     private JButton admitPatient_findButton;

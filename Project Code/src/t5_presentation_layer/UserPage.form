@@ -709,11 +709,7 @@
             <rowspec value="top:4dlu:noGrow"/>
             <rowspec value="center:max(d;4px):noGrow"/>
             <rowspec value="top:4dlu:noGrow"/>
-            <rowspec value="center:max(d;4px):noGrow"/>
-            <rowspec value="top:4dlu:noGrow"/>
-            <rowspec value="center:max(d;4px):noGrow"/>
-            <rowspec value="top:4dlu:noGrow"/>
-            <rowspec value="center:475px:noGrow"/>
+            <rowspec value="center:545px:noGrow"/>
             <rowspec value="top:5dlu:noGrow"/>
             <rowspec value="center:30px:noGrow"/>
             <colspec value="fill:max(d;4px):noGrow"/>
@@ -742,42 +738,9 @@
                   </model>
                 </properties>
               </component>
-              <component id="e3b81" class="javax.swing.JTextField" binding="emailDoctor_recipientEmail">
-                <constraints>
-                  <grid row="2" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                    <preferred-size width="150" height="-1"/>
-                  </grid>
-                  <forms defaultalign-horz="false"/>
-                </constraints>
-                <properties>
-                  <text value="Enter Recipient Email Address"/>
-                </properties>
-              </component>
-              <component id="8604" class="javax.swing.JTextField" binding="emailDoctor_ccAddress">
-                <constraints>
-                  <grid row="4" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                    <preferred-size width="150" height="-1"/>
-                  </grid>
-                  <forms defaultalign-horz="false"/>
-                </constraints>
-                <properties>
-                  <text value="Enter CC Address"/>
-                </properties>
-              </component>
-              <component id="985d6" class="javax.swing.JTextField" binding="emailDoctor_bccAddress">
-                <constraints>
-                  <grid row="6" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                    <preferred-size width="150" height="-1"/>
-                  </grid>
-                  <forms defaultalign-horz="false"/>
-                </constraints>
-                <properties>
-                  <text value="Enter BCC Address"/>
-                </properties>
-              </component>
               <component id="79743" class="javax.swing.JTextField" binding="emailDoctor_enterSubject" default-binding="true">
                 <constraints>
-                  <grid row="8" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                  <grid row="4" column="2" row-span="1" col-span="5" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
                   </grid>
                   <forms defaultalign-horz="false"/>
@@ -788,7 +751,7 @@
               </component>
               <scrollpane id="5d922">
                 <constraints>
-                  <grid row="10" column="4" row-span="1" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                  <grid row="6" column="2" row-span="1" col-span="5" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                   <forms defaultalign-horz="false" defaultalign-vert="false"/>
                 </constraints>
                 <properties/>
@@ -802,23 +765,9 @@
                   </component>
                 </children>
               </scrollpane>
-              <scrollpane id="dd883">
-                <constraints>
-                  <grid row="4" column="2" row-span="7" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-                  <forms defaultalign-horz="false" defaultalign-vert="false"/>
-                </constraints>
-                <properties/>
-                <border type="none"/>
-                <children>
-                  <component id="fecdd" class="javax.swing.JTree" binding="tree1" default-binding="true">
-                    <constraints/>
-                    <properties/>
-                  </component>
-                </children>
-              </scrollpane>
               <component id="bf91a" class="javax.swing.JButton" binding="sendEmailButton" default-binding="true">
                 <constraints>
-                  <grid row="12" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="8" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                   <forms/>
                 </constraints>
                 <properties>
@@ -862,17 +811,6 @@
             </properties>
             <border type="none"/>
             <children>
-              <component id="1e2e2" class="javax.swing.JComboBox" binding="scheduleAppointment_locationComboBox">
-                <constraints>
-                  <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-                  <forms/>
-                </constraints>
-                <properties>
-                  <model>
-                    <item value="Select a Location"/>
-                  </model>
-                </properties>
-              </component>
               <component id="8d26f" class="javax.swing.JTextField" binding="scheduleAppointment_firstName">
                 <constraints>
                   <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
@@ -950,47 +888,6 @@
                   <text value="Reason for Appointment"/>
                 </properties>
               </component>
-              <component id="b094c" class="javax.swing.JComboBox" binding="scheduleAppointment_doctorComboBox">
-                <constraints>
-                  <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-                  <forms/>
-                </constraints>
-                <properties>
-                  <model>
-                    <item value="Select a Doctor"/>
-                    <item value="Doctor 1"/>
-                    <item value="Doctor 2"/>
-                    <item value="Doctor 3"/>
-                    <item value="Doctor 4"/>
-                    <item value="Doctor 5"/>
-                    <item value="Doctor 6"/>
-                    <item value="Doctor 7"/>
-                    <item value="Doctor 8"/>
-                    <item value="Doctor 9"/>
-                    <item value="Doctor 10"/>
-                  </model>
-                </properties>
-              </component>
-              <component id="3162a" class="javax.swing.JButton" binding="selectDateButton" default-binding="true">
-                <constraints>
-                  <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <forms/>
-                </constraints>
-                <properties>
-                  <text value="Select Date"/>
-                </properties>
-              </component>
-              <component id="58190" class="javax.swing.JComboBox" binding="scheduleAppointment_departmentComboBox">
-                <constraints>
-                  <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-                  <forms/>
-                </constraints>
-                <properties>
-                  <model>
-                    <item value="Department"/>
-                  </model>
-                </properties>
-              </component>
               <scrollpane id="b8b1f">
                 <constraints>
                   <grid row="10" column="2" row-span="1" col-span="9" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -1012,6 +909,37 @@
                 </constraints>
                 <properties>
                   <text value="Schedule Appointment"/>
+                </properties>
+              </component>
+              <component id="b094c" class="javax.swing.JComboBox" binding="scheduleAppointment_doctorComboBox">
+                <constraints>
+                  <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                  <forms/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="Select a Doctor"/>
+                  </model>
+                </properties>
+              </component>
+              <component id="3162a" class="javax.swing.JButton" binding="selectDateButton" default-binding="true">
+                <constraints>
+                  <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <forms/>
+                </constraints>
+                <properties>
+                  <text value="Select Date"/>
+                </properties>
+              </component>
+              <component id="58190" class="javax.swing.JComboBox" binding="scheduleAppointment_departmentComboBox">
+                <constraints>
+                  <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                  <forms/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="Department"/>
+                  </model>
                 </properties>
               </component>
             </children>

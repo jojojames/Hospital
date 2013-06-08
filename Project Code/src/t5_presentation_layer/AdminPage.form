@@ -18,7 +18,7 @@
     <colspec value="left:4dlu:noGrow"/>
     <colspec value="fill:max(d;4px):noGrow"/>
     <constraints>
-      <xy x="20" y="20" width="1124" height="834"/>
+      <xy x="20" y="20" width="1124" height="865"/>
     </constraints>
     <properties/>
     <border type="none" title="Admin"/>
@@ -1923,15 +1923,9 @@
                     <rowspec value="top:4px:noGrow"/>
                     <rowspec value="center:8px:noGrow"/>
                     <rowspec value="top:4px:noGrow"/>
-                    <rowspec value="center:30px:noGrow"/>
-                    <rowspec value="top:4dlu:noGrow"/>
-                    <rowspec value="center:30px:noGrow"/>
-                    <rowspec value="top:3dlu:noGrow"/>
-                    <rowspec value="center:30px:noGrow"/>
-                    <rowspec value="top:3dlu:noGrow"/>
                     <rowspec value="center:33px:noGrow"/>
                     <rowspec value="top:4px:noGrow"/>
-                    <rowspec value="center:360px:noGrow"/>
+                    <rowspec value="center:500px:noGrow"/>
                     <rowspec value="top:4dlu:noGrow"/>
                     <rowspec value="center:30px:noGrow"/>
                     <rowspec value="top:3dlu:noGrow"/>
@@ -1963,16 +1957,6 @@
                         <properties>
                           <model>
                             <item value="Select a Patient"/>
-                            <item value="Patient 1"/>
-                            <item value="Patient 2"/>
-                            <item value="Patient 3"/>
-                            <item value="Patient 4"/>
-                            <item value="Patient 5"/>
-                            <item value="Patient 6"/>
-                            <item value="Patient 7"/>
-                            <item value="Patient 8"/>
-                            <item value="Patient 9"/>
-                            <item value="Patient 10"/>
                           </model>
                         </properties>
                       </component>
@@ -1992,77 +1976,35 @@
                         </constraints>
                         <properties/>
                       </component>
-                      <component id="89baa" class="javax.swing.JTextField" binding="emailPatient_recipientEmail">
-                        <constraints>
-                          <grid row="6" column="4" row-span="1" col-span="5" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                            <preferred-size width="150" height="-1"/>
-                          </grid>
-                          <forms defaultalign-horz="false"/>
-                        </constraints>
-                        <properties>
-                          <text value="Enter Recipient Email"/>
-                        </properties>
-                      </component>
-                      <component id="d6f4d" class="javax.swing.JTextField" binding="emailPatient_ccAddress">
-                        <constraints>
-                          <grid row="8" column="4" row-span="1" col-span="5" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                            <preferred-size width="150" height="-1"/>
-                          </grid>
-                          <forms defaultalign-horz="false"/>
-                        </constraints>
-                        <properties>
-                          <text value="Enter CC Address"/>
-                        </properties>
-                      </component>
-                      <component id="e6674" class="javax.swing.JTextField" binding="emailPatient_bccAddress">
-                        <constraints>
-                          <grid row="10" column="4" row-span="1" col-span="5" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                            <preferred-size width="150" height="-1"/>
-                          </grid>
-                          <forms defaultalign-horz="false"/>
-                        </constraints>
-                        <properties>
-                          <text value="Enter BCC Address"/>
-                        </properties>
-                      </component>
-                      <component id="bf359" class="javax.swing.JTextField" binding="emailPatient_emailSubject">
-                        <constraints>
-                          <grid row="12" column="4" row-span="1" col-span="5" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                            <preferred-size width="150" height="-1"/>
-                          </grid>
-                          <forms defaultalign-horz="false"/>
-                        </constraints>
-                        <properties>
-                          <text value="Enter Subject"/>
-                        </properties>
-                      </component>
                       <component id="915f2" class="javax.swing.JButton" binding="sendMessageButton" default-binding="true">
                         <constraints>
-                          <grid row="16" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                          <grid row="10" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                           <forms/>
                         </constraints>
                         <properties>
                           <text value="Send Message"/>
                         </properties>
                       </component>
-                      <component id="60ab1" class="javax.swing.JTree" binding="tree1" default-binding="true">
-                        <constraints>
-                          <grid row="6" column="2" row-span="9" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                            <preferred-size width="150" height="50"/>
-                          </grid>
-                          <forms defaultalign-horz="false" defaultalign-vert="false"/>
-                        </constraints>
-                        <properties/>
-                      </component>
                       <component id="22279" class="javax.swing.JTextArea" binding="emailPatient_emailMessage">
                         <constraints>
-                          <grid row="14" column="4" row-span="1" col-span="5" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                          <grid row="8" column="2" row-span="1" col-span="7" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="50"/>
                           </grid>
                           <forms defaultalign-horz="false" defaultalign-vert="false"/>
                         </constraints>
                         <properties>
                           <text value="Enter Message"/>
+                        </properties>
+                      </component>
+                      <component id="bf359" class="javax.swing.JTextField" binding="emailPatient_emailSubject">
+                        <constraints>
+                          <grid row="6" column="2" row-span="1" col-span="7" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                            <preferred-size width="150" height="-1"/>
+                          </grid>
+                          <forms defaultalign-horz="false"/>
+                        </constraints>
+                        <properties>
+                          <text value="Enter Subject"/>
                         </properties>
                       </component>
                     </children>

@@ -71,8 +71,6 @@ public class UserPage {
     private JTable table1;
     private JTable table2;
 
-    private JTree tree1;
-
     // Schedule Appointment
     private JComboBox scheduleAppointment_locationComboBox;
     private JTextField scheduleAppointment_firstName;
@@ -160,6 +158,15 @@ public class UserPage {
                 cl.show(contentPane, "Login Page");
             }
         });
+
+        fillComboBox();
+    }
+
+    public void fillComboBox() {
+
+        //location/department combobox
+        for(Department d: hospital.getAllDepartments())
+            scheduleAppointment_departmentComboBox.addItem(d.getDepartmentName());
     }
 
 
@@ -223,9 +230,6 @@ public class UserPage {
     public void updateViewWithNewUserInfoInEmailToDoctorTab() {
 
         // TODO: REMOVE THE 'Enter Recipient Email Address', 'Enter CC Address', 'Enter BCC Address'
-        emailDoctor_bccAddress.setText("REMOVE THIS");
-        emailDoctor_ccAddress.setText("REMOVE THIS");
-        emailDoctor_recipientEmail.setText("REMOVE THIS");
         Patient currentUser = (Patient) hospital.getAllUsers().get(userNameOfCurrentUser);
         updateDoctorComboBoxHelper(currentUser, emailDoctor_doctorComboBox);
     }
@@ -275,7 +279,7 @@ public class UserPage {
     }
 
     private void updateDocComboBoxInScheduleAppointment(Hospital hospital, JComboBox<String> comboBox) {
-        comboBox.removeAllItems();
+        //comboBox.removeAllItems();
         HashMap<String, Person> allStaff = hospital.getAllStaff();
         for(Person person : allStaff.values()) {
             if(person.getType() == 2) {
