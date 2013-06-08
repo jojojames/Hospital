@@ -26,6 +26,7 @@ public class Hospital {
     private Vector<InsurancePolicy> allInsurancePolicy = new Vector<InsurancePolicy>();
     private Vector<Room> allRoom = new Vector<Room>();
 
+    private Vector<Appointment> allAppointments = new Vector<Appointment>();
 
     public HashMap<String, Person> allUsers = new HashMap<String, Person>();
     public HashMap<String, Person> allStaff = new HashMap<String, Person>();
@@ -67,9 +68,9 @@ public class Hospital {
     }
 
     private void generate_users() {
-        Person a = new Patient("a", "password", "a", "A", "1/1/92", "123-123-123", "Address", "City", "310-123-123",
-                "323-123-123", "email.com", "aEC", "AEC", "123-123-123", "323-123-122", "InsuranceProvider",
-                "InsuranceAccount", "m", "CA", "20", "middle","spouse","95112", 5);
+        Person a = new Patient("a", "password", "John", "Jones", "1/1/92", "123-123-123", "555 Milky Way", "Solar", "310-123-123",
+                "323-123-123", "JohnJones@mail.com", "Sally", "Jones", "123-123-123", "323-123-122", "AllState",
+                "456324561481", "m", "CA", "20", "Jim","spouse","95112", 5);
         allUsers.put(a.getUserName(), a);
 
         Person b = new Patient("b", "password", "b", "B", "1/1/91", "223-124-123", "Address", "City", "311-123-123",
@@ -346,5 +347,13 @@ public class Hospital {
 
     public Vector<Room> getAllRoom(){
         return allRoom;
+    }
+
+    public Vector<Appointment> getAllAppointments() {
+        return allAppointments;
+    }
+
+    public void setAllAppointments(Vector<Appointment> allAppointments) {
+        this.allAppointments = allAppointments;
     }
 }

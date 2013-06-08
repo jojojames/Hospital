@@ -7,17 +7,20 @@ public class Appointment {
     private String notesDescription;
     private Patient patient;
     private Doctor doctor;
+    private Room room;
     private String appointmentDate;
     private String basicReason;
     private String fullReason;
     private String time;
+    private Department department;
 
-    public Appointment(Doctor doc, Patient patient, String time, String basicReason, String fullReason) {
-        this.doctor = doc;
+    public Appointment(Doctor doctor, Patient patient, Department department, String basicReason, String fullReason, Room room) {
+        this.doctor = doctor;
         this.patient = patient;
-        this.time = time;
         this.basicReason = basicReason;
         this.fullReason = fullReason;
+        this.room = room;
+        this.department = department;
     }
 
     public String getDate() {
@@ -84,5 +87,20 @@ public class Appointment {
         this.time = time;
     }
 
+    public Room getRoom() {
+        return room;
+    }
+
+    public void setRoom(Room room) {
+        this.room = room;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
 
 }
