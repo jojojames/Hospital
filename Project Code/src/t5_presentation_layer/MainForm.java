@@ -62,7 +62,8 @@ public class MainForm {
 
         // Page User sees if they are Staff after logging in.
         AdminPage adminPage = new AdminPage(contentPane);
-        contentPane.add(adminPage.getAdminPagePanel(), "Admin Page");
+        JScrollPane scrollAdminPage = new JScrollPane(adminPage.getAdminPagePanel());
+        contentPane.add(scrollAdminPage, "Admin Page");
 
         // Page User sees when signing up.
         NewUserPage newUserPage = new NewUserPage(contentPane, hospital);
