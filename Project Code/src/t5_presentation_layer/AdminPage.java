@@ -131,10 +131,11 @@ public class AdminPage {
     public AdminPage(JPanel _contentPane) {
         this.contentPane = _contentPane;
 
-        ghostText();
+        GhostText PC_firstName = new GhostText(patientCheck_firstName,"First Name");
+        GhostText PC_lastName = new GhostText(patientCheck_lastName,"Last Name");
+        GhostText PC_enterPatient = new GhostText(patientCheck_patientUserName, "Enter Patient User Name");
 
         //populate patient combobox
-<<<<<<< HEAD
         for(Person p: hospital.allUsers.values()){
             Patient patient = (Patient)p;
             admitPatient_patientComboBox.addItem(patient.getFirstName());
@@ -158,9 +159,6 @@ public class AdminPage {
                 admitPatient_doctorComboBox.addItem("Dr. " + doctor.getLastName());
             }
         }
-=======
-        fillComboBox();
->>>>>>> 2ff3d67a085ea79378c8c956dca17b77935556e0
 
         logoutButton.addActionListener(new ActionListener() {
             @Override
@@ -173,7 +171,20 @@ public class AdminPage {
         searchPatient.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                searchPatient();
+                String first = patientCheck_firstName.getText();
+                String last = patientCheck_lastName.getText();
+
+                for (Person person : hospital.allUsers.values()) {
+                    Patient patient = (Patient) person;
+
+                    if (patient.getFirstName() == first && patient.getLastName() == last) {
+                        JFrame frame = new JFrame("JOptionPane showMessageDialog component example");
+                        JOptionPane.showMessageDialog(frame, "Patient Found");
+
+                        roomChange_firstName.setText(first);
+                        roomChange_lastName.setText(last);
+                    }
+                }
             }
         });
 
@@ -187,14 +198,59 @@ public class AdminPage {
         newPatient_createPatientButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                newPatient();
+                String nFirstName = newPatient_firstName.getText();
+                String nLastName = newPatient_lastName.getText();
+                String nMiddleName = mITextField.getText();
+                String nDOB = newPatient_DOB.getText();
+                String nAge = newPatient_age.getText();
+                String nSSN = newPatient_socialSecurity.getText();
+                String nAddress = newPatient_address.getText();
+                String nCity = newPatient_city.getText();
+                String nZip = newPatient_zip.getText();
+                String nHomePhone = newPatient_homePhone.getText();
+                String nMobilePhone = newPatient_mobilePhone.getText();
+                String nEmail = newPatient_emailAddress.getText();
+                String nECFirstName = newPatient_ECfirstName.getText();
+                String nECLastName = newPatient_EClastName.getText();
+                String nECHomePhone = newPatient_EChomeNumber.getText();
+                String nECMobilePhone = newPatient_ECmobileNumber.getText();
+                String nInsuranceProvider = newPatient_insuranceProvider.getText();
+                String nInsuranceAccountNum = newPatient_accountNumber.getText();
+
+                Person g = new Patient("PLACEHOLDER_USERNAME", "PLACHOLDER_PASSWORD", nFirstName, nLastName, nDOB,
+                        nSSN, nAddress, nCity, nHomePhone, nMobilePhone, nEmail, nECFirstName, nECLastName, nECHomePhone,
+                        nECMobilePhone, nInsuranceProvider, nInsuranceAccountNum, newPatient_sexComboBox.getSelectedItem().toString(),
+                        newPatient_stateComboBox.getSelectedItem().toString(), nAge, nMiddleName,
+                        newPatient_ECrelationComboBox.getSelectedItem().toString(), nZip, 5);
+                hospital.getAllUsers().put(nFirstName, g);
+
+                newPatient_firstName.setText("");
+                newPatient_lastName.setText("");
+                mITextField.setText("");
+                newPatient_DOB.setText("");
+                newPatient_age.setText("");
+                newPatient_socialSecurity.setText("");
+                newPatient_address.setText("");
+                newPatient_city.setText("");
+                newPatient_zip.setText("");
+                newPatient_homePhone.setText("");
+                newPatient_mobilePhone.setText("");
+                newPatient_emailAddress.setText("");
+                newPatient_ECfirstName.setText("");
+                newPatient_EClastName.setText("");
+                newPatient_EChomeNumber.setText("");
+                newPatient_ECmobileNumber.setText("");
+                newPatient_insuranceProvider.setText("");
+                newPatient_accountNumber.setText("");
+
+                admitPatient_patientComboBox.addItem(nFirstName);
             }
         });
 
+        //button listener
         admitPatient_findButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-<<<<<<< HEAD
                 for(Person person: hospital.allUsers.values()){
                     Patient patient = (Patient) person;
                     if(patient.getFirstName()  == admitPatient_patientComboBox.getSelectedItem()){
@@ -211,38 +267,10 @@ public class AdminPage {
                         admitPatient_ECemailAddress.setText(patient.getEmailAddress());
                     }
                 }
-=======
-                admitPatient();
->>>>>>> 2ff3d67a085ea79378c8c956dca17b77935556e0
             }
         });
     }
 
-    public void fillComboBox() {
-        for(Person p: hospital.allUsers.values()){
-            Patient patient = (Patient)p;
-            admitPatient_patientComboBox.addItem(patient.getFirstName());
-        }
-
-        //location/department combobox
-        for(Department d: hospital.getAllDepartments())
-            admitPatient_locationComboBox.addItem(d.getDepartmentName());
-
-        //Room number combobox
-        for(Room room: hospital.getAllRoom()){
-            admitPatient_roomNumberComboBox.addItem(room.getRoomNum());
-            roomChange_newRoomComboBox.addItem(room.getRoomNum());
-        }
-
-        //Doctor combobox
-        for(Person o: hospital.allStaff.values()){
-            if(o.getType() == 2)
-            {
-                Doctor doctor = (Doctor)o;
-                admitPatient_doctorComboBox.addItem(doctor.getFirstName());
-            }
-        }
-    }
     public JPanel getAdminPagePanel() {
         return adminPagePanel;
     }
@@ -253,98 +281,6 @@ public class AdminPage {
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
-    }
-
-    public void admitPatient() {
-        for(Person person: hospital.allUsers.values()){
-            Patient patient = (Patient) person;
-            if(patient.getFirstName() == admitPatient_patientComboBox.getSelectedItem()){
-                admitPatient_firstName.setText(patient.getFirstName());
-                admitPatient_lastName.setText(patient.getLastName());
-                admitPatient_emailAddress.setText(patient.getEmailAddress());
-                admitPatient_homeNumber.setText(patient.getHomePhone());
-                admitPatient_address.setText(patient.getAddress());
-                admitPatient_city.setText(patient.getCity());
-                admitPatient_state.setText(patient.getState());
-                admitPatient_ECname.setText(patient.getECfirstName() + " " + patient.getEClastName());
-                admitPatient_EChomeNumber.setText(patient.getEChomePhone());
-                admitPatient_ECmobileNumber.setText(patient.getECmobilePhone());
-                admitPatient_ECemailAddress.setText(patient.getEmailAddress());
-            }
-        }
-    }
-
-    public void newPatient() {
-        String nFirstName = newPatient_firstName.getText();
-        String nLastName = newPatient_lastName.getText();
-        String nMiddleName = mITextField.getText();
-        String nDOB = newPatient_DOB.getText();
-        String nAge = newPatient_age.getText();
-        String nSSN = newPatient_socialSecurity.getText();
-        String nAddress = newPatient_address.getText();
-        String nCity = newPatient_city.getText();
-        String nZip = newPatient_zip.getText();
-        String nHomePhone = newPatient_homePhone.getText();
-        String nMobilePhone = newPatient_mobilePhone.getText();
-        String nEmail = newPatient_emailAddress.getText();
-        String nECFirstName = newPatient_ECfirstName.getText();
-        String nECLastName = newPatient_EClastName.getText();
-        String nECHomePhone = newPatient_EChomeNumber.getText();
-        String nECMobilePhone = newPatient_ECmobileNumber.getText();
-        String nInsuranceProvider = newPatient_insuranceProvider.getText();
-        String nInsuranceAccountNum = newPatient_accountNumber.getText();
-
-        Person g = new Patient("PLACEHOLDER_USERNAME", "PLACHOLDER_PASSWORD", nFirstName, nLastName, nDOB,
-                nSSN, nAddress, nCity, nHomePhone, nMobilePhone, nEmail, nECFirstName, nECLastName, nECHomePhone,
-                nECMobilePhone, nInsuranceProvider, nInsuranceAccountNum, newPatient_sexComboBox.getSelectedItem().toString(),
-                newPatient_stateComboBox.getSelectedItem().toString(), nAge, nMiddleName,
-                newPatient_ECrelationComboBox.getSelectedItem().toString(), nZip, 5);
-        hospital.getAllUsers().put(nFirstName, g);
-
-        newPatient_firstName.setText("");
-        newPatient_lastName.setText("");
-        mITextField.setText("");
-        newPatient_DOB.setText("");
-        newPatient_age.setText("");
-        newPatient_socialSecurity.setText("");
-        newPatient_address.setText("");
-        newPatient_city.setText("");
-        newPatient_zip.setText("");
-        newPatient_homePhone.setText("");
-        newPatient_mobilePhone.setText("");
-        newPatient_emailAddress.setText("");
-        newPatient_ECfirstName.setText("");
-        newPatient_EClastName.setText("");
-        newPatient_EChomeNumber.setText("");
-        newPatient_ECmobileNumber.setText("");
-        newPatient_insuranceProvider.setText("");
-        newPatient_accountNumber.setText("");
-
-        admitPatient_patientComboBox.addItem(nFirstName);
-
-    }
-
-    public void searchPatient() {
-        String first = patientCheck_firstName.getText();
-        String last = patientCheck_lastName.getText();
-
-        for (Person person : hospital.allUsers.values()) {
-            Patient patient = (Patient) person;
-
-            if (patient.getFirstName() == first && patient.getLastName() == last) {
-                JFrame frame = new JFrame("JOptionPane showMessageDialog component example");
-                JOptionPane.showMessageDialog(frame, "Patient Found");
-
-                roomChange_firstName.setText(first);
-                roomChange_lastName.setText(last);
-            }
-        }
-    }
-
-    public void ghostText() {
-        GhostText PC_firstName = new GhostText(patientCheck_firstName,"First Name");
-        GhostText PC_lastName = new GhostText(patientCheck_lastName,"Last Name");
-        GhostText PC_enterPatient = new GhostText(patientCheck_patientUserName, "Enter Patient User Name");
     }
 
     public static class GhostText implements FocusListener, DocumentListener, PropertyChangeListener {
