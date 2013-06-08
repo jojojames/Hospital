@@ -184,6 +184,7 @@ public class AdminPage {
         for(Person p: hospital.allUsers.values()){
             Patient patient = (Patient)p;
             admitPatient_patientComboBox.addItem(patient.getFirstName());
+            emailPatient_patientComboBox.addItem(patient.getFirstName());
         }
 
         //location/department combobox
@@ -196,11 +197,29 @@ public class AdminPage {
             roomChange_newRoomComboBox.addItem(room.getRoomNum());
         }
 
-        //Doctor combobox
+        //Doctor combobox admit Patient Page
         for(Person o: hospital.allStaff.values()){
             if(o.getType() == 2) {
                 Doctor doctor = (Doctor)o;
-                admitPatient_doctorComboBox.addItem(doctor.getFirstName());
+                admitPatient_doctorComboBox.addItem("Dr. " + doctor.getLastName());
+                newPatient_physicianComboBox.addItem("Dr. " + doctor.getLastName());
+                scheduleSurgery_primPhysicianComboBox.addItem("Dr. " + doctor.getLastName());
+            }
+        }
+
+        //Doctor combobox admit Patient Page
+        for(Person o: hospital.allStaff.values()){
+            if(o.getType() == 1) {
+                Surgeon surgeon = (Surgeon)o;
+                scheduleSurgery_attnPhysicianComboBox.addItem("Dr. " + surgeon.getLastName());
+            }
+        }
+
+        //Doctor combobox admit Patient Page
+        for(Person o: hospital.allStaff.values()){
+            if(o.getType() == 4) {
+                Nurse nurse = (Nurse)o;
+                scheduleSurgery_nurseComboBox.addItem("Nurse " + nurse.getLastName());
             }
         }
     }
