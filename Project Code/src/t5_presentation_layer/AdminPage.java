@@ -13,6 +13,8 @@ import java.beans.PropertyChangeListener;
 import java.util.Date;
 import java.util.HashMap;
 
+import t5_relations.Patient_Surgeon;
+import t5_relations.Surgeon_Surgery;
 import t5_storage.Hospital;
 import t5_domain_objects.*;
 
@@ -226,12 +228,30 @@ public class AdminPage {
         scheduleSurgery_insPhone.setText(curPatient.getInsuranceAccount());
         scheduleSurgery_insProvider.setText(curPatient.getInsuranceProvider());
         scheduleSurgery_insContact.setText(curPatient.getECfirstName());
+        viewSurgeries_patientID.setText(curPatient.getUserName());
         showStaffInComboBoxScheduleSurgery();
     }
 
     public void scheduleSurgeryForSelectedUser() {
-        //private String userPickedForAdminServices;
+        String guar = scheduleSurgery_guarantor.getText();
+        String date = scheduleSurgery_surgeryDate.getText();
+        String diag = scheduleSurgery_diagnosisCode.getText();
+        String proc = scheduleSurgery_procedure.getText();
+        String proccode = scheduleSurgery_procedureCode.getText();
+        String desc = scheduleSurgery_comments.getText();
+        Surgeon surgeon = (Surgeon) hospital.getAllStaff().get((String) scheduleSurgery_attnPhysicianComboBox.getSelectedItem());
+        Nurse nurse = (Nurse) hospital.getAllStaff().get((String) scheduleSurgery_nurseComboBox.getSelectedItem());
+        Doctor doctor = (Doctor) hospital.getAllStaff().get((String) scheduleSurgery_primPhysicianComboBox.getSelectedItem());
 
+        Surgery surgery = new Surgery(surgeon, doctor, guar, date, diag, proc, proccode, desc);
+        Surgeon_Surgery surgeon_surgery = new Surgeon_Surgery(surgery, surgeon);
+        surgeon.getSurgeonSurgery().add(surgeon_surgery);
+
+        Patient user = (Patient) hospital.getAllUsers().get(userPickedForAdminServices);
+        Patient_Surgeon patient_surgeon = new Patient_Surgeon(user, surgeon);
+        user.getSurgeries().add(surgery);
+        // TODO: WRITE A SUCCESS DIALOG
+        System.out.println("You've added a surgery!");
     }
 
     private void showStaffInComboBoxScheduleSurgery() {
@@ -306,20 +326,10 @@ public class AdminPage {
                 admitPatient_doctorComboBox.addItem("Dr. " + doctor.getLastName());
                 newPatient_physicianComboBox.addItem("Dr. " + doctor.getLastName());
                 scheduleSurgery_primPhysicianComboBox.addItem("Dr. " + doctor.getLastName());
-            }
-        }
-
-        //Doctor combobox admit Patient Page
-        for(Person o: hospital.allStaff.values()){
-            if(o.getType() == 1) {
+            } else if(o.getType() == 1) {
                 Surgeon surgeon = (Surgeon)o;
                 scheduleSurgery_attnPhysicianComboBox.addItem("Dr. " + surgeon.getLastName());
-            }
-        }
-
-        //Doctor combobox admit Patient Page
-        for(Person o: hospital.allStaff.values()){
-            if(o.getType() == 4) {
+            } else if(o.getType() == 4) {
                 Nurse nurse = (Nurse)o;
                 scheduleSurgery_nurseComboBox.addItem("Nurse " + nurse.getLastName());
             }

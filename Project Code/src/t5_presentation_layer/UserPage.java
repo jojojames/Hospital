@@ -208,6 +208,7 @@ public class UserPage {
         patientInformation_ECmobilePhone.setText(currentUser.getECmobilePhone());
         patientInformation_insuranceProvider.setText(currentUser.getInsuranceProvider());
         patientInformation_insuranceAccount.setText(currentUser.getInsuranceAccount());
+        userViewSurgeries_patientID.setText(currentUser.getUserName());
     }
 
     public void sendEmailToDoctor() {

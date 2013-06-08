@@ -10,8 +10,9 @@ public class Patient_Surgeon {
     /**
      *
      */
-    public Patient_Surgeon() {
-
+    public Patient_Surgeon(Patient patient, Surgeon surgeon) {
+        this.patient = patient;
+        this.surgeon = surgeon;
     }
 
     public Patient getPatient() {

@@ -1061,7 +1061,7 @@
                   <forms defaultalign-horz="false"/>
                 </constraints>
                 <properties>
-                  <text value="Patient ID"/>
+                  <text value="Patient User Name"/>
                 </properties>
               </component>
               <component id="d9a18" class="javax.swing.JSeparator">

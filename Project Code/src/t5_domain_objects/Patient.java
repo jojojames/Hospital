@@ -48,6 +48,7 @@ public class Patient extends RPerson {
     public Vector<Diagnosis> diagnosis = new Vector<Diagnosis>();
     public Vector<BillingStatement> billingStatement = new Vector<BillingStatement>();
     public Vector<Prescription> prescription = new Vector<Prescription>();
+    public Vector<Surgery> surgeries = new Vector<Surgery>();
     public InsurancePolicy insurancePolicy;
 
     public Patient(String userName, String password, String firstName, String lastName,
@@ -259,5 +260,13 @@ public class Patient extends RPerson {
 
     public void setInsurancePolicy(InsurancePolicy insurancePolicy) {
         this.insurancePolicy = insurancePolicy;
+    }
+
+    public Vector<Surgery> getSurgeries() {
+        return surgeries;
+    }
+
+    public void setSurgeries(Vector<Surgery> surgeries) {
+        this.surgeries = surgeries;
     }
 }

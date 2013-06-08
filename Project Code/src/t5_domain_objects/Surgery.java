@@ -7,36 +7,28 @@ import java.util.Date;
 import java.util.Vector;
 
 public class Surgery {
-    private String surgeryType;
     public Vector<Surgeon_Surgery> surgeonSurgery = new Vector<Surgeon_Surgery>();
     private String guarantor;
     public String date;
-    private int diagnosisCode;
+    private String diagnosisCode;
     private String procedure;
-    private int procedureCode;
+    private String procedureCode;
     public OperatingRoom operatingRoom;
     private String description;
     public Doctor doctor;
     public Surgeon surgeon;
     public Vector<Surgery_Nurse> surgeryNurse = new Vector<Surgery_Nurse>();
 
-    public Surgery(String surgeryType, String guarantor, String date, int diagnosisCode, String procedure,
-                   int procedureCode, String description) {
-        this.surgeryType = surgeryType;
+    public Surgery(Surgeon surgeon, Doctor doctor, String guarantor, String date, String diagnosisCode, String procedure,
+                   String procedureCode, String description) {
+        this.surgeon = surgeon;
+        this.doctor = doctor;
         this.guarantor = guarantor;
         this.date = date;
         this.diagnosisCode = diagnosisCode;
         this.procedure = procedure;
         this.procedureCode = procedureCode;
         this.description = description;
-    }
-
-    public String getSurgeryType() {
-        return surgeryType;
-    }
-
-    public void setSurgeryType(String surgeryType) {
-        this.surgeryType = surgeryType;
     }
 
     public Vector<Surgeon_Surgery> getSurgeonSurgery() {
@@ -63,11 +55,11 @@ public class Surgery {
         this.date = date;
     }
 
-    public int getDiagnosisCode() {
+    public String getDiagnosisCode() {
         return diagnosisCode;
     }
 
-    public void setDiagnosisCode(int diagnosisCode) {
+    public void setDiagnosisCode(String diagnosisCode) {
         this.diagnosisCode = diagnosisCode;
     }
 
@@ -79,11 +71,11 @@ public class Surgery {
         this.procedure = procedure;
     }
 
-    public int getProcedureCode() {
+    public String getProcedureCode() {
         return procedureCode;
     }
 
-    public void setProcedureCode(int procedureCode) {
+    public void setProcedureCode(String procedureCode) {
         this.procedureCode = procedureCode;
     }
 
