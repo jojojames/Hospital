@@ -1,9 +1,15 @@
 package t5_presentation_layer;
 
 import javax.swing.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 
 import t5_domain_logic.Hospital;
 import t5_domain_objects.*;
@@ -16,7 +22,7 @@ import t5_domain_objects.*;
 * To change this template use File | Settings | File Templates.
 */
 
-public class AdminPage implements ActionListener {
+public class AdminPage {
     private JPanel panel1;
     private JTextField searchTextField;
     private JButton searchButton;
@@ -48,7 +54,6 @@ public class AdminPage implements ActionListener {
     private JComboBox admitPatient_locationComboBox;
     private JTextField admitPatient_admissionReason;
     private JTextField admitPatient_lastName;
-    private JTextField admitPatient_ECaddress;
     private JTextField admitPatient_firstName;
     private JTextField admitPatient_emailAddress;
     private JTextField admitPatient_homeNumber;
@@ -116,6 +121,7 @@ public class AdminPage implements ActionListener {
     private JTextField patientCheck_lastName;
     private JTextField scheduleSurgery_guarantor;
     private JComboBox newPatient_ECrelationComboBox;
+    private JButton searchPatient;
 
     JPanel contentPane;
     Patient p;
@@ -125,27 +131,62 @@ public class AdminPage implements ActionListener {
     public AdminPage(JPanel _contentPane) {
         this.contentPane = _contentPane;
 
+        GhostText PC_firstName = new GhostText(patientCheck_firstName,"First Name");
+        GhostText PC_lastName = new GhostText(patientCheck_lastName,"Last Name");
+        GhostText PC_enterPatient = new GhostText(patientCheck_patientUserName, "Enter Patient User Name");
 
-        /*
-        // TODO: CAN PULL INFO FROM STAFF HASHMAP NOW
         //populate patient combobox
-        for(Object o: hospital.allStaff.keySet())
-            admitPatient_patientComboBox.addItem(o);
+        for(Person p: hospital.allUsers.values()){
+            Patient patient = (Patient)p;
+            admitPatient_patientComboBox.addItem(patient.getFirstName());
+        }
 
         //location/department combobox
-        for(Object o: hospital.getAllDepartments())
-            admitPatient_locationComboBox.addItem(o);
+        for(Department d: hospital.getAllDepartments())
+            admitPatient_locationComboBox.addItem(d.getDepartmentName());
+
         //Room number combobox
-        for(Object o: Room.hashMap.keySet())
-            comboBox4.addItem(o);
+        for(Room room: hospital.getAllRoom()){
+            admitPatient_roomNumberComboBox.addItem("Rm. #" + room.getRoomNum());
+            roomChange_newRoomComboBox.addItem("Rm. #" + room.getRoomNum());
+        }
 
         //Doctor combobox
-        for(Object o: hospital.getAllUsers().keySet())
-            admitPatient_doctorComboBox.addItem(o);
+        for(Person o: hospital.allStaff.values()){
+            if(o.getType() == 2)
+            {
+                Doctor doctor = (Doctor)o;
+                admitPatient_doctorComboBox.addItem("Dr. " + doctor.getLastName());
+            }
+        }
 
-         */
+        logoutButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                CardLayout c1 = (CardLayout) contentPane.getLayout();
+                c1.show(contentPane,"Login Page");
+            }
+        });
 
+        searchPatient.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String first = patientCheck_firstName.getText();
+                String last = patientCheck_lastName.getText();
 
+                for (Person person : hospital.allUsers.values()) {
+                    Patient patient = (Patient) person;
+
+                    if (patient.getFirstName() == first && patient.getLastName() == last) {
+                        JFrame frame = new JFrame("JOptionPane showMessageDialog component example");
+                        JOptionPane.showMessageDialog(frame, "Patient Found");
+
+                        roomChange_firstName.setText(first);
+                        roomChange_lastName.setText(last);
+                    }
+                }
+            }
+        });
 
         viewSurgery_scheduleSurgeryButton.addActionListener(new ActionListener() {
             @Override
@@ -154,10 +195,80 @@ public class AdminPage implements ActionListener {
             }
         });
 
+        newPatient_createPatientButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String nFirstName = newPatient_firstName.getText();
+                String nLastName = newPatient_lastName.getText();
+                String nMiddleName = mITextField.getText();
+                String nDOB = newPatient_DOB.getText();
+                String nAge = newPatient_age.getText();
+                String nSSN = newPatient_socialSecurity.getText();
+                String nAddress = newPatient_address.getText();
+                String nCity = newPatient_city.getText();
+                String nZip = newPatient_zip.getText();
+                String nHomePhone = newPatient_homePhone.getText();
+                String nMobilePhone = newPatient_mobilePhone.getText();
+                String nEmail = newPatient_emailAddress.getText();
+                String nECFirstName = newPatient_ECfirstName.getText();
+                String nECLastName = newPatient_EClastName.getText();
+                String nECHomePhone = newPatient_EChomeNumber.getText();
+                String nECMobilePhone = newPatient_ECmobileNumber.getText();
+                String nInsuranceProvider = newPatient_insuranceProvider.getText();
+                String nInsuranceAccountNum = newPatient_accountNumber.getText();
+
+                Person g = new Patient("PLACEHOLDER_USERNAME", "PLACHOLDER_PASSWORD", nFirstName, nLastName, nDOB,
+                        nSSN, nAddress, nCity, nHomePhone, nMobilePhone, nEmail, nECFirstName, nECLastName, nECHomePhone,
+                        nECMobilePhone, nInsuranceProvider, nInsuranceAccountNum, newPatient_sexComboBox.getSelectedItem().toString(),
+                        newPatient_stateComboBox.getSelectedItem().toString(), nAge, nMiddleName,
+                        newPatient_ECrelationComboBox.getSelectedItem().toString(), nZip, 5);
+                hospital.getAllUsers().put(nFirstName, g);
+
+                newPatient_firstName.setText("");
+                newPatient_lastName.setText("");
+                mITextField.setText("");
+                newPatient_DOB.setText("");
+                newPatient_age.setText("");
+                newPatient_socialSecurity.setText("");
+                newPatient_address.setText("");
+                newPatient_city.setText("");
+                newPatient_zip.setText("");
+                newPatient_homePhone.setText("");
+                newPatient_mobilePhone.setText("");
+                newPatient_emailAddress.setText("");
+                newPatient_ECfirstName.setText("");
+                newPatient_EClastName.setText("");
+                newPatient_EChomeNumber.setText("");
+                newPatient_ECmobileNumber.setText("");
+                newPatient_insuranceProvider.setText("");
+                newPatient_accountNumber.setText("");
+
+                admitPatient_patientComboBox.addItem(nFirstName);
+            }
+        });
+
         //button listener
-        logoutButton.addActionListener(this);
-        newPatient_createPatientButton.addActionListener(this);
-        admitPatient_findButton.addActionListener(this);
+        admitPatient_findButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                for(Person person: hospital.allUsers.values()){
+                    Patient patient = (Patient) person;
+                    if(patient.getFirstName()  == admitPatient_patientComboBox.getSelectedItem()){
+                        admitPatient_firstName.setText(patient.getFirstName());
+                        admitPatient_lastName.setText(patient.getLastName());
+                        admitPatient_emailAddress.setText(patient.getEmailAddress());
+                        admitPatient_homeNumber.setText(patient.getHomePhone());
+                        admitPatient_address.setText(patient.getAddress());
+                        admitPatient_city.setText(patient.getCity());
+                        admitPatient_state.setText(patient.getState());
+                        admitPatient_ECname.setText(patient.getECfirstName() + " " + patient.getEClastName());
+                        admitPatient_EChomeNumber.setText(patient.getEChomePhone());
+                        admitPatient_ECmobileNumber.setText(patient.getECmobilePhone());
+                        admitPatient_ECemailAddress.setText(patient.getEmailAddress());
+                    }
+                }
+            }
+        });
     }
 
     public JPanel getAdminPagePanel() {
@@ -172,99 +283,99 @@ public class AdminPage implements ActionListener {
         // TODO: place custom component creation code here
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        String cmd = e.getActionCommand();
+    public static class GhostText implements FocusListener, DocumentListener, PropertyChangeListener {
+        private final JTextField textfield;
+        private boolean isEmpty;
+        private Color ghostColor;
+        private Color foregroundColor;
+        private final String ghostText;
 
-        String nFirstName = newPatient_firstName.getText();
-        String nLastName = newPatient_lastName.getText();
-        String nMiddleName = mITextField.getText();
-        String nDOB = newPatient_DOB.getText();
-        String nAge = newPatient_age.getText();
-        String nSSN = newPatient_socialSecurity.getText();
-        String nAddress = newPatient_address.getText();
-        String nCity = newPatient_city.getText();
-        String nZip = newPatient_zip.getText();
-        String nHomePhone = newPatient_homePhone.getText();
-        String nMobilePhone = newPatient_mobilePhone.getText();
-        String nEmail = newPatient_emailAddress.getText();
-        String nECFirstName = newPatient_ECfirstName.getText();
-        String nECLastName = newPatient_EClastName.getText();
-        String nECHomePhone = newPatient_EChomeNumber.getText();
-        String nECMobilePhone = newPatient_ECmobileNumber.getText();
-        String nInsuranceProvider = newPatient_insuranceProvider.getText();
-        String nInsuranceAccountNum = newPatient_accountNumber.getText();
-        String nBody = admitPatient_comments.getText();
-
-        if(cmd.equals("Logout")){
-            CardLayout c1 = (CardLayout) contentPane.getLayout();
-            c1.show(contentPane,"Login Page");
+        protected GhostText(final JTextField textfield, String ghostText) {
+            super();
+            this.textfield = textfield;
+            this.ghostText = ghostText;
+            this.ghostColor = Color.LIGHT_GRAY;
+            textfield.addFocusListener(this);
+            registerListeners();
+            updateState();
+            if (!this.textfield.hasFocus()) {
+                focusLost(null);
+            }
         }
 
-        if(cmd.equals("Create Patient")){
-            //add new patient
-            Person g = new Patient("PLACEHOLDER_USERNAME", "PLACHOLDER_PASSWORD", nFirstName, nLastName, nDOB,
-                    nSSN, nAddress, nCity, nHomePhone, nMobilePhone, nEmail, nECFirstName, nECLastName, nECHomePhone,
-                    nECMobilePhone, nInsuranceProvider, nInsuranceAccountNum, newPatient_sexComboBox.getSelectedItem().toString(),
-                    newPatient_stateComboBox.getSelectedItem().toString(), nAge, nMiddleName,
-                    newPatient_ECrelationComboBox.getSelectedItem().toString(), nZip, 5);
-            hospital.getAllUsers().put(nFirstName, g);
+        public void delete() {
+            unregisterListeners();
+            textfield.removeFocusListener(this);
+        }
 
-            newPatient_firstName.setText("");
-            newPatient_lastName.setText("");
-            mITextField.setText("");
-            newPatient_DOB.setText("");
-            newPatient_age.setText("");
-            newPatient_socialSecurity.setText("");
-            newPatient_address.setText("");
-            newPatient_city.setText("");
-            newPatient_zip.setText("");
-            newPatient_homePhone.setText("");
-            newPatient_mobilePhone.setText("");
-            newPatient_emailAddress.setText("");
-            newPatient_ECfirstName.setText("");
-            newPatient_EClastName.setText("");
-            newPatient_EChomeNumber.setText("");
-            newPatient_ECmobileNumber.setText("");
-            newPatient_insuranceProvider.setText("");
-            newPatient_accountNumber.setText("");
+        private void registerListeners() {
+            textfield.getDocument().addDocumentListener(this);
+            textfield.addPropertyChangeListener("foreground", this);
+        }
 
-            admitPatient_patientComboBox.addItem(nFirstName);
+        private void unregisterListeners() {
+            textfield.getDocument().removeDocumentListener(this);
+            textfield.removePropertyChangeListener("foreground", this);
+        }
 
+        public Color getGhostColor() {
+            return ghostColor;
+        }
+
+        public void setGhostColor(Color ghostColor) {
+            this.ghostColor = ghostColor;
+        }
+
+        private void updateState() {
+            isEmpty = textfield.getText().length() == 0;
+            foregroundColor = textfield.getForeground();
+        }
+
+        @Override
+        public void focusGained(FocusEvent e) {
+            if (isEmpty) {
+                unregisterListeners();
+                try {
+                    textfield.setText("");
+                    textfield.setForeground(foregroundColor);
+                } finally {
+                    registerListeners();
+                }
+            }
 
         }
 
-
-
-        // TODO: FIX THIS, YOU'RE USING A CLASS NOT THE OBJECT.
-        // USE THIS INSTEAD.     Hospital hospital = new Hospital();
-        // hospital <------------------------- variable you want, NOT Hospital
-
-        if(cmd.equals("Find")) {
-            // TODO: USE KEY LOOKUP INSTEAD OF ITERATION WHEN POSSIBLE
-
-            for(Person person: hospital.allUsers.values()){
-                Patient patient = (Patient) person;
-                if(patient.getFirstName() == admitPatient_patientComboBox.getSelectedItem()){
-                    admitPatient_firstName.setText(patient.getFirstName());
-                    admitPatient_lastName.setText(patient.getLastName());
-                    admitPatient_emailAddress.setText(patient.getEmailAddress());
-                    admitPatient_homeNumber.setText(patient.getHomePhone());
-                    admitPatient_address.setText(patient.getAddress());
-                    admitPatient_city.setText(patient.getCity());
-                    admitPatient_state.setText(patient.getState());
-                    admitPatient_ECname.setText(patient.getECfirstName() + " " + patient.getEClastName());
-                    admitPatient_EChomeNumber.setText(patient.getEChomePhone());
-                    admitPatient_ECmobileNumber.setText(patient.getECmobilePhone());
-                    admitPatient_ECemailAddress.setText(patient.getEmailAddress());
+        @Override
+        public void focusLost(FocusEvent e) {
+            if (isEmpty) {
+                unregisterListeners();
+                try {
+                    textfield.setText(ghostText);
+                    textfield.setForeground(ghostColor);
+                } finally {
+                    registerListeners();
                 }
             }
         }
 
-
-        if(cmd.equals("Search Patient")) {
-
+        @Override
+        public void propertyChange(PropertyChangeEvent evt) {
+            updateState();
         }
 
+        @Override
+        public void changedUpdate(DocumentEvent e) {
+            updateState();
+        }
+
+        @Override
+        public void insertUpdate(DocumentEvent e) {
+            updateState();
+        }
+
+        @Override
+        public void removeUpdate(DocumentEvent e) {
+            updateState();
+        }
     }
 }
