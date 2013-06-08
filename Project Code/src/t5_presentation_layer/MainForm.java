@@ -1,6 +1,6 @@
 package t5_presentation_layer;
 
-import t5_domain_logic.Hospital;
+import t5_storage.Hospital;
 import t5_domain_objects.Doctor;
 import t5_domain_objects.Patient;
 import t5_domain_objects.Person;
@@ -11,7 +11,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.util.HashMap;
 
 /**
  * Created with IntelliJ IDEA.
@@ -36,7 +35,8 @@ public class MainForm {
     private Hospital hospital = new Hospital();
 
     // PAGES
-    UserPage userPage;
+    public UserPage userPage;
+    public AdminPage adminPage;
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
@@ -107,15 +107,15 @@ public class MainForm {
         // Default Page user sees, the Login Page.
         contentPane.add(MainPanel, "Login Page");
 
-        // Page User sees after logging in.
-        userPage = new UserPage(contentPane, hospital);
-        JScrollPane scrollUserPage = new JScrollPane(userPage.getUserPagePanel());
-        contentPane.add(scrollUserPage, "User Page");
-
         // Page User sees if they are Staff after logging in.
-        AdminPage adminPage = new AdminPage(contentPane);
+        adminPage = new AdminPage(contentPane);
         JScrollPane scrollAdminPage = new JScrollPane(adminPage.getAdminPagePanel());
         contentPane.add(scrollAdminPage, "Admin Page");
+
+        // Page User sees after logging in.
+        userPage = new UserPage(contentPane, hospital, adminPage);
+        JScrollPane scrollUserPage = new JScrollPane(userPage.getUserPagePanel());
+        contentPane.add(scrollUserPage, "User Page");
 
         // Page User sees when signing up.
         NewUserPage newUserPage = new NewUserPage(contentPane, hospital);

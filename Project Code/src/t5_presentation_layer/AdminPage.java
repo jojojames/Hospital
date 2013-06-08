@@ -10,8 +10,10 @@ import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.util.Date;
+import java.util.HashMap;
 
-import t5_domain_logic.Hospital;
+import t5_storage.Hospital;
 import t5_domain_objects.*;
 
 /**
@@ -89,10 +91,10 @@ public class AdminPage {
     private JTextField scheduleSurgery_authorizationNum;
     private JTextField scheduleSurgery_daysApproved;
     private JTextField scheduleSurgery_insContact;
+    private JTextField scheduleSurgery_procedure;
     private JButton scheduleSurgeryButton;
     private JButton clearButton;
     private JButton cancelButton;
-    private JTextField scheduleSurgery_procedure;
     private JButton submitRoomChangeButton;
     private JTextField viewSurgeries_patientID;
     private JButton viewSurgery_scheduleSurgeryButton;
@@ -122,6 +124,11 @@ public class AdminPage {
     private JComboBox newPatient_ECrelationComboBox;
     private JButton searchPatient;
 
+
+    private String userPickedForAdminServices;
+
+
+
     JPanel contentPane;
     Patient p;
     Hospital hospital = new Hospital();
@@ -129,6 +136,7 @@ public class AdminPage {
 
     public AdminPage(JPanel _contentPane) {
         this.contentPane = _contentPane;
+        userPickedForAdminServices = new String("");
 
         ghostText();
 
@@ -185,6 +193,64 @@ public class AdminPage {
                 submitRoomChange();
             }
         });
+        scheduleSurgeryButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                scheduleSurgeryForSelectedUser();
+            }
+        });
+    }
+
+    public void updateScheduleSurgeryPageForSelectedUser() {
+        /*
+
+        // TODO: DO THE REST?
+        private JTextField scheduleSurgery_procedureCode;
+        private JTextField scheduleSurgery_diagnosisCode;
+        private JTextField scheduleSurgery_surgeryDate;
+        private JTextArea scheduleSurgery_comments;
+        private JTextField scheduleSurgery_policyNumber;
+        private JTextField scheduleSurgery_groupNumber;
+        private JTextField scheduleSurgery_subscriberName;
+        private JTextField scheduleSurgery_authorizationNum;
+        private JTextField scheduleSurgery_daysApproved;
+        private JTextField scheduleSurgery_procedure;
+        */
+
+        Patient curPatient = (Patient) hospital.getAllUsers().get(userPickedForAdminServices);
+        scheduleSurgery_patientName.setText(curPatient.getFirstName() + " " + curPatient.getLastName());
+        scheduleSurgery_patientAddress.setText(curPatient.getAddress());
+        scheduleSurgery_dateOfBirth.setText(curPatient.getDateOfBirth());
+        scheduleSurgery_homePhone.setText(curPatient.getHomePhone());
+        scheduleSurgery_mobilePhone.setText(curPatient.getMobilePhone());
+        scheduleSurgery_guarantor.setText(curPatient.getECfirstName());
+        scheduleSurgery_insPhone.setText(curPatient.getInsuranceAccount());
+        scheduleSurgery_insProvider.setText(curPatient.getInsuranceProvider());
+        scheduleSurgery_insContact.setText(curPatient.getECfirstName());
+        showStaffInComboBoxScheduleSurgery();
+    }
+
+    public void scheduleSurgeryForSelectedUser() {
+        //private String userPickedForAdminServices;
+
+    }
+
+    private void showStaffInComboBoxScheduleSurgery() {
+        scheduleSurgery_attnPhysicianComboBox.removeAllItems();
+        scheduleSurgery_primPhysicianComboBox.removeAllItems();
+        scheduleSurgery_nurseComboBox.removeAllItems();
+        for(Person person : hospital.getAllStaff().values()) {
+            if(person.getType() == 1) {
+                // surgeon
+                scheduleSurgery_attnPhysicianComboBox.addItem(person.getUserName());
+            } else if (person.getType() == 2) {
+                // doctor
+                scheduleSurgery_primPhysicianComboBox.addItem(person.getUserName());
+            } else if (person.getType() == 4) {
+                // nurse
+                scheduleSurgery_nurseComboBox.addItem(person.getUserName());
+            }
+
+        }
     }
 
     private void submitRoomChange() {
@@ -206,6 +272,14 @@ public class AdminPage {
                 System.out.println(d.getAppointment().get(i).getRoom().getReasonForNewRoom());
             }
         }
+    }
+
+    public String getUserPickedForAdminServices() {
+        return userPickedForAdminServices;
+    }
+
+    public void setUserPickedForAdminServices(String userPickedForAdminServices) {
+        this.userPickedForAdminServices = userPickedForAdminServices;
     }
 
     public void fillComboBox() {
@@ -437,6 +511,8 @@ public class AdminPage {
             isEmpty = textfield.getText().length() == 0;
             foregroundColor = textfield.getForeground();
         }
+
+
 
         @Override
         public void focusGained(FocusEvent e) {

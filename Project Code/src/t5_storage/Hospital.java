@@ -1,4 +1,4 @@
-package t5_domain_logic;
+package t5_storage;
 
 import t5_domain_objects.*;
 

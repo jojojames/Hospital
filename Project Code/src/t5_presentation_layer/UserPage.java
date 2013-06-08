@@ -1,6 +1,6 @@
 package t5_presentation_layer;
 
-import t5_domain_logic.Hospital;
+import t5_storage.Hospital;
 import t5_domain_objects.*;
 import t5_relations.Patient_Doctor;
 
@@ -108,12 +108,14 @@ public class UserPage {
 
     JPanel contentPane;
     Hospital hospital;
+    AdminPage adminPage;
 
     private String userNameOfCurrentUser; // user name of user who is currently logged in
 
-    public UserPage(JPanel _contentPane, Hospital _hospital) {
+    public UserPage(JPanel _contentPane, Hospital _hospital, AdminPage _adminPage) {
         this.hospital = _hospital;
         this.contentPane = _contentPane;
+        this.adminPage = _adminPage;
         logOutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -151,12 +153,14 @@ public class UserPage {
             }
         });
 
-        // Logs User out of User Page and throws back to Login Page for admin to log in
+        // Swap to the admin page with the user's information filled in.
         userViewSurgeries_scheduleSurgeryButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 CardLayout cl = (CardLayout) contentPane.getLayout();
-                cl.show(contentPane, "Login Page");
+                adminPage.setUserPickedForAdminServices(userNameOfCurrentUser);
+                adminPage.updateScheduleSurgeryPageForSelectedUser();
+                cl.show(contentPane, "Admin Page");
             }
         });
     }

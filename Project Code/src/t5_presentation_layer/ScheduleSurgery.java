@@ -1,6 +1,6 @@
 package t5_presentation_layer;
 
-import t5_domain_logic.Hospital;
+import t5_storage.Hospital;
 
 import javax.swing.*;
 
