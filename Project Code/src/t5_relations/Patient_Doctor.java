@@ -7,8 +7,9 @@ public class Patient_Doctor {
     public Patient patient;
     public Doctor doctor;
 
-    public Patient_Doctor() {
-
+    public Patient_Doctor(Doctor doctor, Patient patient) {
+        this.doctor = doctor;
+        this.patient = patient;
     }
 
     public Patient getPatient() {

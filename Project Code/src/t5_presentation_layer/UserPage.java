@@ -1,15 +1,14 @@
 package t5_presentation_layer;
 
 import t5_domain_logic.Hospital;
-import t5_domain_objects.Appointment;
-import t5_domain_objects.Patient;
+import t5_domain_objects.*;
 import t5_relations.Patient_Doctor;
-import t5_domain_objects.Doctor;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.HashMap;
 import java.util.Vector;
 
 /**
@@ -23,7 +22,7 @@ public class UserPage {
 
     // Parts of the GUI
     private JButton sendEmailButton;
-    private JButton viewSurgeries_scheduleSurgeryButton;
+    private JButton scheduleAppointment_scheduleAppointmentButton;
     private JButton surgeriesButton;
     private JButton viewAppointmentsButton;
     private JButton viewBillingReportButton;
@@ -84,7 +83,6 @@ public class UserPage {
     private JComboBox scheduleAppointment_stateComboBox;
     private JTextField scheduleAppointment_reason;
     private JComboBox scheduleAppointment_doctorComboBox;
-    private JComboBox scheduleAppointment_timeComboBox;
     private JTextPane scheduleAppointment_reasonMessage;
     private JButton scheduleAppointmentButton1;
     private JButton selectDateButton;
@@ -107,6 +105,7 @@ public class UserPage {
     private JTable userViewSurgeries_surgerySchedule;
     private JTable userViewSurgeries_surgeryHistory;
     private JButton userViewSurgeries_scheduleSurgeryButton;
+    private JComboBox scheduleAppointment_departmentComboBox;
 
     JPanel contentPane;
     Hospital hospital;
@@ -138,8 +137,8 @@ public class UserPage {
 
         });
 
-        // WHAT DOES THIS DO?
-        viewSurgeries_scheduleSurgeryButton.addActionListener(new ActionListener() {
+        // Schedules an appointment.
+        scheduleAppointment_scheduleAppointmentButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 setUpAnAppointment();
             }
@@ -218,7 +217,7 @@ public class UserPage {
         docUserPicked.getEmailMessages().add(emailMessage);
 
         // TODO: WRITE A EMAIL SUCCESS DIALOG
-        System.out.println("Emailed the Doctor.");
+        System.out.println("You have emailed Doctor " + docUserPicked.getLastName() + ".");
     }
 
     public void updateViewWithNewUserInfoInEmailToDoctorTab() {
@@ -227,28 +226,11 @@ public class UserPage {
         emailDoctor_bccAddress.setText("REMOVE THIS");
         emailDoctor_ccAddress.setText("REMOVE THIS");
         emailDoctor_recipientEmail.setText("REMOVE THIS");
-
         Patient currentUser = (Patient) hospital.getAllUsers().get(userNameOfCurrentUser);
         updateDoctorComboBoxHelper(currentUser, emailDoctor_doctorComboBox);
-
-        /*
-        String[] petStrings = { "Bird", "Cat", "Dog", "Rabbit", "Pig" };
-        for (String pet : petStrings) {
-            emailDoctor_doctorComboBox.addItem(pet);
-
-        }
-        */
     }
 
     public void setUpAnAppointment() {
-        if (scheduleAppointment_doctorComboBox.getItemCount() == 0) {
-            // This should be the first thing to check.
-            // If there are no doctors to schedule an appointment with, return instead.
-            // TODO: WRITE A FAILURE DIALOG
-            System.out.println("You have no doctors available to schedule an apppointment with.");
-            return;
-        }
-
         String locationPicked = (String) scheduleAppointment_locationComboBox.getSelectedItem();
         String firstName = scheduleAppointment_firstName.getText();
         String lastName = scheduleAppointment_lastName.getText();
@@ -258,38 +240,27 @@ public class UserPage {
         String state = (String) scheduleAppointment_stateComboBox.getSelectedItem();
         String basicReason = scheduleAppointment_reason.getText();
         String fullReason = scheduleAppointment_reasonMessage.getText();
-        String time = (String) scheduleAppointment_timeComboBox.getSelectedItem();
+        Department department = new Department((String) scheduleAppointment_departmentComboBox.getSelectedItem());
         String docName = (String) scheduleAppointment_doctorComboBox.getSelectedItem();
 
         // This lines adds a a relation between a doctor and a patient with the middling happening with the Appointment.
         Doctor docWithAppointment = (Doctor) hospital.getAllStaff().get(docName);
         Patient currentUser = (Patient) hospital.getAllUsers().get(userNameOfCurrentUser);
-        // TODO: FIX APPOINTMENT
-        //Appointment newAppointment = new Appointment(docWithAppointment, currentUser, time, basicReason, fullReason);
-        //docWithAppointment.getAppointment().add(newAppointment);
-        //currentUser.getAppointment().add(newAppointment);
+        Patient_Doctor newPatientDoctorRelation = new Patient_Doctor(docWithAppointment, currentUser);
+        currentUser.getPersonDoctor().add(newPatientDoctorRelation);
+        docWithAppointment.getPersonDoctor().add(newPatientDoctorRelation);
+        Room room = hospital.getAllRooms().pop();
+        Appointment newAppointment = new Appointment(docWithAppointment, currentUser, department, basicReason, fullReason, room);
+        docWithAppointment.getAppointment().add(newAppointment);
+        currentUser.getAppointment().add(newAppointment);
 
         // TODO: ADD A SUCCESS ALERT THAT THE USER SUCCESSFULLY ADDED AN APPOINTMENT.
+        updateViewWithNewUserInfoInEmailToDoctorTab();
         System.out.println("You have set an appointment.");
 
     }
 
     public void updateUserInfoInAppointmentTab() {
-        /*
-        private JComboBox scheduleAppointment_locationComboBox;
-        private JTextField scheduleAppointment_firstName;
-        private JTextField scheduleAppointment_lastName;
-        private JTextField scheduleAppointment_emailAddress;
-        private JTextField scheduleAppointment_address;
-        private JTextField scheduleAppointment_city;
-        private JComboBox scheduleAppointment_stateComboBox;
-        private JTextField scheduleAppointment_reason;
-        private JComboBox scheduleAppointment_doctorComboBox;
-        private JComboBox scheduleAppointment_timeComboBox;
-        private JTextPane scheduleAppointment_reasonMessage;
-        private JButton scheduleAppointmentButton1;
-        */
-
         Patient currentUser = (Patient) hospital.getAllUsers().get(userNameOfCurrentUser);
         scheduleAppointment_firstName.setText(currentUser.getFirstName());
         scheduleAppointment_lastName.setText(currentUser.getLastName());
@@ -300,8 +271,18 @@ public class UserPage {
         scheduleAppointment_stateComboBox.addItem(currentUser.getState());
         scheduleAppointment_reason.setText("Reason For Appointment");
         scheduleAppointment_reasonMessage.setText("Detailed Reasons Here.");
-        updateDoctorComboBoxHelper(currentUser, scheduleAppointment_doctorComboBox);
+        updateDocComboBoxInScheduleAppointment(hospital, scheduleAppointment_doctorComboBox);
+    }
 
+    private void updateDocComboBoxInScheduleAppointment(Hospital hospital, JComboBox<String> comboBox) {
+        comboBox.removeAllItems();
+        HashMap<String, Person> allStaff = hospital.getAllStaff();
+        for(Person person : allStaff.values()) {
+            if(person.getType() == 2) {
+                Doctor doc = (Doctor) person;
+                comboBox.addItem(doc.getUserName());
+            }
+        }
     }
 
     private void updateDoctorComboBoxHelper(Patient currentUser, JComboBox<String> comboBox) {
@@ -332,16 +313,6 @@ public class UserPage {
     public void setLogOutButton(JButton logOutButton) {
         this.logOutButton = logOutButton;
     }
-
-    /* After move of edit button into patient information, not sure if these setter/getter pair is necessary, delete if needed
-    public JButton getEditButton() {
-        return editButton;
-    }
-
-    public void setEditButton(JButton editButton) {
-        this.editButton = editButton;
-    }
-    */
 
     public String getUserNameOfCurrentUser() {
         return userNameOfCurrentUser;
