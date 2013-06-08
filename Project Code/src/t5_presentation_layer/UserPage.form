@@ -663,7 +663,7 @@
                   <text value="Schedule Appointment"/>
                 </properties>
               </component>
-              <scrollpane id="369c0" binding="patientHistory_appointmentHistoryTable">
+              <scrollpane id="369c0" binding="patientHistory_scrollForAppointment">
                 <constraints>
                   <grid row="4" column="2" row-span="1" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                   <forms defaultalign-horz="false" defaultalign-vert="false"/>
@@ -671,7 +671,7 @@
                 <properties/>
                 <border type="none"/>
                 <children>
-                  <component id="7cd06" class="javax.swing.JTable" binding="table1" default-binding="true">
+                  <component id="7cd06" class="javax.swing.JTable" binding="patientHistory_appointmentTable">
                     <constraints/>
                     <properties/>
                   </component>
@@ -686,7 +686,7 @@
                   <text value="Go to Pharmacy"/>
                 </properties>
               </component>
-              <scrollpane id="1cc9d" binding="patientHistory_prescriptionHistoryTable">
+              <scrollpane id="1cc9d" binding="patientHistory_scrollForPharmacy">
                 <constraints>
                   <grid row="8" column="2" row-span="1" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                   <forms defaultalign-horz="false" defaultalign-vert="false"/>
@@ -694,7 +694,7 @@
                 <properties/>
                 <border type="none"/>
                 <children>
-                  <component id="1bf19" class="javax.swing.JTable" binding="table2" default-binding="true">
+                  <component id="1bf19" class="javax.swing.JTable" binding="patientHistory_pharmacyTable">
                     <constraints/>
                     <properties/>
                   </component>

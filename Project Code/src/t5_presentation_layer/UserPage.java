@@ -57,8 +57,10 @@ public class UserPage {
     // Patient History
     private JButton patientHistory_pharmacyButton;
     private JButton patientHistory_scheduleAppointmentButton;
-    private JScrollPane patientHistory_appointmentHistoryTable;
-    private JScrollPane patientHistory_prescriptionHistoryTable;
+    private JScrollPane patientHistory_scrollForAppointment;
+    private JTable patientHistory_appointmentTable;
+    private JScrollPane patientHistory_scrollForPharmacy;
+    private JTable patientHistory_pharmacyTable;
 
     // Email Doctor
     private JComboBox emailDoctor_doctorComboBox;
@@ -67,9 +69,6 @@ public class UserPage {
     private JTextField emailDoctor_enterSubject;
     private JEditorPane emailDoctor_message;
     private JTextField emailDoctor_bccAddress;
-
-    private JTable table1;
-    private JTable table2;
 
     private JTree tree1;
 
@@ -230,6 +229,32 @@ public class UserPage {
         updateDoctorComboBoxHelper(currentUser, emailDoctor_doctorComboBox);
     }
 
+    public void updateViewInPatientHistoryTables() {
+        //private JScrollPane patientHistory_appointmentHistoryTable;
+        Patient currentUser = (Patient) hospital.getAllUsers().get(userNameOfCurrentUser);
+        Vector<String> columnNames = new Vector<String>();
+        columnNames.add("Appointments");
+        Vector<Vector> columnNamesHolder = new Vector<Vector>();
+        columnNamesHolder.add(columnNames);
+
+        Vector<Appointment> appointments = currentUser.getAppointment();
+        Vector<String> appointmentNames = new Vector<String>();
+        Vector<Vector> appointNamesHolder = new Vector<Vector>();
+        appointNamesHolder.add(appointmentNames);
+
+        for(int i=0; i<appointments.size(); i++) {
+            Appointment appoint = appointments.get(i);
+            String bigString = appoint.getAppointmentDate() + " " + appoint.getNotesDescription() + " " +
+                    appoint.getAppointmentDate() + " " + appoint.getBasicReason() + " " + appoint.getFullReason()
+                    + " " + appoint.getTime();
+            appointmentNames.add(bigString);
+        }
+
+        // TABLES AREN'T WORKING
+        patientHistory_appointmentTable = new JTable(appointNamesHolder, columnNamesHolder);
+        patientHistory_appointmentTable.setFillsViewportHeight(true);
+    }
+
     public void setUpAnAppointment() {
         String locationPicked = (String) scheduleAppointment_locationComboBox.getSelectedItem();
         String firstName = scheduleAppointment_firstName.getText();
@@ -256,6 +281,7 @@ public class UserPage {
 
         // TODO: ADD A SUCCESS ALERT THAT THE USER SUCCESSFULLY ADDED AN APPOINTMENT.
         updateViewWithNewUserInfoInEmailToDoctorTab();
+        updateViewInPatientHistoryTables();
         System.out.println("You have set an appointment.");
 
     }
