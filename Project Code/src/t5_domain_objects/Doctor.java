@@ -67,6 +67,10 @@ public class Doctor extends RPerson {
 
     }
 
+    public Doctor() {
+        //To change body of created methods use File | Settings | File Templates.
+    }
+
     public Vector<Appointment> getAppointment() {
         return this.appointment;
     }

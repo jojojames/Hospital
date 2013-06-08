@@ -125,7 +125,7 @@ public class AdminPage {
     JPanel contentPane;
     Patient p;
     Hospital hospital = new Hospital();
-
+    Doctor d = new Doctor();
 
     public AdminPage(JPanel _contentPane) {
         this.contentPane = _contentPane;
@@ -178,6 +178,34 @@ public class AdminPage {
 
             }
         });
+
+        submitRoomChangeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                submitRoomChange();
+            }
+        });
+    }
+
+    private void submitRoomChange() {
+        String roomChangeFirstName = roomChange_firstName.getText();
+        String roomChangeLastName = roomChange_lastName.getText();
+        String roomChangeReason = roomChange_reason.getText();
+
+        for(int i = 0; i < d.getAppointment().size(); i++) {
+            if(d.getAppointment().get(i).getPatient().getFirstName().equals(roomChangeFirstName) &&
+                    d.getAppointment().get(i).getPatient().getLastName().equals(roomChangeLastName)) {
+
+                d.getAppointment().get(i).getRoom().setNewRoom(roomChange_newRoomComboBox.getSelectedItem().hashCode());
+                d.getAppointment().get(i).getRoom().setReasonForNewRoom(roomChangeReason);
+
+                JFrame frame = new JFrame("JOptionPane showMessageDialog component example");
+                JOptionPane.showMessageDialog(frame, "Room Changed");
+
+                System.out.println(d.getAppointment().get(i).getRoom().getNewRoom());
+                System.out.println(d.getAppointment().get(i).getRoom().getReasonForNewRoom());
+            }
+        }
     }
 
     public void fillComboBox() {
@@ -308,15 +336,15 @@ public class AdminPage {
         String first = patientCheck_firstName.getText();
         String last = patientCheck_lastName.getText();
 
-        for (Person person : hospital.allUsers.values()) {
-            Patient patient = (Patient) person;
-
-            if (patient.getFirstName() == first && patient.getLastName() == last) {
+        for(int i = 0; i < d.getAppointment().size(); i++) {
+            if(d.getAppointment().get(i).getPatient().getFirstName().equals(first) &&
+                    d.getAppointment().get(i).getPatient().getLastName().equals(last)) {
                 JFrame frame = new JFrame("JOptionPane showMessageDialog component example");
                 JOptionPane.showMessageDialog(frame, "Patient Found");
 
                 roomChange_firstName.setText(first);
                 roomChange_lastName.setText(last);
+                roomChange_roomNumber.setText(""+d.getAppointment().get(i).getRoom().getRoomNum());
             }
         }
     }
@@ -332,12 +360,12 @@ public class AdminPage {
                 for(Person person1: hospital.allStaff.values())
                     if(person1.getType() == 2){
                         Doctor doctor = (Doctor)person1;
-                        if(doctor.getFirstName().equals(admitPatient_doctorComboBox.getSelectedItem())){
+                        if(admitPatient_doctorComboBox.getSelectedItem().equals("Dr. " + doctor.getLastName())){
                             for(Room room: hospital.getAllRooms()){
                                 if(admitPatient_roomNumberComboBox.getSelectedItem().equals(room.getRoomNum())){
                                     for(Department department: hospital.getAllDepartments()){
                                         if(department.getDepartmentName().equals(admitPatient_locationComboBox.getSelectedItem())){
-                                            Appointment appointment = new Appointment(doctor,patient,department,reason,description,room);
+                                            d.getAppointment().add(new Appointment(doctor, patient, department, reason, description, room));
                                             /*
                                             System.out.println("" + appointment.getDoctor().getFirstName());
                                             System.out.println(appointment.getPatient().getFirstName());
