@@ -54,7 +54,6 @@ public class AdminPage {
     private JComboBox admitPatient_locationComboBox;
     private JTextField admitPatient_admissionReason;
     private JTextField admitPatient_lastName;
-    private JTextField admitPatient_ECaddress;
     private JTextField admitPatient_firstName;
     private JTextField admitPatient_emailAddress;
     private JTextField admitPatient_homeNumber;
@@ -116,7 +115,6 @@ public class AdminPage {
     private JTextField admitPatient_city;
     private JTextField admitPatient_EChomeNumber;
     private JTextField admitPatient_ECmobileNumber;
-    private JTextField admitPatient_ECemailAddress;
     private JTextField patientCheck_patientUserName;
     private JTextField patientCheck_firstName;
     private JTextField patientCheck_lastName;
@@ -169,7 +167,15 @@ public class AdminPage {
         admitPatient_findButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                findAdmitPatient();
+            }
+        });
+
+        admitPatient_admitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
                 admitPatient();
+
             }
         });
     }
@@ -192,13 +198,13 @@ public class AdminPage {
 
         //Doctor combobox
         for(Person o: hospital.allStaff.values()){
-            if(o.getType() == 2)
-            {
+            if(o.getType() == 2) {
                 Doctor doctor = (Doctor)o;
                 admitPatient_doctorComboBox.addItem(doctor.getFirstName());
             }
         }
     }
+
     public JPanel getAdminPagePanel() {
         return adminPagePanel;
     }
@@ -211,7 +217,7 @@ public class AdminPage {
         // TODO: place custom component creation code here
     }
 
-    public void admitPatient() {
+    public void findAdmitPatient() {
         for(Person person: hospital.allUsers.values()){
             Patient patient = (Patient) person;
             if(patient.getFirstName() == admitPatient_patientComboBox.getSelectedItem()){
@@ -225,7 +231,6 @@ public class AdminPage {
                 admitPatient_ECname.setText(patient.getECfirstName() + " " + patient.getEClastName());
                 admitPatient_EChomeNumber.setText(patient.getEChomePhone());
                 admitPatient_ECmobileNumber.setText(patient.getECmobilePhone());
-                admitPatient_ECemailAddress.setText(patient.getEmailAddress());
             }
         }
     }
@@ -294,6 +299,41 @@ public class AdminPage {
                 roomChange_firstName.setText(first);
                 roomChange_lastName.setText(last);
             }
+        }
+    }
+
+    public void admitPatient() {
+
+        String reason = admitPatient_admissionReason.getText();
+        String description = admitPatient_comments.getText();
+
+        for(Person person: hospital.allUsers.values()){
+            Patient patient = (Patient)person;
+            if(patient.getFirstName().equals(admitPatient_patientComboBox.getSelectedItem()))
+                for(Person person1: hospital.allStaff.values())
+                    if(person1.getType() == 2){
+                        Doctor doctor = (Doctor)person1;
+                        if(doctor.getFirstName().equals(admitPatient_doctorComboBox.getSelectedItem())){
+                            for(Room room: hospital.getAllRoom()){
+                                if(admitPatient_roomNumberComboBox.getSelectedItem().equals(room.getRoomNum())){
+                                    for(Department department: hospital.getAllDepartments()){
+                                        if(department.getDepartmentName().equals(admitPatient_locationComboBox.getSelectedItem())){
+                                            Appointment appointment = new Appointment(doctor,patient,department,reason,description,room);
+                                            /*
+                                            System.out.println("" + appointment.getDoctor().getFirstName());
+                                            System.out.println(appointment.getPatient().getFirstName());
+                                            System.out.println(appointment.getDepartment().getDepartmentName());
+                                            System.out.println(appointment.getBasicReason());
+                                            System.out.println(appointment.getFullReason());
+                                            System.out.println(appointment.getRoom().getRoomNum());
+                                            */
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
         }
     }
 
