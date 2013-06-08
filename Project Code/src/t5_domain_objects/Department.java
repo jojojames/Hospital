@@ -7,6 +7,7 @@ public class Department {
     public Vector<Doctor> doctor = new Vector<Doctor>();
     private String departmentName;
     //private int departmentID;
+
     //private int headID;
     public Vector<Nurse> nurse = new Vector<Nurse>();
     public Head head;
@@ -22,4 +23,10 @@ public class Department {
         this.departmentName = departmentName;
         //this.headID = headID;
     }
+
+    public String getDepartmentName() {
+        return departmentName;
+    }
+
+
 }

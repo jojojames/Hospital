@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class Room {
     public Ward ward;
     private String reasonForNewRoom;
-    public int roomNum;
+    private int roomNum;
     private int newRoom;
 
     /**
@@ -23,4 +23,29 @@ public class Room {
     public Room(int roomNum){
         this.roomNum = roomNum;
     }
+
+    public int getRoomNum() {
+        return roomNum;
+    }
+
+    public int getNewRoom() {
+        return newRoom;
+    }
+
+    public void setNewRoom(int newRoom) {
+        this.newRoom = newRoom;
+    }
+
+    public String getReasonForNewRoom() {
+        return reasonForNewRoom;
+    }
+
+    public void setReasonForNewRoom(String reasonForNewRoom) {
+        this.reasonForNewRoom = reasonForNewRoom;
+    }
+
+    public void setRoomNum(int roomNum) {
+        this.roomNum = roomNum;
+    }
+
 }
