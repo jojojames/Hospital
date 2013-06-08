@@ -65,27 +65,27 @@ public class Hospital {
     }
 
     private void generate_users() {
-        Person a = new Patient("a", "password", "John", "Jones", "1/1/92", "123-123-123", "555 Milky Way", "Solar", "310-123-123",
-                "323-123-123", "JohnJones@mail.com", "Sally", "Jones", "123-123-123", "323-123-122", "AllState",
-                "456324561481", "m", "CA", "20", "Jim","spouse","95112", 5);
+        Person a = new Patient("a", "password", "Sterling", "Archer", "1/1/92", "123-123-123", "Address", "City", "310-123-123",
+                "323-123-123", "email.com", "aEC", "AEC", "123-123-123", "323-123-122", "InsuranceProvider",
+                "InsuranceAccount", "m", "CA", "20", "middle","spouse","95112", 5);
         allUsers.put(a.getUserName(), a);
 
-        Person b = new Patient("b", "password", "b", "B", "1/1/91", "223-124-123", "Address", "City", "311-123-123",
+        Person b = new Patient("b", "password", "Ray", "Gillette", "1/1/91", "223-124-123", "Address", "City", "311-123-123",
                 "323-125-123", "email.com", "bEC", "BEC", "123-153-123", "323-124-122", "InsuranceProvider",
                 "InsuranceAccount", "m", "CA", "21", "middle","spouse","95112", 5);
         allUsers.put(b.getUserName(), b);
 
-        Person c = new Patient("c", "password", "c", "C", "1/1/93", "253-124-123", "Address", "City", "111-123-123",
+        Person c = new Patient("c", "password", "Lana", "Kane", "1/1/93", "253-124-123", "Address", "City", "111-123-123",
                 "326-122-123", "email.com", "cEC", "CEC", "123-753-523", "323-124-132", "InsuranceProvider",
                 "InsuranceAccount", "m", "CA", "26", "middle","spouse","95112", 5);
         allUsers.put(c.getUserName(), c);
 
-        Person d = new Patient("d", "password", "d", "D", "9/1/93", "953-924-123", "Address", "City", "191-123-123",
+        Person d = new Patient("d", "password", "Doctor", "Krieger", "9/1/93", "953-924-123", "Address", "City", "191-123-123",
                 "326-822-193", "email.com", "dEC", "DEC", "123-853-528", "393-124-130", "InsuranceProvider",
                 "InsuranceAccount", "f", "CA", "29", "middle","spouse","95112", 5);
         allUsers.put(d.getUserName(), d);
 
-        Person e = new Patient("e", "password", "e", "E", "9/8/93", "883-924-123", "Address", "City", "198-123-123",
+        Person e = new Patient("e", "password", "Cyril", "Figgis", "9/8/93", "883-924-123", "Address", "City", "198-123-123",
                 "326-822-883", "email.com", "eEC", "EEC", "123-853-828", "393-124-138", "InsuranceProvider",
                 "InsuranceAccount", "f", "CA", "27", "middle","spouse","95112", 5);
         allUsers.put(e.getUserName(), e);
@@ -109,17 +109,17 @@ public class Hospital {
                 String dateOfBirth, String sex, String socialSecurity,  String emailAddress, String mobilePhone,
         int yearsOfExperiance, int departmentID, int skillID);
                 */
-        Person aSurgeon = new Surgeon("aSurgUser", "aSurPW", "surgFirstName", "surgLastName", "surgMiddleName",
+        Person aSurgeon = new Surgeon("aSurgUser", "aSurPW", "Michael", "Bluth", "M",
                 "surgDateOfBirth", "m", "social102323", "surg@email.com", "102302", 5, 3, 1);
-        Person bSurgeon = new Surgeon("bSurgUser", "bSurPW", "surgFirstNbme", "surgLbstNbme", "surgMiddleNbme",
+        Person bSurgeon = new Surgeon("bSurgUser", "bSurPW", "GOB", "Bluth", "R",
                 "surgDbteOfBirth", "m", "socibl102323", "surg@embil.com", "102302", 5, 3, 1);
-        Person cSurgeon = new Surgeon("cSurgUser", "cSurPW", "surgFirstNcme", "surgLcstNcme", "surgMiddleNcme",
+        Person cSurgeon = new Surgeon("cSurgUser", "cSurPW", "George", "Bluth Sr.", "L",
                 "surgDcteOfBirth", "m", "socicl102323", "surg@emcil.com", "102302", 5, 3, 1);
-        Person dSurgeon = new Surgeon("dSurgUser", "dSurPW", "surgFirstNdme", "surgLdstNdme", "surgMiddleNdme",
+        Person dSurgeon = new Surgeon("dSurgUser", "dSurPW", "Buster", "Bluth", "N",
                 "surgDdteOfBirth", "m", "sodidl102323", "surg@emdil.dom", "102302", 5, 3, 1);
-        Person eSurgeon = new Surgeon("eSurgUser", "eSurPW", "surgFirstNeme", "surgLestNeme", "surgMieeleNeme",
+        Person eSurgeon = new Surgeon("eSurgUser", "eSurPW", "George Michael", "Bluth", "M",
                 "surgDeteOfBirth", "m", "soeiel102323", "surg@emeil.eom", "102302", 5, 3, 1);
-        Person fSurgfon = new Surgeon("fSurgUsfr", "fSurPW", "surgFirstNfmf", "surgLfstNfmf", "surgMifflfNfmf",
+        Person fSurgfon = new Surgeon("fSurgUsfr", "fSurPW", "Tobias", "Funke", "G",
                 "surgDftfOfBirth", "m", "sofifl102323", "surg@fmfil.fom", "102302", 5, 3, 1);
 
         allStaff.put(aSurgeon.getUserName(), aSurgeon);
@@ -138,19 +138,19 @@ public class Hospital {
         int skillId, int yearsOfExperience, Date hiredDate, int departmentID) {
         */
 
-        Person aDoc = new Doctor("aDoc", "aDocPass", "Mutahar", "Ahmed", "docmiddle",
+        Person aDoc = new Doctor("aDoc", "aDocPass", "Walter", "White", "A",
                 "dateof", "m", "social", "doc@email", "mobile1232", 2, 1, "3", 3, 2);
-        Person bDoc = new Doctor("bDoc", "bDocPbss", "Patrick", "Anderson", "docmiddle",
+        Person bDoc = new Doctor("bDoc", "bDocPbss", "Jesse", "Pinkman", "B",
                 "dbteof", "m", "socibl", "doc@embil", "mobile1232", 2, 1, "3", 3, 2);
-        Person cDoc = new Doctor("cDoc", "cDocPcss", "Andrews", "Alan", "docmiddle",
+        Person cDoc = new Doctor("cDoc", "cDocPcss", "Saul", "Goodman", "C",
                 "dcteof", "m", "socicl", "doc@emcil", "mobile1232", 2, 1, "3", 3, 2);
-        Person dDoc = new Doctor("dDoc", "dDocPdss", "Stephen", "Angeli", "docmiddle",
+        Person dDoc = new Doctor("dDoc", "dDocPdss", "Gustavo", "Fring", "D",
                 "ddteof", "m", "socidl", "doc@emdil", "mobile1232", 2, 1, "3", 3, 2);
-        Person eDoc = new Doctor("eDoc", "eDocPess", "Lewis", "Attas", "docmiddle",
+        Person eDoc = new Doctor("eDoc", "eDocPess", "Skylar", "White", "E",
                 "deteof", "m", "sociel", "doc@emeil", "mobile1232", 2, 1, "3", 3, 2);
-        Person fDoc = new Doctor("fDoc", "fDocPfss", "Kevin", "Basralian", "docmiddle",
+        Person fDoc = new Doctor("fDoc", "fDocPfss", "Mike", "Ehrmantraut", "F",
                 "dfteof", "m", "socifl", "doc@emfil", "mobile1232", 2, 1, "3", 3, 2);
-        Person zDoc = new Doctor("zDoc", "zDocPzss", "Mark", "Berman", "docmiddle",
+        Person zDoc = new Doctor("zDoc", "zDocPzss", "Hank", "Schrader", "G",
                 "dzteof", "m", "socizl", "doc@emzil", "mobile1232", 2, 1, "3", 3, 2);
         allStaff.put(aDoc.getUserName(), aDoc);
         allStaff.put(bDoc.getUserName(), bDoc);
@@ -168,17 +168,17 @@ public class Hospital {
         int yearsOfExperience, int skillID, String hiredDate) {
                 */
 
-        Person aHead = new Head("aHeadusername", "aHeadpassword", "aHeadname", "aHeadLast", "aHeadMid",
+        Person aHead = new Head("aHeadusername", "aHeadpassword", "Bob", "Kelso", "A",
                 "dateofbirth", "m", "social", "email@email", "mobile", 3, 3, "1", 3);
-        Person bHebd = new Head("bHebdusernbme", "bHebdpbssword", "bHebdnbme", "bHebdLbst", "bHebdMid",
+        Person bHebd = new Head("bHebdusernbme", "bHebdpbssword", "Perry", "Cox", "B",
                 "dbteofbirth", "m", "socibl", "embil@embil", "mobile", 3, 3, "1", 3);
-        Person cHecd = new Head("cHecduserncme", "cHecdpcssword", "cHecdncme", "cHecdLcst", "cHecdMid",
+        Person cHecd = new Head("cHecduserncme", "cHecdpcssword", "Chris", "Turk", "C",
                 "dcteofbirth", "m", "socicl", "emcil@emcil", "mobile", 3, 3, "1", 3);
-        Person dHedd = new Head("dHedduserndme", "dHeddpdssword", "dHeddndme", "dHeddLdst", "dHeddMid",
+        Person dHedd = new Head("dHedduserndme", "dHeddpdssword", "Jordan", "Sullivan", "D",
                 "ddteofbirth", "m", "socidl", "emdil@emdil", "mobile", 3, 3, "1", 3);
-        Person eHeed = new Head("eHeeduserneme", "eHeedpessword", "eHeedneme", "eHeedLest", "eHeedMid",
+        Person eHeed = new Head("eHeeduserneme", "eHeedpessword", "Peter", "Hooch", "E",
                 "deteofbirth", "m", "sociel", "emeil@emeil", "mobile", 3, 3, "1", 3);
-        Person fHefd = new Head("fHefdusernfme", "fHefdpfssword", "fHefdnfme", "fHefdLfst", "fHefdMid",
+        Person fHefd = new Head("fHefdusernfme", "fHefdpfssword", "Doug", "Murphy", "F",
                 "dfteofbirth", "m", "socifl", "emfil@emfil", "mobile", 3, 3, "1", 3);
 
         allStaff.put(aHead.getUserName(), aHead);
@@ -195,17 +195,17 @@ public class Hospital {
                  String dateOfBirth, String sex, String socialSecurity,  String emailAddress, String mobilePhone
          */
 
-        Person aNurse = new Nurse("nurseUserName", "nusrePass", "nusrename", "nurselast", "nursemiddle",
+        Person aNurse = new Nurse("nurseUserName", "nusrePass", "Carla", "Turk", "A",
                 "dateofb", "f", "asdfadfsocial", "email", "1212", 4);
-        Person bNurse = new Nurse("nurseUserNbme", "nusrePbss", "nusrenbme", "nurselbst", "nursemiddle",
+        Person bNurse = new Nurse("nurseUserNbme", "nusrePbss", "Laverne", "Roberts", "B",
                 "dbteofb", "f", "bsdfbdfsocibl", "embil", "1212", 4);
-        Person cNurse = new Nurse("nurseUserNcme", "nusrePcss", "nusrencme", "nurselcst", "nursemiddle",
+        Person cNurse = new Nurse("nurseUserNcme", "nusrePcss", "Elliot", "Reid", "C",
                 "dcteofb", "f", "csdfcdfsocicl", "emcil", "1212", 4);
-        Person dNurse = new Nurse("nurseUserNdme", "nusrePdss", "nusrendme", "nurseldst", "nursemiddle",
+        Person dNurse = new Nurse("nurseUserNdme", "nusrePdss", "The", "Todd", "D",
                 "ddteofb", "f", "dsdfddfsocidl", "emdil", "1212", 4);
-        Person eNurse = new Nurse("nurseUserNeme", "nusrePess", "nusreneme", "nurselest", "nursemiddle",
+        Person eNurse = new Nurse("nurseUserNeme", "nusrePess", "Ted", "Buckland", "E",
                 "deteofb", "f", "esdfedfsociel", "emeil", "1212", 4);
-        Person fNurse = new Nurse("nurseUserNfme", "nusrePfss", "nusrenfme", "nurselfst", "nursemiddle",
+        Person fNurse = new Nurse("nurseUserNfme", "nusrePfss", "Dorian", "Dorian", "F",
                 "dfteofb", "f", "fsdffdfsocifl", "emfil", "1212", 4);
 
         allStaff.put(aNurse.getUserName(), aNurse);
@@ -224,8 +224,8 @@ public class Hospital {
     }
 
     private void build_insurance() {
-        String[] contactName = {"name1", "name2", "name3"};
-        String[] providerName = {"provider1", "provider2", "provider3"};
+        String[] contactName = {"Michael Scott", "Jim Halpert", "Dwight Schrute"};
+        String[] providerName = {"Liberty Mutual", "State Farm", "Farmers"};
         for(int i=0; i<NUM_INSURANCE; i++) {
             Insurance newInsurance = new Insurance(contactName[i], i, providerName[i]); //Contact, Contact#, Provider
             allInsurance.add(newInsurance);
