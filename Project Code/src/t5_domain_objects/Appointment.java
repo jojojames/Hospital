@@ -23,15 +23,6 @@ public class Appointment {
         this.department = department;
     }
 
-    public Appointment(Doctor doctor, Patient patient, Department department, String basicReason, String fullReason, Room room) {
-        this.doctor = doctor;
-        this.patient = patient;
-        this.basicReason = basicReason;
-        this.fullReason = fullReason;
-        this.room = room;
-        this.department = department;
-    }
-
     public String getDate() {
         return date;
     }
